@@ -296,6 +296,11 @@ class LogAnalyzer:
                     return str(val).strip() if pd.notna(val) else ""
 
                 step_value = row['Номер шага']
+                try:
+                    step_value = int(step_value)
+                except ValueError:
+                    pass
+
                 event_value = safe_str_convert(row['Проверяем наличие ивента(ов)'])
                 action_value = safe_str_convert(row['Действие'])
                 params_value = safe_str_convert(row['Параметры через запятую'])
@@ -534,6 +539,8 @@ class LogAnalyzer:
                                                                 'nan',
                                                                 '']:
                 continue
+            if expected_step.step_number == 13:
+                pass
             curr_expected_names = [event.name for event in expected_step]
             next_expected_names = self._get_next_steps_names(
                 index=step_index,
@@ -559,8 +566,6 @@ class LogAnalyzer:
                 actual_next=actual_names,
                 func=max,
             )
-            if expected_step.step_number == 14:
-                pass
             if last_actual_index is None:
                 if closest_index is None:
                     new_index = self._get_index(
