@@ -1,0 +1,1168 @@
+UserID: USER_677f900e481c8ff450bd2ded
+Version: 1.14.10
+ABTestingVariant: default
+ABTestingGameConfigVersion: 033eafa47441da070254407a579f4410
+
+1/9/2025 12:09:16 PM | EventName: AnalyticsInitialized | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [systemLanguage | English],
+                                                          [gameLanguage | en],
+                                                          [os | Android OS 11 / API-30 (RKQ1.200826.002/V12.5.6.0.RKFEUXM)],
+                                                          [osFamily | Other],
+                                                          [deviceModel | Xiaomi M2101K6G],
+                                                          [deviceType | Handheld],
+                                                          [deviceUniqueIdentifier | 3272e5785721f1e722015c48ca762615],
+                                                          [processorType | ARM64 FP ASIMD AES],
+                                                          [processorCount | 8],
+                                                          [batteryLevel | 0.54],
+                                                          [batteryStatus | Charging],
+                                                          [systemMemorySizeMB | 7569],
+                                                          [splashScreenFinished | True],
+                                                          [sessionId | d6c3543f-dcde-4f25-86e0-3fa28f66db43],
+                                                          [sessionDuration | 0],
+                                                          [PreciseTime | 2025-01-09 09:09:16.040]
+
+1/9/2025 12:09:16 PM | EventName: Cheats | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:16.079]
+
+1/9/2025 12:09:18 PM | EventName: LoadClientConfigStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0.54],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-09 09:09:17.982],
+                                                          [sessionDuration | 0.5866881],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 1.103096]
+
+1/9/2025 12:09:18 PM | EventName: LoadClientConfigCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0.54],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-09 09:09:18.004],
+                                                          [sessionDuration | 0.5866881],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 1.125628],
+                                                          [duration | 0.02255]
+
+1/9/2025 12:09:31 PM | EventName: AreYouSureOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:31.288]
+
+1/9/2025 12:09:32 PM | EventName: AreYouSureOpenChoice | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:32.322],
+                                                          [choice | True]
+
+1/9/2025 12:09:32 PM | EventName: NotificationPermissionStatus | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:32.872],
+                                                          [permissionAllowed | True]
+
+1/9/2025 12:09:33 PM | EventName: LoginStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0.54],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-09 09:09:32.991],
+                                                          [sessionDuration | 15.63688],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 16.11182],
+                                                          [method | Anonymous]
+
+1/9/2025 12:09:34 PM | EventName: LoginCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0.54],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-09 09:09:34.506],
+                                                          [sessionDuration | 17.10344],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 17.628258],
+                                                          [duration | 1.516442],
+                                                          [method | Anonymous]
+
+1/9/2025 12:09:34 PM | EventName: ABTestingResolveCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0.54],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-09 09:09:34.850],
+                                                          [sessionDuration | 17.45356],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 17.971715],
+                                                          [duration | 0.307876],
+                                                          [abTestingGroup | default]
+
+1/9/2025 12:09:35 PM | EventName: LoadGameStateStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0.54],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-09 09:09:35.854],
+                                                          [sessionDuration | 17.45356],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 18.951354]
+
+1/9/2025 12:09:36 PM | EventName: LoadGameStateCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0.54],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-09 09:09:36.445],
+                                                          [sessionDuration | 18.0366],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 19.566116],
+                                                          [duration | 0.614764]
+
+1/9/2025 12:09:39 PM | EventName: StoreInitializationCompleted | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:39.560]
+
+1/9/2025 12:09:41 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:41.239],
+                                                          [window | Poker]
+
+1/9/2025 12:09:41 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:41.908],
+                                                          [window | Закрыто]
+
+1/9/2025 12:09:42 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:42.402],
+                                                          [window | Закрыто]
+
+1/9/2025 12:09:48 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:48.854],
+                                                          [window | Navigation]
+
+1/9/2025 12:09:50 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:50.086],
+                                                          [window | Settings]
+
+1/9/2025 12:09:50 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:50.377],
+                                                          [window | Закрыто]
+
+1/9/2025 12:09:51 PM | EventName: MusicToggle | Params:
+                                                          [PreciseTime | 2025-01-09 09:09:51.689],
+                                                          [state | True]
+
+1/9/2025 12:10:07 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:07.895],
+                                                          [window | NotEnoughResourceMany]
+
+1/9/2025 12:10:07 PM | EventName: FastBuyOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:07.909],
+                                                          [type | RubiesMultiple],
+                                                          [product_id_0 | poker_tales_diamonds_lot_1],
+                                                          [product_id_1 | poker_tales_diamonds_lot_2],
+                                                          [product_id_2 | poker_tales_diamonds_lot_3],
+                                                          [product_id_3 | poker_tales_diamonds_lot_4],
+                                                          [product_id_4 | poker_tales_diamonds_lot_5],
+                                                          [product_id_5 | poker_tales_diamonds_lot_6]
+
+1/9/2025 12:10:12 PM | EventName: FastBuyClick | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:12.741],
+                                                          [type | RubiesMultiple],
+                                                          [product_id | poker_tales_diamonds_lot_3]
+
+1/9/2025 12:10:12 PM | EventName: PurchaseStarted | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:12.782],
+                                                          [ProductId | poker_tales_diamonds_lot_3],
+                                                          [PurchaseMode | FastBuy],
+                                                          [CartType | FastBuy],
+                                                          [FromWhere | RubiesMultiple]
+
+1/9/2025 12:10:18 PM | EventName: PurchaseCanceled | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:18.261],
+                                                          [ProductId | poker_tales_diamonds_lot_3],
+                                                          [PurchaseMode | FastBuy],
+                                                          [CartType | FastBuy],
+                                                          [FromWhere | RubiesMultiple]
+
+1/9/2025 12:10:19 PM | EventName: FastBuyClick | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:19.722],
+                                                          [type | RubiesMultiple],
+                                                          [product_id | poker_tales_diamonds_lot_6]
+
+1/9/2025 12:10:19 PM | EventName: PurchaseStarted | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:19.735],
+                                                          [ProductId | poker_tales_diamonds_lot_6],
+                                                          [PurchaseMode | FastBuy],
+                                                          [CartType | FastBuy],
+                                                          [FromWhere | RubiesMultiple]
+
+1/9/2025 12:10:25 PM | EventName: PurchaseCanceled | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:25.313],
+                                                          [ProductId | poker_tales_diamonds_lot_6],
+                                                          [PurchaseMode | FastBuy],
+                                                          [CartType | FastBuy],
+                                                          [FromWhere | RubiesMultiple]
+
+1/9/2025 12:10:28 PM | EventName: FastBuyClick | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:28.923],
+                                                          [type | RubiesMultiple],
+                                                          [product_id | poker_tales_diamonds_lot_4]
+
+1/9/2025 12:10:28 PM | EventName: PurchaseStarted | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:28.957],
+                                                          [ProductId | poker_tales_diamonds_lot_4],
+                                                          [PurchaseMode | FastBuy],
+                                                          [CartType | FastBuy],
+                                                          [FromWhere | RubiesMultiple]
+
+1/9/2025 12:10:32 PM | EventName: PurchaseCanceled | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:32.388],
+                                                          [ProductId | poker_tales_diamonds_lot_4],
+                                                          [PurchaseMode | FastBuy],
+                                                          [CartType | FastBuy],
+                                                          [FromWhere | RubiesMultiple]
+
+1/9/2025 12:10:34 PM | EventName: FastBuyClick | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:34.523],
+                                                          [type | RubiesMultiple],
+                                                          [product_id | poker_tales_diamonds_lot_5]
+
+1/9/2025 12:10:34 PM | EventName: PurchaseStarted | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:34.536],
+                                                          [ProductId | poker_tales_diamonds_lot_5],
+                                                          [PurchaseMode | FastBuy],
+                                                          [CartType | FastBuy],
+                                                          [FromWhere | RubiesMultiple]
+
+1/9/2025 12:10:39 PM | EventName: PurchaseCanceled | Params:
+                                                          [PreciseTime | 2025-01-09 09:10:39.108],
+                                                          [ProductId | poker_tales_diamonds_lot_5],
+                                                          [PurchaseMode | FastBuy],
+                                                          [CartType | FastBuy],
+                                                          [FromWhere | RubiesMultiple]
+
+1/9/2025 12:12:28 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:28.050],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 43],
+                                                          [before | 44]
+
+1/9/2025 12:12:28 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:28.056],
+                                                          [combinationName | flush],
+                                                          [cards | q_s,7_s,k_s,2_s,8_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:12:28 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:28.059],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+1/9/2025 12:12:34 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:34.260],
+                                                          [combinationName | flush],
+                                                          [cards | q_s,7_s,k_s,2_s,8_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:12:34 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:34.284],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 34000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Flush],
+                                                          [balance | 133000],
+                                                          [before | 99000]
+
+1/9/2025 12:12:37 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:37.038],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 42],
+                                                          [before | 43]
+
+1/9/2025 12:12:37 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:37.042],
+                                                          [combinationName | sf],
+                                                          [cards | 4_h,5_h,6_h,7_h,8_h,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:12:37 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:37.045],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+1/9/2025 12:12:40 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:40.563],
+                                                          [combinationName | sf],
+                                                          [cards | 4_h,5_h,6_h,7_h,8_h,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:12:40 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:40.577],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 34000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | StraightFlush],
+                                                          [balance | 167000],
+                                                          [before | 133000]
+
+1/9/2025 12:12:53 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:53.222],
+                                                          [window | SuperGame]
+
+1/9/2025 12:12:54 PM | EventName: SuperGameLaunch | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:54.013],
+                                                          [superGame | Lottery]
+
+1/9/2025 12:12:54 PM | EventName: OnboardingStepPassed | Params:
+                                                          [PreciseTime | 2025-01-09 09:12:54.519],
+                                                          [stepName | lottery_comix_showed]
+
+1/9/2025 12:13:02 PM | EventName: SuperBuyPanel | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:02.976],
+                                                          [superGame | lottery]
+
+1/9/2025 12:13:03 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:03.702],
+                                                          [eventType | Списание],
+                                                          [currencyName | Diamond],
+                                                          [value | 10],
+                                                          [fromWhere | SuperGame],
+                                                          [itemId | lottery],
+                                                          [balance | 10],
+                                                          [before | 20]
+
+1/9/2025 12:13:11 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:11.134],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 110000],
+                                                          [fromWhere | SuperGame],
+                                                          [itemId | Lottery],
+                                                          [balance | 1877000],
+                                                          [before | 277000]
+
+1/9/2025 12:13:11 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:11.138],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Apple],
+                                                          [value | 2],
+                                                          [fromWhere | SuperGame],
+                                                          [itemId | Lottery],
+                                                          [balance | 3],
+                                                          [before | 1]
+
+1/9/2025 12:13:11 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:11.142],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 1600000],
+                                                          [fromWhere | SuperGame],
+                                                          [itemId | Lottery],
+                                                          [balance | 1877000],
+                                                          [before | 277000]
+
+1/9/2025 12:13:11 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:11.145],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Energy],
+                                                          [value | 15],
+                                                          [fromWhere | SuperGame],
+                                                          [itemId | Lottery],
+                                                          [balance | 57],
+                                                          [before | 42]
+
+1/9/2025 12:13:11 PM | EventName: SuperGameFinish | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:11.153],
+                                                          [superGame | Lottery]
+
+1/9/2025 12:13:11 PM | EventName: QuestCompleted | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:11.191],
+                                                          [questId | quest_super_lottery]
+
+1/9/2025 12:13:11 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:11.195],
+                                                          [window | Win]
+
+1/9/2025 12:13:17 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:17.312],
+                                                          [window | CardPacks]
+
+1/9/2025 12:13:17 PM | EventName: CardCollected | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:17.329],
+                                                          [collection | Standard],
+                                                          [suit | Spades],
+                                                          [rank | Eight],
+                                                          [isNew | True],
+                                                          [fromWhere | lottery]
+
+1/9/2025 12:13:17 PM | EventName: CardCollected | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:17.336],
+                                                          [collection | Standard],
+                                                          [suit | Clubs],
+                                                          [rank | Seven],
+                                                          [isNew | True],
+                                                          [fromWhere | lottery]
+
+1/9/2025 12:13:17 PM | EventName: CardCollected | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:17.341],
+                                                          [collection | Tropic],
+                                                          [suit | Diamonds],
+                                                          [rank | Three],
+                                                          [isNew | True],
+                                                          [fromWhere | lottery]
+
+1/9/2025 12:13:20 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:20.250],
+                                                          [window | Закрыто]
+
+1/9/2025 12:13:26 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:26.521],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 56],
+                                                          [before | 57]
+
+1/9/2025 12:13:26 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:26.525],
+                                                          [combinationName | none],
+                                                          [cards | 7_c,8_c,k_s,9_s,a_c,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:13:26 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:26.529],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+1/9/2025 12:13:29 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:29.930],
+                                                          [combinationName | none],
+                                                          [cards | t_s,4_h,j_s,2_s,q_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:13:31 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:31.404],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 0],
+                                                          [fromWhere | Poker],
+                                                          [itemId | None],
+                                                          [balance | 1877000],
+                                                          [before | 1877000]
+
+1/9/2025 12:13:35 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:35.038],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 55],
+                                                          [before | 56]
+
+1/9/2025 12:13:35 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:35.042],
+                                                          [combinationName | none],
+                                                          [cards | 9_c,5_c,k_h,j_c,q_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:13:35 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:35.048],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+1/9/2025 12:13:44 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:44.778],
+                                                          [combinationName | none],
+                                                          [cards | 4_d,t_c,6_c,2_c,7_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:13:46 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:13:46.307],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 0],
+                                                          [fromWhere | Poker],
+                                                          [itemId | None],
+                                                          [balance | 1877000],
+                                                          [before | 1877000]
+
+1/9/2025 12:14:14 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:14.054],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 54],
+                                                          [before | 55]
+
+1/9/2025 12:14:14 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:14.058],
+                                                          [combinationName | none],
+                                                          [cards | 3_h,9_d,q_c,4_c,2_c,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:14:14 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:14.061],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+1/9/2025 12:14:16 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:16.396],
+                                                          [combinationName | none],
+                                                          [cards | t_c,a_c,5_d,6_c,7_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:14:17 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:17.905],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 0],
+                                                          [fromWhere | Poker],
+                                                          [itemId | None],
+                                                          [balance | 1877000],
+                                                          [before | 1877000]
+
+1/9/2025 12:14:20 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:20.966],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 53],
+                                                          [before | 53]
+
+1/9/2025 12:14:20 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:20.971],
+                                                          [combinationName | set],
+                                                          [cards | k_c,k_s,9_s,k_d,3_c,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:14:20 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:20.974],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+1/9/2025 12:14:25 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:25.476],
+                                                          [combinationName | set],
+                                                          [cards | k_c,k_s,j_d,k_d,4_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:14:26 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:26.555],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 23000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | ThreeOfAKind],
+                                                          [balance | 1900000],
+                                                          [before | 1877000]
+
+1/9/2025 12:14:26 PM | EventName: OnboardingStepPassed | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:26.783],
+                                                          [stepName | autoplay_dialog_showed]
+
+1/9/2025 12:14:27 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:27.093],
+                                                          [window | NewContent],
+                                                          [contentType | Autoplay]
+
+1/9/2025 12:14:35 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:35.159],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 52],
+                                                          [before | 53]
+
+1/9/2025 12:14:35 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:35.173],
+                                                          [combinationName | pair],
+                                                          [cards | a_d,a_s,6_h,q_d,2_d,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:14:35 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:35.176],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+1/9/2025 12:14:46 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:46.126],
+                                                          [combinationName | pair],
+                                                          [cards | a_d,a_s,3_d,7_s,t_d,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:14:47 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:47.339],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 11000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | JackOrBetter],
+                                                          [balance | 1911000],
+                                                          [before | 1900000]
+
+1/9/2025 12:14:52 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:52.460],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 51],
+                                                          [before | 52]
+
+1/9/2025 12:14:52 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:52.464],
+                                                          [combinationName | doper],
+                                                          [cards | 3_s,2_c,j_d,3_h,j_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:14:52 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:14:52.471],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+1/9/2025 12:15:05 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:05.743],
+                                                          [combinationName | doper],
+                                                          [cards | 3_s,9_s,j_d,3_h,j_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:15:06 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:06.688],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 17000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | TwoPairs],
+                                                          [balance | 1928000],
+                                                          [before | 1911000]
+
+1/9/2025 12:15:08 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:08.142],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 50],
+                                                          [before | 51]
+
+1/9/2025 12:15:08 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:08.146],
+                                                          [combinationName | pair],
+                                                          [cards | 8_s,a_s,t_h,8_h,4_h,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:15:08 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:08.149],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+1/9/2025 12:15:10 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:10.625],
+                                                          [combinationName | pair],
+                                                          [cards | 8_s,3_c,k_d,8_h,6_d,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:15:11 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:11.822],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 11000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | JackOrBetter],
+                                                          [balance | 1939000],
+                                                          [before | 1928000]
+
+1/9/2025 12:15:12 PM | EventName: OnboardingStepPassed | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:12.080],
+                                                          [stepName | daily_bonus_unlocked]
+
+1/9/2025 12:15:12 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:12.119],
+                                                          [window | DailyBonus]
+
+1/9/2025 12:15:12 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:12.491],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 2600000],
+                                                          [fromWhere | DailyBonus],
+                                                          [itemId | Day_1],
+                                                          [balance | 4539000],
+                                                          [before | 1939000]
+
+1/9/2025 12:15:13 PM | EventName: OnboardingStepPassed | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:13.760],
+                                                          [stepName | poker_bet_showed]
+
+1/9/2025 12:15:14 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:14.064],
+                                                          [window | NewContent],
+                                                          [contentType | Bet]
+
+1/9/2025 12:15:19 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:19.668],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 49],
+                                                          [before | 50]
+
+1/9/2025 12:15:19 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:19.672],
+                                                          [combinationName | doper],
+                                                          [cards | 7_h,j_s,6_h,j_d,6_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:15:19 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:19.685],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 5]
+
+1/9/2025 12:15:21 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:21.893],
+                                                          [combinationName | doper],
+                                                          [cards | q_h,j_s,6_h,j_d,6_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:15:22 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:22.889],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 17000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | TwoPairs],
+                                                          [balance | 4556000],
+                                                          [before | 4539000]
+
+1/9/2025 12:15:35 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:35.194],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 48],
+                                                          [before | 49]
+
+1/9/2025 12:15:35 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:35.198],
+                                                          [combinationName | pair],
+                                                          [cards | a_c,q_s,k_c,a_h,j_d,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:15:35 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:35.201],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 3]
+
+1/9/2025 12:15:38 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:38.461],
+                                                          [combinationName | pair],
+                                                          [cards | a_c,t_h,9_s,a_h,4_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:15:39 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:39.672],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 11000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | JackOrBetter],
+                                                          [balance | 4567000],
+                                                          [before | 4556000]
+
+1/9/2025 12:15:41 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:41.337],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 47],
+                                                          [before | 47]
+
+1/9/2025 12:15:41 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:41.341],
+                                                          [combinationName | fh],
+                                                          [cards | 8_c,k_c,8_h,k_s,8_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:15:41 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:41.344],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 3]
+
+1/9/2025 12:15:47 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:47.430],
+                                                          [combinationName | fh],
+                                                          [cards | 8_c,k_c,8_h,k_s,8_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:15:47 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:15:47.447],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 34000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | FullHouse],
+                                                          [balance | 4601000],
+                                                          [before | 4567000]
+
+1/9/2025 12:16:00 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:00.298],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 46],
+                                                          [before | 47]
+
+1/9/2025 12:16:00 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:00.302],
+                                                          [combinationName | set],
+                                                          [cards | j_d,3_h,8_d,3_s,3_c,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:00 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:00.305],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 3]
+
+1/9/2025 12:16:04 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:04.993],
+                                                          [combinationName | set],
+                                                          [cards | 7_s,3_h,q_c,3_s,3_c,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:06 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:06.074],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 23000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | ThreeOfAKind],
+                                                          [balance | 4624000],
+                                                          [before | 4601000]
+
+1/9/2025 12:16:07 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:07.902],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 45],
+                                                          [before | 46]
+
+1/9/2025 12:16:07 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:07.906],
+                                                          [combinationName | doper],
+                                                          [cards | t_c,8_d,8_c,t_h,5_h,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:07 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:07.909],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 3]
+
+1/9/2025 12:16:11 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:11.055],
+                                                          [window | PetsUnlock]
+
+1/9/2025 12:16:14 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:14.110],
+                                                          [combinationName | doper],
+                                                          [cards | t_c,8_d,8_c,t_h,3_h,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:15 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:15.087],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 17000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | TwoPairs],
+                                                          [balance | 4641000],
+                                                          [before | 4624000]
+
+1/9/2025 12:16:16 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:16.201],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 44],
+                                                          [before | 45]
+
+1/9/2025 12:16:16 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:16.205],
+                                                          [combinationName | straight],
+                                                          [cards | 5_d,6_h,3_d,2_s,4_c,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:16 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:16.215],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 3]
+
+1/9/2025 12:16:18 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:18.910],
+                                                          [combinationName | straight],
+                                                          [cards | 5_d,6_h,3_d,2_s,4_c,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:18 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:18.935],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 34000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Straight],
+                                                          [balance | 4675000],
+                                                          [before | 4641000]
+
+1/9/2025 12:16:22 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:22.281],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 43],
+                                                          [before | 44]
+
+1/9/2025 12:16:22 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:22.285],
+                                                          [combinationName | pair],
+                                                          [cards | 6_h,7_h,q_c,7_c,5_h,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:22 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:22.298],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 3]
+
+1/9/2025 12:16:27 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:27.557],
+                                                          [combinationName | pair],
+                                                          [cards | 8_s,7_h,j_s,7_c,3_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:28 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:28.788],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 11000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | JackOrBetter],
+                                                          [balance | 4686000],
+                                                          [before | 4675000]
+
+1/9/2025 12:16:29 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:29.837],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 42],
+                                                          [before | 42]
+
+1/9/2025 12:16:29 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:29.841],
+                                                          [combinationName | pair],
+                                                          [cards | 5_d,4_h,8_d,3_s,2_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:29 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:29.845],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 3]
+
+1/9/2025 12:16:34 PM | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:34.842]
+
+1/9/2025 12:16:34 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:34.847],
+                                                          [combinationName | straight],
+                                                          [cards | 5_d,4_h,6_c,3_s,2_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:35 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:35.824],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 34000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Straight],
+                                                          [balance | 4720000],
+                                                          [before | 4686000]
+
+1/9/2025 12:16:36 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:36.345],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 41],
+                                                          [before | 42]
+
+1/9/2025 12:16:36 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:36.348],
+                                                          [combinationName | four],
+                                                          [cards | 9_d,2_s,2_c,2_h,2_d,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:36 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:36.352],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 3]
+
+1/9/2025 12:16:39 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:39.681],
+                                                          [combinationName | four],
+                                                          [cards | a_s,2_s,2_c,2_h,2_d,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:40 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:40.622],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 34000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | FourOfAKind],
+                                                          [balance | 4754000],
+                                                          [before | 4720000]
+
+1/9/2025 12:16:47 PM | EventName: QuestCompleted | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:46.996],
+                                                          [questId | quest_poker_four]
+
+1/9/2025 12:16:49 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:49.180],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 40],
+                                                          [before | 41]
+
+1/9/2025 12:16:49 PM | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:49.184],
+                                                          [combinationName | rf],
+                                                          [cards | q_s,t_s,j_s,k_s,a_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:49 PM | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:49.187],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 3]
+
+1/9/2025 12:16:52 PM | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:52.091],
+                                                          [combinationName | rf],
+                                                          [cards | q_s,t_s,j_s,k_s,a_s,],
+                                                          [autoplayOn | False]
+
+1/9/2025 12:16:52 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:16:52.113],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 34000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | RoyalFlush],
+                                                          [balance | 4938000],
+                                                          [before | 4788000]
+
+1/9/2025 12:17:05 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:05.205],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Apple],
+                                                          [value | 2],
+                                                          [fromWhere | StickerQuest],
+                                                          [itemId | Apple],
+                                                          [balance | 5],
+                                                          [before | 3]
+
+1/9/2025 12:17:05 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:05.210],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 150000],
+                                                          [fromWhere | StickerQuest],
+                                                          [itemId | Gold],
+                                                          [balance | 4938000],
+                                                          [before | 4788000]
+
+1/9/2025 12:17:19 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:19.381],
+                                                          [window | SuperGame]
+
+1/9/2025 12:17:21 PM | EventName: SuperGameLaunch | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:21.249],
+                                                          [superGame | WheelOfFortune]
+
+1/9/2025 12:17:24 PM | EventName: OnboardingStepPassed | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:24.889],
+                                                          [stepName | wof_comix_showed]
+
+1/9/2025 12:17:31 PM | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:31.321],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Energy],
+                                                          [value | 15],
+                                                          [fromWhere | SuperGame],
+                                                          [itemId | WheelOfFortune],
+                                                          [balance | 55],
+                                                          [before | 40]
+
+1/9/2025 12:17:31 PM | EventName: SuperGameFinish | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:31.325],
+                                                          [superGame | WheelOfFortune]
+
+1/9/2025 12:17:31 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:31.539],
+                                                          [window | Win]
+
+1/9/2025 12:17:36 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:36.294],
+                                                          [window | Закрыто]
+
+1/9/2025 12:17:38 PM | EventName: OnboardingStepPassed | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:38.545],
+                                                          [stepName | special_offers_unlocked]
+
+1/9/2025 12:17:38 PM | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:38.684],
+                                                          [window | SpecialOffer]
+
+1/9/2025 12:17:38 PM | EventName: SpecialOfferOpen | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:38.713],
+                                                          [type | Welcome],
+                                                          [product_id | poker_tales_welcome_pack],
+                                                          [trigger | auto]
+
+1/9/2025 12:17:47 PM | EventName: SpecialOfferClick | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:47.723],
+                                                          [type | Welcome],
+                                                          [product_id | poker_tales_welcome_pack]
+
+1/9/2025 12:17:47 PM | EventName: PurchaseStarted | Params:
+                                                          [PreciseTime | 2025-01-09 09:17:47.743],
+                                                          [ProductId | poker_tales_welcome_pack],
+                                                          [PurchaseMode | SpecialOffer],
+                                                          [CartType | FastBuy],
+                                                          [FromWhere | Welcome]
