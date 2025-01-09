@@ -259,6 +259,9 @@ class DefaultBackend(Generic[S]):
                     )
                     break
 
+        if expected_step.step_number == 9:
+            pass
+
         matching_step = self._find_best_match_from_queues(
             unexpected_events=unexpected_events,
             list_usality=list_usality,
@@ -562,7 +565,7 @@ class DefaultBackend(Generic[S]):
             discrepancies(
                 step_number=expected_event.step_number,
                 action=expected_event.action,
-                expected=expected_event,
+                expected=event.expected,
                 found_match=event.found_match,
                 best_match=event.best_match,
                 best_mismatches=event.mismatch,
