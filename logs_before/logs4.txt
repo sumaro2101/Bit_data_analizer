@@ -3,14 +3,6 @@ Version: 1.14.10
 ABTestingVariant: default
 ABTestingGameConfigVersion: Unknown Config Version
 
-09.01.2025 23:05:15 | PassEvent
-
-09.01.2025 23:05:16 | PassEvent
-
-09.01.2025 23:05:17 | PassEvent
-
-09.01.2025 23:05:18 | PassEvent
-
 09.01.2025 23:03:24 | EventName: AnalyticsInitialized | Params:
                                                           [internetReachability | NotReachable],
                                                           [systemLanguage | Russian],
@@ -93,8 +85,6 @@ ABTestingGameConfigVersion: Unknown Config Version
                                                           [duration | 16.239433],
                                                           [interruptsCount | 1]
 
-09.01.2025 23:03:41 | TelegramChatLogBehaviour: SymbolTarget
-
 09.01.2025 23:03:44 | EventName: MainMenuFirstTimeOpenResume | Params:
                                                           [internetReachability | ReachableViaLocalAreaNetwork],
                                                           [batteryLevel | 1],
@@ -123,8 +113,6 @@ ABTestingGameConfigVersion: Unknown Config Version
                                                           [duration | 24.171959],
                                                           [interruptsCount | 2]
 
-09.01.2025 23:03:49 | TelegramChatLogBehaviour: SymbolTarget
-
 09.01.2025 23:03:52 | EventName: MainMenuFirstTimeOpenResume | Params:
                                                           [internetReachability | ReachableViaLocalAreaNetwork],
                                                           [batteryLevel | 1],
@@ -148,8 +136,6 @@ ABTestingGameConfigVersion: Unknown Config Version
                                                           [splashScreenFinished | True],
                                                           [duration | 27.750728],
                                                           [interruptsCount | 3]
-
-09.01.2025 23:03:53 | TelegramChatLogBehaviour: SymbolTarget
 
 09.01.2025 23:03:55 | EventName: MainMenuFirstTimeOpenResume | Params:
                                                           [internetReachability | ReachableViaLocalAreaNetwork],
@@ -184,8 +170,6 @@ ABTestingGameConfigVersion: Unknown Config Version
                                                           [splashScreenFinished | True],
                                                           [duration | 30.952727],
                                                           [interruptsCount | 4]
-
-09.01.2025 23:03:56 | TelegramChatLogBehaviour: SymbolTarget
 
 09.01.2025 23:04:06 | EventName: MainMenuFirstTimeOpenResume | Params:
                                                           [internetReachability | ReachableViaLocalAreaNetwork],
@@ -391,60 +375,3 @@ ABTestingGameConfigVersion: Unknown Config Version
                                                           [PreciseTime | 2025-01-09 16:05:14.301],
                                                           [window | Legal]
 
-09.01.2025 23:05:15 | TelegramChatLogBehaviour: SymbolTarget
-
-09.01.2025 23:09:20 | EventName: LegalClick | Params:
-                                                          [PreciseTime | 2025-01-09 16:09:20.178],
-                                                          [link | 1]
-
-09.01.2025 23:09:20 | TelegramChatLogBehaviour: SymbolTarget
-
-09.01.2025 23:09:23 | EventName: LegalClick | Params:
-                                                          [PreciseTime | 2025-01-09 16:09:23.296],
-                                                          [link | 2]
-
-09.01.2025 23:09:23 | TelegramChatLogBehaviour: SymbolTarget
-
-09.01.2025 23:09:31 | EventName: WindowOpen | Params:
-                                                          [PreciseTime | 2025-01-09 16:09:31.068],
-                                                          [window | AccountManagement]
-
-09.01.2025 23:09:32 | EventName: WindowOpen | Params:
-                                                          [PreciseTime | 2025-01-09 16:09:32.610],
-                                                          [window | ShareTheMail]
-
-09.01.2025 23:09:43 | EventName: EmailShared | Params:
-                                                          [PreciseTime | 2025-01-09 16:09:43.216],
-                                                          [mail | test@test.test]
-
-09.01.2025 23:09:44 | EventName: CurrencyChanged | Params:
-                                                          [PreciseTime | 2025-01-09 16:09:44.727],
-                                                          [eventType | Начисление],
-                                                          [currencyName | Energy],
-                                                          [value | 25],
-                                                          [fromWhere | settings],
-                                                          [itemId | share_mail_reward],
-                                                          [balance | 74],
-                                                          [before | 49]
-
-09.01.2025 23:09:46 | EventName: WindowOpen | Params:
-                                                          [PreciseTime | 2025-01-09 16:09:46.874],
-                                                          [window | ShareTheMail]
-
-09.01.2025 23:09:53 | EventName: EmailShared | Params:
-                                                          [PreciseTime | 2025-01-09 16:09:53.050],
-                                                          [mail | test@test2.test]
-
-09.01.2025 23:09:55 | EventName: WindowOpen | Params:
-                                                          [PreciseTime | 2025-01-09 16:09:55.931],
-                                                          [window | AccountDeletion]
-
-09.01.2025 23:10:00 | EventName: WindowOpen | Params:
-                                                          [PreciseTime | 2025-01-09 16:10:00.494],
-                                                          [window | DeleteAccount]
-
-09.01.2025 23:10:03 | EventName: WindowOpen | Params:
-                                                          [PreciseTime | 2025-01-09 16:10:03.618],
-                                                          [window | Feedback]
-
-09.01.2025 23:10:04 | TelegramChatLogBehaviour: SymbolTarget

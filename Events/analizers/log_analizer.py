@@ -529,9 +529,26 @@ class LogAnalyzer:
         """
 
         list_of_steps = []
+        pass_event = 0
+        process_pass = False
         start = 0
         leng_actual = len(actual_events)
         for step_index, expected_step in enumerate(expected_steps):
+            if not process_pass:
+                curr_index = start
+                curr_event = actual_events[curr_index]
+                while curr_event.name == 'PassEvent':
+                    pass_event += 1
+                    curr_index += 1
+                    curr_event = actual_events[curr_index]
+                if pass_event > 2:
+                    process_pass = True
+            if pass_event > 2:
+                pass_event -= 1
+                continue
+            else:
+                process_pass = False
+                pass_event = 0
             if start >= leng_actual:
                 return list_of_steps
             leng_expected = len(expected_step)
@@ -539,7 +556,7 @@ class LogAnalyzer:
                                                                 'nan',
                                                                 '']:
                 continue
-            if expected_step.step_number == 13:
+            if expected_step.step_number == 14:
                 pass
             curr_expected_names = [event.name for event in expected_step]
             next_expected_names = self._get_next_steps_names(
@@ -600,7 +617,7 @@ class LogAnalyzer:
                     name=last_expected_event.name,
                     curr_interval=actual_names,
                 )
-                if last_index != 0 and last_index != len(new_interval_step):
+                if last_index != 0 and last_index != len(new_interval_step) - 1:
                     first_next_event = next_expected_names[0]
                     last_actual_event = curr_expected_names[-1]
                     curr_interval_names = [event.name for event in new_interval_step]
@@ -745,13 +762,13 @@ class LogAnalyzer:
             актуального предположительного шага.
 
         Returns:
-            int | None: Индекс, елси не найден - None.
+            int | None: Индекс, если не найден - None.
         """
 
         index = 0
         try:
             finded = curr_interval[::-1].index(name)
-            index = len(curr_interval) - finded
+            index = len(curr_interval) - finded - 1
         except ValueError:
             return None
         return index
