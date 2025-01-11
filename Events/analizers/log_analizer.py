@@ -530,28 +530,19 @@ class LogAnalyzer:
 
         list_of_steps = []
         pass_event = 0
-        process_pass = False
         start = 0
         leng_actual = len(actual_events)
         for step_index, expected_step in enumerate(expected_steps):
-            if not process_pass:
-                curr_index = start
-                curr_event = actual_events[curr_index]
-                while curr_event.name == 'PassEvent':
-                    pass_event += 1
-                    curr_index += 1
-                    curr_event = actual_events[curr_index]
-                if pass_event > 2:
-                    process_pass = True
-            if pass_event > 2:
-                pass_event -= 1
-                continue
-            else:
-                process_pass = False
-                pass_event = 0
             if start >= leng_actual:
                 return list_of_steps
             leng_expected = len(expected_step)
+            if pass_event:
+                pass_event -= 1
+                self._add_empty_step(
+                    list_of_steps=list_of_steps,
+                    expected_step=expected_step,
+                )
+                continue
             if leng_expected == 1 and expected_step[0].name in ['-',
                                                                 'nan',
                                                                 '']:
@@ -578,6 +569,19 @@ class LogAnalyzer:
             else:
                 actual_step = actual_events[start:start + leng_expected + closest_index]
             actual_names = [event.name for event in actual_step]
+            pass_event, first_event = self._find_pass_step(
+                actual_names=actual_names,
+                actual_events=actual_events,
+                start=start,
+                pass_event=pass_event,
+            )
+            if pass_event and (not actual_names or first_event):
+                pass_event -= 1
+                self._add_empty_step(
+                    list_of_steps=list_of_steps,
+                    expected_step=expected_step,
+                )
+                continue
             last_actual_index = self._get_index(
                 names=curr_expected_names,
                 actual_next=actual_names,
@@ -657,6 +661,14 @@ class LogAnalyzer:
                 elif equal_next and not last_pass:
                     new_interval_step = actual_events[start: start + len(new_interval_step) + 1]
 
+            actual_names = [event.name for event in new_interval_step]
+            pass_event, first_event = self._find_pass_step(
+                actual_names=actual_names,
+                actual_events=actual_events,
+                start=start,
+                pass_event=pass_event,
+                new_interval_step=new_interval_step,
+            )
             actual_step = Step(
                 step_number=expected_step.step_number,
                 action=expected_step.action,
@@ -665,6 +677,47 @@ class LogAnalyzer:
             list_of_steps.append(actual_step)
             start += len(new_interval_step)
         return list_of_steps
+
+    def _find_pass_step(self,
+                        actual_names: list[str],
+                        actual_events: list[ActualEvent],
+                        start: int,
+                        pass_event: int,
+                        new_interval_step: list[Step] | None = None
+                        ) -> tuple[int, bool]:
+        first_event = False
+        if 'Ожидаемое количество пропущенных шагов чек листа' in actual_names:
+            before = 0
+            if pass_event:
+                before = pass_event
+                pass_event = 0
+            index_pass = actual_names.index('Ожидаемое количество пропущенных шагов чек листа')
+            curr_event = actual_events[start + index_pass]
+            params = curr_event.parameters
+            pass_event = int(params['countPassed'])
+            actual_events.pop(start + index_pass)
+            actual_names.pop(index_pass)
+            if new_interval_step:
+                new_interval_step.pop(index_pass)
+            if index_pass == 0:
+                first_event = True
+            if before > pass_event:
+                pass_event = before
+        return pass_event, first_event
+
+    def _add_empty_step(self,
+                        list_of_steps: list[Step],
+                        expected_step: Step,
+                        ) -> None:
+        if expected_step[0].name not in ['-',
+                                         'nan',
+                                         '']:
+            actual_step = Step(
+                step_number=expected_step.step_number,
+                action=expected_step.action,
+                events=[],
+            )
+            list_of_steps.append(actual_step)
 
     def _get_next_steps_names(self,
                               index: int,

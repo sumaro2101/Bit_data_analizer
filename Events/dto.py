@@ -75,6 +75,7 @@ class ActualEvent:
     name: str
     parameters: dict[str, str]
     timestamp: datetime
+    pass_count: int = 0
 
 
 @dataclass

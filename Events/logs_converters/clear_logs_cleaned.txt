@@ -377,3 +377,53 @@ ABTestingGameConfigVersion: Unknown Config Version
 09.01.2025 23:05:14 | EventName: WindowOpen | Params:
                                                           [PreciseTime | 2025-01-09 16:05:14.301],
                                                           [window | Legal]
+
+09.01.2025 23:09:20 | EventName: LegalClick | Params:
+                                                          [PreciseTime | 2025-01-09 16:09:20.178],
+                                                          [link | 1]
+
+09.01.2025 23:09:23 | EventName: LegalClick | Params:
+                                                          [PreciseTime | 2025-01-09 16:09:23.296],
+                                                          [link | 2]
+
+09.01.2025 23:09:31 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 16:09:31.068],
+                                                          [window | AccountManagement]
+
+09.01.2025 23:09:32 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 16:09:32.610],
+                                                          [window | ShareTheMail]
+
+09.01.2025 23:09:43 | EventName: EmailShared | Params:
+                                                          [PreciseTime | 2025-01-09 16:09:43.216],
+                                                          [mail | test@test.test]
+
+09.01.2025 23:09:44 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-09 16:09:44.727],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Energy],
+                                                          [value | 25],
+                                                          [fromWhere | settings],
+                                                          [itemId | share_mail_reward],
+                                                          [balance | 74],
+                                                          [before | 49]
+
+09.01.2025 23:09:46 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 16:09:46.874],
+                                                          [window | ShareTheMail]
+
+09.01.2025 23:09:53 | EventName: EmailShared | Params:
+                                                          [PreciseTime | 2025-01-09 16:09:53.050],
+                                                          [mail | test@test2.test]
+
+09.01.2025 23:09:55 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 16:09:55.931],
+                                                          [window | AccountDeletion]
+
+09.01.2025 23:10:00 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 16:10:00.494],
+                                                          [window | DeleteAccount]
+
+09.01.2025 23:10:03 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-09 16:10:03.618],
+                                                          [window | Feedback]

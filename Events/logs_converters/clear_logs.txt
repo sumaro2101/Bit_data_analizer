@@ -1,23 +1,3 @@
-[09.01.2025 23:05:15] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
-Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
-UnityEngine.EventSystems.StandaloneInputModule:Process()
-
-_________________________________________________________________________________________
-[09.01.2025 23:05:16] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
-Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
-UnityEngine.EventSystems.StandaloneInputModule:Process()
-
-_________________________________________________________________________________________
-[09.01.2025 23:05:17] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
-Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
-UnityEngine.EventSystems.StandaloneInputModule:Process()
-
-_________________________________________________________________________________________
-[09.01.2025 23:05:18] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
-Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
-UnityEngine.EventSystems.StandaloneInputModule:Process()
-
-_________________________________________________________________________________________
 [09.01.2025 23:03:24] Log : ServicesInitializer. Ctor
 Gammister.FunLand.Core.Common.ServicesInitializer:.ctor(IFirebaseService, IFacebookService, IAppsFlyerService)
 System.Reflection.RuntimeConstructorInfo:InternalInvoke(Object, Object[], Boolean)
@@ -857,6 +837,16 @@ Gammister.FunLand.Services.Facebook.FacebookService:InitCallback()
 Facebook.Unity.CallbackManager:TryCallCallback(Object, IResult)
 Facebook.Unity.CallbackManager:CallCallback(Object, IResult)
 Facebook.Unity.CallbackManager:OnFacebookResponse(IInternalResult)
+
+_________________________________________________________________________________________
+[09.01.2025 23:05:15] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
+Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+
+_________________________________________________________________________________________
+[09.01.2025 23:05:15] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
+Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
 
 _________________________________________________________________________________________
 [09.01.2025 23:03:25] Log : FacebookService. OnInitComplete. IsInitialized: True, IsLoggedIn: False
@@ -17786,6 +17776,30 @@ ________________________________________________________________________________
 [09.01.2025 23:04:52] Log : ServerMessenger. Update. Successfully removed ServerMessage (Id: 14, Command: onboardingProcessStep) from internal queue. Internal queue count: 1
 Gammister.FunLand.Core.Server.Meta.Transport.<Update>d__37:MoveNext()
 UnityEngine.UnitySynchronizationContext:Exec()
+
+[09.01.2025 23:05:15] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
+Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+
+_________________________________________________________________________________________
+[09.01.2025 23:05:16] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
+Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+
+_________________________________________________________________________________________
+[09.01.2025 23:05:17] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
+Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+
+_________________________________________________________________________________________
+[09.01.2025 23:05:18] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
+Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
+
+_________________________________________________________________________________________
+[09.01.2025 23:05:18] Log : TelegramChatLogBehaviour. Send. Start send file to telegram
+Gammister.FunLand.Utilities.TelegramChatLogBehaviour:Send()
+UnityEngine.EventSystems.StandaloneInputModule:Process()
 
 _________________________________________________________________________________________
 [09.01.2025 23:04:59] Log : AnalyticsManager. CustomEvents. CustomEvent. EventName: WindowOpen. ParamsDict: [PreciseTime | 2025-01-09 16:04:59.182]

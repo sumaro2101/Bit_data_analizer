@@ -132,7 +132,7 @@ def check_duplicate_parameters(params_list: List[Tuple[str, str]]) -> Set[str]:
     return duplicates
 
 
-def clean_log_line(lines: List[str], index: int) -> Optional[Tuple[str, List[Tuple[str, str]]]]:
+def clean_log_line(lines: List[str], index: int, pass_events: int, filtered_lines) -> Optional[Tuple[str, List[Tuple[str, str]]]]:
     """
     Очищает строки лога, оставляя только дату, время, тип события и параметры.
     """
@@ -141,7 +141,7 @@ def clean_log_line(lines: List[str], index: int) -> Optional[Tuple[str, List[Tup
     # Извлекаем дату и время из квадратных скобок
     match = re.match(r'\[(.*?)]', line)
     if not match:
-        return None
+        return None, pass_events
 
     date_time = match.group(1)
     rest_of_line = line[match.end():].strip()
@@ -165,23 +165,26 @@ def clean_log_line(lines: List[str], index: int) -> Optional[Tuple[str, List[Tup
     if "CustomEvents. KeysChanged" in rest_of_line:
         event_info = "EventName: KeysChanged"
         is_keys_changed = True
+        telegram_send = True
     # Обработка других событий
     elif "EventName:" in rest_of_line:
         event_index = rest_of_line.find("EventName:")
         event_info = rest_of_line[event_index:].replace("AnalyticsManager. CustomEvents. CustomEvent. ", "")
         if "CurrencyChanged" in event_info:
             is_currency_changed = True
+        telegram_send = True
         # if "StoreInitializationCompleted" in event_info or "StoreInitializationFailed" in event_info:
         #     is_store_init = True
     elif 'TelegramChatLogBehaviour' in rest_of_line:
         if (telegram_send_params[0] in rest_of_line and
            telegram_send_params[-1] in rest_of_line):
-            telegram_send = True
-            event_info = 'PassEvent'
+            pass_events += 1
+            return None, pass_events
 
     elif "CustomEvents. CurrencyChanged" in rest_of_line:
         event_info = "EventName: CurrencyChanged"
         is_currency_changed = True
+        telegram_send = True
     # elif "CustomEvents. IAPP" in rest_of_line:
     #     event_info = "IAPPurchaseStarted"
     # elif "BusinessEvents. StoreInitializationCompleted" in rest_of_line:
@@ -192,11 +195,18 @@ def clean_log_line(lines: List[str], index: int) -> Optional[Tuple[str, List[Tup
     #     is_store_init = True
 
     if not event_info:
-        return None
+        return None, pass_events
 
     # Если это StoreInitialization события, возвращаем сразу без параметров
-    if telegram_send:
-        return f'{date_time} | {event_info}', []
+    if telegram_send and pass_events > 2:
+        formatted_line = '26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа'
+        params_list = dict(countPassed=pass_events - 2)
+        formatted_line += f" | Params:{format_event_dict(params_list)}"
+        filtered_lines.append(formatted_line + "\n")
+        filtered_lines.append("\n")
+        pass_events = 0
+    else:
+        pass_events = 0
     if is_store_init:
         return f"{date_time} | {event_info}", []
 
@@ -277,7 +287,7 @@ def clean_log_line(lines: List[str], index: int) -> Optional[Tuple[str, List[Tup
 
                     params_list.append((key, value))
 
-    return f"{date_time} | {event_info}", params_list
+    return (f"{date_time} | {event_info}", params_list), pass_events
 
 
 def format_event_dict(params_dict: Dict[str, str], indent: int = 58, with_colors: bool = False) -> str:
@@ -623,6 +633,7 @@ def process_logs(file_path: str) -> Tuple[str, str, str, str, str]:
     processed_game_version = "Unknown Version"
     processed_ab_testing_variant = "Unknown Variant"
     processed_ab_testing_game_config_version = "Unknown Config Version"
+    pass_events = 0
     substrings_to_remove = [
         "____", "GameAnalyticsSDK", 'Firebase', 'ParamsDict', '<Animate',
         "No boobs", ' Log : ', 'Gammister.FunLand'
@@ -694,7 +705,7 @@ def process_logs(file_path: str) -> Tuple[str, str, str, str, str]:
         if not any(exclude in line.lower() for exclude in
                    ['unityengine', 'gammister.funland', 'system', 'spine.', ' syste',
                     '--------- beginning of main', 'zenject', 'Firebase']):
-            cleaned_line = clean_log_line(lines, i)
+            cleaned_line, pass_events = clean_log_line(lines, i, pass_events, filtered_lines)
             if cleaned_line:
                 event_info, params_list = cleaned_line
                 duplicates = check_duplicate_parameters(params_list)
