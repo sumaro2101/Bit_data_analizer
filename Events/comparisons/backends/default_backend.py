@@ -4,7 +4,7 @@ from typing import Generic, ClassVar
 from functools import partial
 
 from enums import DiscrepancyType
-from data_types import ER, HT, S, AE, EX
+from data_types import ER, HT, S, AE, EX, Discrepancies
 from collections import defaultdict
 from dto import ResultBackend, EventResult
 from utils import do_formatted_action
@@ -29,7 +29,7 @@ class DefaultBackend(Generic[S]):
         self.expected_events = list(expected_events)
         self._table_data: HT = []
         self._html_data: HT = []
-        self._discrepancies = []
+        self._discrepancies: Discrepancies = []
 
     @property
     def table_data(self):
@@ -203,8 +203,8 @@ class DefaultBackend(Generic[S]):
         step = self._initialization_steps(
             actual_step=actual_step,
         )
-        list_usality = []
-        unexpected_events = defaultdict(list)
+        list_usality: list[EX] = []
+        unexpected_events: defaultdict[int, list[ER]] = defaultdict(list)
         if not step:
             for expected_event in expected_step:
                 event = EventResult(

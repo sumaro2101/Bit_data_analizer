@@ -21,7 +21,7 @@ class ExpectedEvent:
     """
     step_number: int | str
     name: str
-    parameters: dict[str, str | None]  # None означает, что параметр должен существовать без конкретного значения
+    parameters: dict[str, str] | None  # None означает, что параметр должен существовать без конкретного значения
     action: str
     flexible_order: bool = False  # Флаг для событий с произвольным порядком
     order_group: int = 0  # Группа событий с произвольным порядком
