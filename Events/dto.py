@@ -27,7 +27,6 @@ class ExpectedEvent:
     order_group: int = 0  # Группа событий с произвольным порядком
     is_optional: bool = False  # Флаг, является ли событие опциональным
     has_events: bool = True
-    alternative: 'ExpectedEvent' = None
 
     def __hash__(self):
         """
@@ -111,6 +110,7 @@ class Step:
     has_events_inside: bool = True
     flexible_inside: bool = False
     pass_expected: bool = False
+    alternative: 'Step' = None
 
     def __getitem__(self, index):
         return self.events[index]

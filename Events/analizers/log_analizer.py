@@ -525,6 +525,7 @@ class LogAnalyzer:
     def _parse_steps(self,
                      actual_events: list[ActualEvent],
                      expected_steps: list[Step],
+                     alternative: bool = False,
                      ) -> list[Step]:
         """
         Алгоритм который исходя из ожидаемых и актуальных событий
@@ -557,8 +558,6 @@ class LogAnalyzer:
                                                                 'nan',
                                                                 '']:
                 continue
-            if expected_step.step_number == 14:
-                pass
             curr_expected_names = [event.name for event in expected_step]
             next_expected_names = self._get_next_steps_names(
                 index=step_index,
@@ -679,6 +678,21 @@ class LogAnalyzer:
                 pass_event=pass_event,
                 new_interval_step=new_interval_step,
             )
+            if alternative:
+                return new_interval_step
+
+            if expected_step.alternative:
+                interval_step_alternative = self._parse_steps(
+                    actual_events=actual_events[start:],
+                    expected_steps=expected_steps[step_index:],
+                    alternative=True
+                )
+                expected_step, new_interval_step = self._search_best_step(
+                    expected_step=expected_step,
+                    curr_interval=new_interval_step,
+                    alternative_step=expected_step.alternative,
+                    alternative_interval=interval_step_alternative,
+                )
             actual_step = Step(
                 step_number=expected_step.step_number,
                 action=expected_step.action,
@@ -687,6 +701,51 @@ class LogAnalyzer:
             list_of_steps.append(actual_step)
             start += len(new_interval_step)
         return list_of_steps
+
+    def _search_best_step(self,
+                          expected_step: Step,
+                          curr_interval: list[ActualEvent],
+                          alternative_step: Step,
+                          alternative_interval: list[ActualEvent],
+                          ) -> tuple[ExpectedEvent, list[ActualEvent]]:
+        curr_names = [event.name for event in curr_interval]
+        alt_names = [event.name for event in alternative_interval]
+        equal_curr = self._get_count_equal(
+            names=curr_names,
+            interval=curr_interval,
+            step=expected_step,
+        )
+        equal_alt = self._get_count_equal(
+            names=alt_names,
+            interval=alternative_interval,
+            step=alternative_step,
+        )
+        if equal_curr >= equal_alt:
+            return expected_step, curr_interval
+        else:
+            return alternative_step, alternative_interval
+
+    def _get_count_equal(self,
+                         names: list[str],
+                         interval: list[ActualEvent],
+                         step: Step,
+                         ) -> int:
+        counter = 0
+        interval_copy = list(interval)
+        for event in step:
+            try:
+                index_event = names.index(event.name)
+                curr_event = interval_copy[index_event]
+            except IndexError:
+                continue
+            counter += self._check_parameters(
+                actual_event=curr_event,
+                expected_curr=event,
+            )
+            names.pop(index_event)
+            interval_copy.pop(index_event)
+
+        return counter
 
     def _find_pass_step(self,
                         actual_names: list[str],
@@ -859,8 +918,12 @@ class LogAnalyzer:
         expected_curr = {key: value
                          for key, value
                          in expected_curr.parameters.items()
-                         if key != 'PreciseTime'}
-        return actual_param == expected_curr
+                         if key != 'PreciseTime' or value}
+        full_params = {key: value
+                       for key, value
+                       in actual_param.items()
+                       if key in expected_curr}
+        return full_params == expected_curr
 
     def _process_param_line(self, param_line: str, params: dict) -> None:
         """

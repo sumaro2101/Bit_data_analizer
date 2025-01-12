@@ -76,8 +76,6 @@ class DefaultBackend(Generic[S]):
         """
         actual_event_index = 0
         for expected_step in expected_events:
-            if expected_step.step_number == 67:
-                pass
             if not expected_step.has_events_inside:
                 self._register_no_expect_action(
                     expected_step=expected_step,
@@ -153,6 +151,9 @@ class DefaultBackend(Generic[S]):
             action=expected_step.action,
             )
         first = True
+        if expected_step.alternative:
+            if expected_step.step_number != actual_step.step_number:
+                expected_step = expected_step.alternative
         for expected, actual in zip(expected_step, actual_step):
             event_to_table = self._patrial_add_event(
                 expected_event=expected,
@@ -223,7 +224,11 @@ class DefaultBackend(Generic[S]):
                 expected_event=expected_step[0],
             )
             return
-
+        if expected_step.step_number == 15:
+            pass
+        if expected_step.alternative:
+            if expected_step.step_number != actual_step.step_number:
+                expected_step = expected_step.alternative
         for expected_event in expected_step:
             for index, event in enumerate(step):
                 if (not event.event.name == expected_event.name or
@@ -260,9 +265,6 @@ class DefaultBackend(Generic[S]):
                     )
                     break
 
-        if expected_step.step_number == 9:
-            pass
-
         matching_step = self._find_best_match_from_queues(
             unexpected_events=unexpected_events,
             list_usality=list_usality,
@@ -284,8 +286,7 @@ class DefaultBackend(Generic[S]):
             correct_step=step_with_undefind,
             fill_step=matching_step,
         )
-        if expected_event.step_number == 19:
-                pass
+
         self._register_events(
             step=out_list_step,
             expected_event=expected_step[0],
