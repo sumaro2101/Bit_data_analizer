@@ -12,5 +12,7 @@ class DiscrepancyType(Enum):
         WRONG_ORDER: Нарушена последовательность событий
     """
     MISSING_EVENT = "missing_event"
+    UNEXPECTED_EVENT = 'unexpected_event'
     PARAMETER_MISMATCH = "parameter_mismatch"
     WRONG_ORDER = "wrong_order"
+    PASS_EVENT = 'pass_event'

@@ -100,6 +100,7 @@ class EventResult:
     optional: bool = False
     timestamp: datetime | None = None
     wrong_time: bool = False
+    pass_expected: bool = False
 
 
 @dataclass
@@ -109,6 +110,7 @@ class Step:
     events: list[ExpectedEvent | ActualEvent]
     has_events_inside: bool = True
     flexible_inside: bool = False
+    pass_expected: bool = False
 
     def __getitem__(self, index):
         return self.events[index]

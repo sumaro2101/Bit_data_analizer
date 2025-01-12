@@ -214,6 +214,7 @@ class DefaultBackend(Generic[S]):
                     expected=expected_event,
                     optional=expected_event.is_optional,
                     flexible=expected_event.flexible_order,
+                    pass_expected=expected_step.pass_expected,
                 )
                 step.append(event)
                 self.unexpected_events_count += 1
@@ -283,7 +284,8 @@ class DefaultBackend(Generic[S]):
             correct_step=step_with_undefind,
             fill_step=matching_step,
         )
-
+        if expected_event.step_number == 19:
+                pass
         self._register_events(
             step=out_list_step,
             expected_event=expected_step[0],
@@ -561,6 +563,7 @@ class DefaultBackend(Generic[S]):
                 is_flexible=event.expected.flexible_order,
                 timestamp=event.timestamp,
                 wrong_time=event.wrong_time,
+                pass_expected=event.pass_expected,
             )
             discrepancies(
                 step_number=expected_event.step_number,
@@ -569,6 +572,7 @@ class DefaultBackend(Generic[S]):
                 found_match=event.found_match,
                 best_match=event.best_match,
                 best_mismatches=event.mismatch,
+                pass_expected=event.pass_expected,
             )
             first = False
 
@@ -643,6 +647,7 @@ class DefaultBackend(Generic[S]):
         is_flexible: bool = False,
         timestamp: datetime | None = None,
         wrong_time: bool = False,
+        pass_expected: bool = False,
     ) -> tuple[list[str], list[str]]:
         """
         Формирует строки данных для консольной и HTML таблиц на основе сравнения событий.
@@ -781,7 +786,10 @@ class DefaultBackend(Generic[S]):
                 console_params.append(truncate_parameter(param_str,
                                                          COLUMN_WIDTHS['MAX_PARAMETER_LINE_LENGTH']))
                 html_color_class = "text-warning" if expected.is_optional else "text-danger"
-                html_params.append(f'<span class="{html_color_class}">{param_name}={value_str}</span>')
+                if pass_expected:
+                    html_params.append(f"{param_name}={value_str}")
+                else:
+                    html_params.append(f'<span class="{html_color_class}">{param_name}={value_str}</span>')
 
         # Форматируем имя события и маркеры
         event_name = expected.name
@@ -800,6 +808,8 @@ class DefaultBackend(Generic[S]):
                 status_color = YELLOW
         elif found_match and not wrong_time:
             status_color = GREEN if not best_mismatches else RED
+        elif pass_expected:
+            status_color = YELLOW
         else:
             status_color = RED
 
@@ -808,14 +818,18 @@ class DefaultBackend(Generic[S]):
             '✓' if (expected.is_optional and not found_match) else '✗' if not found_match else '✗'
         if wrong_time:
             status_text = '✗'
+        if pass_expected:
+            status_text = '-'
 
         differences = list(best_mismatches)
 
         # Обработка опциональных событий
         if expected.is_optional and not found_match:
             differences = [f"{YELLOW}Опциональный ивент не найден, но это нормально{RESET}"]
-        elif not found_match:
+        elif not found_match and not pass_expected:
             status_text = 'Ивент не найден'
+        elif pass_expected:
+            differences = [f'{YELLOW} Шаг намерено пропущен пользователем{RESET}']
         if wrong_time:
             wrong_text = f'{RED}Нарушена последовательность шагов!{RESET}'
 
@@ -838,10 +852,10 @@ class DefaultBackend(Generic[S]):
             formatted_action.replace(WHITE, "").replace(RESET, "") if first_in_step else "",
             f"{event_name}{html_flexible_marker}{html_optional_marker}",
             "<br>".join(html_params),
-            f'<span class="{"text-warning" if expected.is_optional and not found_match else "text-success" if status_color == GREEN else "text-danger"}">{status_text}</span>',
+            f'<span class="{"text-warning" if (expected.is_optional or pass_expected) and not found_match else "text-success" if status_color == GREEN else "text-danger"}">{status_text}</span>',
             "<br>".join([
                 f'<span class="text-warning">{d.replace(YELLOW, "").replace(RED, "").replace(RESET, "")}</span>'
-                if "Опциональный ивент не найден" in d
+                if "Опциональный ивент не найден" in d or 'Шаг намерено пропущен пользователем' in d
                 else f'<span class="text-danger">{d.replace(RED, "").replace(RESET, "")}</span>'
                 for d in differences
             ]) if differences else "" if not wrong_time else f'<span class="text-danger">{wrong_text}</span>',
@@ -860,6 +874,7 @@ class DefaultBackend(Generic[S]):
                          found_match: bool,
                          best_match: AE | None,
                          best_mismatches: list[str],
+                         pass_expected: bool = False,
                          ) -> None:
         """
         Добавляет информацию о несоответствии между ожидаемым и фактическим событием в список расхождений.
@@ -877,7 +892,7 @@ class DefaultBackend(Generic[S]):
             best_match (Optional[ActualEvent]): Объект наилучшего соответствия фактического события (если есть).
             best_mismatches (List[str]): Список деталей несоответствия параметров.
         """
-        if not found_match:
+        if not found_match and not best_match and not pass_expected:
             if not expected.is_optional:  # Добавлено условие: не опциональный
                 discrepancy_type = DiscrepancyType.MISSING_EVENT.value
                 details = ['Ивент не найден']
@@ -889,6 +904,28 @@ class DefaultBackend(Generic[S]):
                     'details': details,
                     'timestamp': best_match.timestamp if best_match else None
                 })
+        elif pass_expected:
+            discrepancy_type = DiscrepancyType.PASS_EVENT.value
+            details = ['Шаг намерено пропущен пользователем']
+            discrepancies.append({
+                'step': step_number,
+                'action': action,
+                'event': expected.name,
+                'type': discrepancy_type,
+                'details': details,
+                'timestamp': best_match.timestamp if best_match else None
+            })
+        elif best_match and not found_match:
+            discrepancy_type = DiscrepancyType.UNEXPECTED_EVENT.value
+            details = ['Неожиданное событие']
+            discrepancies.append({
+                'step': step_number,
+                'action': action,
+                'event': expected.name,
+                'type': discrepancy_type,
+                'details': details,
+                'timestamp': best_match.timestamp if best_match else None
+            })
         else:
             if best_mismatches:  # Добавляем несоответствие только если есть best_mismatches
                 discrepancy_type = DiscrepancyType.PARAMETER_MISMATCH.value

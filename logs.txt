@@ -177,8 +177,6 @@ ABTestingGameConfigVersion: Unknown Config Version
                                                           [duration | 30.952727],
                                                           [interruptsCount | 4]
 
-09.01.2025 23:03:56 | TelegramChatLogBehaviour: SymbolTarget
-
 09.01.2025 23:04:06 | EventName: MainMenuFirstTimeOpenResume | Params:
                                                           [internetReachability | ReachableViaLocalAreaNetwork],
                                                           [batteryLevel | 1],

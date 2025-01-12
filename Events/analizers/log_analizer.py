@@ -408,7 +408,7 @@ class LogAnalyzer:
                             )
                 list_out.append(step)
             self.logger.info(f'{WHITE}Успешно обработано '
-                             f'{len(self.expected_events)} '
+                             f'{len(list_out)} '
                              f'ожидаемых событий{RESET}')
             return list_out
 
@@ -511,7 +511,7 @@ class LogAnalyzer:
                     )
                     actual_events.append(event)
 
-            self.logger.info(f"{WHITE}Успешно прочитано {len(self.actual_events)} фактических событий{RESET}")
+            self.logger.info(f"{WHITE}Успешно прочитано {len(actual_events)} фактических событий{RESET}")
             actual_steps = self._parse_steps(
                 actual_events=actual_events,
                 expected_steps=expected_steps,
@@ -728,6 +728,7 @@ class LogAnalyzer:
                 events=[],
             )
             list_of_steps.append(actual_step)
+            expected_step.pass_expected = True
 
     def _get_next_steps_names(self,
                               index: int,
@@ -981,7 +982,8 @@ class LogAnalyzer:
             else:
                 param_mismatches = [d for d in discrepancies if d['type'] == DiscrepancyType.PARAMETER_MISMATCH.value]
                 missing_events = [d for d in discrepancies if d['type'] == DiscrepancyType.MISSING_EVENT.value]
-                unexpected_events = [d for d in discrepancies if d['type'] == 'unexpected_event']
+                pass_event = [d for d in discrepancies if d['type'] == DiscrepancyType.PASS_EVENT.value]
+                unexpected_events = [d for d in discrepancies if d['type'] == DiscrepancyType.UNEXPECTED_EVENT.value]
 
                 # Выводим общую статистику
                 self.logger.warning(f"\n{RED}❌ Найдено несоответствий:{RESET}")
@@ -991,6 +993,8 @@ class LogAnalyzer:
                     self.logger.warning(f"  - Количество шагов с несоответствием параметров: {len(param_mismatches)}")
                 if unexpected_events:
                     self.logger.warning(f"  - Неожиданных ивентов: {len(unexpected_events)}")
+                if pass_event:
+                    self.logger.warning(f'  - Пропущенных ивентов: {len(pass_event)}')
 
                 # Выводим информацию о каждом несоответствии параметров
                 for disc in param_mismatches:
@@ -1012,7 +1016,12 @@ class LogAnalyzer:
                             self.logger.warning(f"Временная метка: {disc['timestamp']}")
                         for detail in disc['details']:
                             self.logger.warning(f"  {detail}")
-
+                if pass_event:
+                    self.logger.warning('\nПропущенные события:')
+                    for disc in pass_event:
+                        self.logger.warning(f"\nШаг {disc['step']} - {disc['event']}")
+                        for detail in disc['details']:
+                            self.logger.warning(f"  {detail}")
                 # В конце выводим список шагов с отсутствующими событиями
                 if missing_events:
                     missing_steps = list(set(d['step'] for d in missing_events))
