@@ -309,13 +309,23 @@ class LogAnalyzer:
                    and list_of_expected_event_step):
                     if processed_empty_actions_step:
                         has_events_inside = False
+                    alternative = False
+                    if 'ALT' in str(current_step):
+                        number_step = int(current_step.split(' ')[0])
+                        alternative = True
                     step = Step(step_number=current_step,
                                 action=current_action,
                                 events=list_of_expected_event_step,
                                 has_events_inside=has_events_inside,
                                 flexible_inside=flexible_inside,
                                 )
-                    list_out.append(step)
+                    if alternative:
+                        steps_nubmers = [step_n.step_number for step_n in list_out]
+                        index_step = steps_nubmers.index(number_step)
+                        list_out[index_step].alternative = step
+                    else:
+                        list_out.append(step)
+
                     has_events_inside = True
                     flexible_inside = False
                     list_of_expected_event_step = []

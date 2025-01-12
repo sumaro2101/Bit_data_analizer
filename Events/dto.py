@@ -27,6 +27,7 @@ class ExpectedEvent:
     order_group: int = 0  # Группа событий с произвольным порядком
     is_optional: bool = False  # Флаг, является ли событие опциональным
     has_events: bool = True
+    alternative: 'ExpectedEvent' = None
 
     def __hash__(self):
         """

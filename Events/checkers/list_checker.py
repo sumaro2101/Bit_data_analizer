@@ -224,7 +224,7 @@ class ChecklistValidator:
                 if isinstance(val, (str, np.str_)):
                     val_str = str(val).strip()
                     if 'ALT' in val_str:
-                        return int(val_str.split(',')[0].strip())
+                        return int(val_str.split(' ')[0].strip())
                     try:
                         return int(float(val_str))
                     except (ValueError, TypeError):
