@@ -197,6 +197,8 @@ def clean_log_line(lines: List[str], index: int, pass_events: int, filtered_line
     # elif "BusinessEvents. StoreInitializationFailed" in rest_of_line:
     #     event_info = "EventName: StoreInitializationFailed"
     #     is_store_init = True
+    else:
+        telegram_send = True
 
     if not event_info:
         return None, pass_events
@@ -710,7 +712,22 @@ def process_logs(file_path: str) -> Tuple[str, str, str, str, str]:
         if not any(exclude in line.lower() for exclude in
                    ['unityengine', 'gammister.funland', 'system', 'spine.', ' syste',
                     '--------- beginning of main', 'zenject', 'Firebase']):
+            if '[13.01.2025 16:26:01]' in line:
+                pass
             cleaned_line, pass_events = clean_log_line(lines, i, pass_events, filtered_lines)
+            if 'Log :' in line:
+                if not cleaned_line and ('TelegramChatLogBehaviour. Send. Start send file to telegram' not in line and
+                                         'TelegramChatLogBehaviour. OnCompleteSend. Send result is Done: True' not in line):
+                    if pass_events > 2:
+                        formatted_line = '26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа'
+                        params_list = dict(countPassed=pass_events - 2)
+                        formatted_line += f" | Params:{format_event_dict(params_list)}"
+                        filtered_lines.append(formatted_line + "\n")
+                        filtered_lines.append("\n")
+                        print(add_colors(formatted_line, substrings_to_remove) + "\n")
+                        pass_events = 0
+                    else:
+                        pass_events = 0
             if cleaned_line:
                 event_info, params_list = cleaned_line
                 duplicates = check_duplicate_parameters(params_list)
