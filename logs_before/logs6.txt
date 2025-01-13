@@ -1,0 +1,341 @@
+UserID: USER_67838155b611b7f4837ca3d1
+Version: 1.14.10
+ABTestingVariant: default
+ABTestingGameConfigVersion: Unknown Config Version
+
+12.01.2025 15:45:13 | EventName: AnalyticsInitialized | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [systemLanguage | Russian],
+                                                          [gameLanguage | en],
+                                                          [os | Android OS 14 / API-34 (UP1A.231005.007/X510XXU7BXK1)],
+                                                          [osFamily | Other],
+                                                          [deviceModel | samsung SM-X510],
+                                                          [deviceType | Handheld],
+                                                          [deviceUniqueIdentifier | d397aeae41097f02eae14a99b52c2c00],
+                                                          [processorType | ARM64 FP ASIMD AES],
+                                                          [processorCount | 8],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [systemMemorySizeMB | 5706],
+                                                          [splashScreenFinished | True],
+                                                          [sessionId | 383c5f8f-7afe-4720-8027-9b5ae0712f9d],
+                                                          [sessionDuration | 0],
+                                                          [PreciseTime | 2025-01-12 08:45:13.123]
+
+12.01.2025 15:45:13 | EventName: Cheats | Params:
+                                                          [PreciseTime | 2025-01-12 08:45:13.152]
+
+12.01.2025 15:45:13 | EventName: AssetBundlesNotLoaded | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:13.739],
+                                                          [sessionDuration | 0],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 0.149817],
+                                                          [operation | Resource<String>(catalog_2025.01.11.19.46.28.hash)]
+
+12.01.2025 15:45:13 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:13.781],
+                                                          [sessionDuration | 0],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 0.192055],
+                                                          [interruptsCount | 0]
+
+12.01.2025 15:45:14 | EventName: NoInternetConnection | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:14.752],
+                                                          [sessionDuration | 0,4354296],
+                                                          [splashScreenFinished | True]
+
+12.01.2025 15:45:37 | EventName: LoadClientConfigStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:37.073],
+                                                          [sessionDuration | 22,84011],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 23.479533]
+
+12.01.2025 15:45:38 | EventName: LoadClientConfigCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:38.768],
+                                                          [sessionDuration | 23,78701],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 25.177538],
+                                                          [duration | 1.698009]
+
+12.01.2025 15:45:42 | EventName: AreYouSureOpen | Params:
+                                                          [PreciseTime | 2025-01-12 08:45:42.449]
+
+12.01.2025 15:45:43 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:43.065],
+                                                          [sessionDuration | 28,33982],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 29.461704],
+                                                          [interruptsCount | 1]
+
+12.01.2025 15:45:46 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:46.263],
+                                                          [sessionDuration | 28,33982],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 32.652504],
+                                                          [interruptsCount | 1]
+
+12.01.2025 15:45:49 | EventName: AreYouSureOpenChoice | Params:
+                                                          [PreciseTime | 2025-01-12 08:45:49.126],
+                                                          [choice | False]
+
+12.01.2025 15:45:50 | EventName: PrivacyPolicyClicked | Params:
+                                                          [PreciseTime | 2025-01-12 08:45:50.538],
+                                                          [link | privacy_policy]
+
+12.01.2025 15:45:50 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:50.696],
+                                                          [sessionDuration | 32,7454],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 37.101811],
+                                                          [interruptsCount | 2]
+
+12.01.2025 15:45:53 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:53.190],
+                                                          [sessionDuration | 32,7454],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 39.59737],
+                                                          [interruptsCount | 2]
+
+12.01.2025 15:45:54 | EventName: PrivacyPolicyClicked | Params:
+                                                          [PreciseTime | 2025-01-12 08:45:54.134],
+                                                          [link | terms_and_conditions]
+
+12.01.2025 15:45:54 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:54.189],
+                                                          [sessionDuration | 33,72886],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 40.59677],
+                                                          [interruptsCount | 3]
+
+12.01.2025 15:45:56 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:56.712],
+                                                          [sessionDuration | 33,72886],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 43.117648],
+                                                          [interruptsCount | 3]
+
+12.01.2025 15:45:57 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-12 08:45:57.306],
+                                                          [window | PrivacyPolicy]
+
+12.01.2025 15:45:57 | EventName: LoginStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:57.488],
+                                                          [sessionDuration | 34,50189],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 43.897408],
+                                                          [method | Facebook]
+
+12.01.2025 15:45:57 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:45:57.570],
+                                                          [sessionDuration | 34,50189],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 43.980709],
+                                                          [interruptsCount | 4]
+
+12.01.2025 15:46:03 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:46:03.642],
+                                                          [sessionDuration | 34,50189],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 50.027689],
+                                                          [interruptsCount | 4]
+
+12.01.2025 15:46:03 | EventName: NotificationPermissionStatus | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:03.665],
+                                                          [permissionAllowed | False]
+
+12.01.2025 15:46:03 | EventName: LoginCancelled | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,95],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:46:03.706],
+                                                          [sessionDuration | 34,52189],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 50.114707],
+                                                          [duration | 6.217302],
+                                                          [method | Facebook]
+
+12.01.2025 15:46:10 | EventName: AreYouSureOpen | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:10.317]
+
+12.01.2025 15:46:12 | EventName: AreYouSureOpenChoice | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:12.195],
+                                                          [choice | True]
+
+12.01.2025 15:46:12 | EventName: NotificationPermissionStatus | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:12.457],
+                                                          [permissionAllowed | False]
+
+12.01.2025 15:46:12 | EventName: LoginStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,94],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:46:12.560],
+                                                          [sessionDuration | 43,4371],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 58.970111],
+                                                          [method | Anonymous]
+
+12.01.2025 15:46:13 | EventName: LoginCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,94],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:46:13.740],
+                                                          [sessionDuration | 44,55005],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 60.149917],
+                                                          [duration | 1.17981],
+                                                          [method | Anonymous]
+
+12.01.2025 15:46:14 | EventName: ABTestingResolveCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,94],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:46:14.057],
+                                                          [sessionDuration | 44,88232],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 60.467025],
+                                                          [duration | 0.294439],
+                                                          [abTestingGroup | default]
+
+12.01.2025 15:46:14 | EventName: LoadGameStateStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,94],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:46:14.079],
+                                                          [sessionDuration | 44,88232],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 60.489164]
+
+12.01.2025 15:46:15 | EventName: LoadGameStateCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,94],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:46:15.861],
+                                                          [sessionDuration | 45,56346],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 62.272181],
+                                                          [duration | 1.783019]
+
+12.01.2025 15:46:23 | EventName: MainMenuFirstTimeOpen | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,94],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-12 08:46:23.130],
+                                                          [sessionDuration | 51,92696],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 69.540879],
+                                                          [interruptsCount | 4]
+
+12.01.2025 15:46:23 | EventName: StoreInitializationCompleted | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:23.253]
+
+12.01.2025 15:46:26 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:26.099],
+                                                          [window | Poker]
+
+12.01.2025 15:46:29 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:29.209],
+                                                          [window | Закрыто]
+
+12.01.2025 15:46:29 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:29.853],
+                                                          [window | Закрыто]
+
+12.01.2025 15:46:30 | EventName: OnboardingStepPassed | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:30.010],
+                                                          [stepName | start_dialog_showed]
+
+12.01.2025 15:46:32 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:32.366],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 49],
+                                                          [before | 50]
+
+12.01.2025 15:46:32 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:32.373],
+                                                          [combinationName | none],
+                                                          [cards | q_c,3_h,9_c,4_d,9_d,],
+                                                          [autoplayOn | False]
+
+12.01.2025 15:46:32 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:32.376],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+12.01.2025 15:46:36 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:36.738]
+
+12.01.2025 15:46:36 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:36.743],
+                                                          [combinationName | doper],
+                                                          [cards | 5_h,5_s,9_c,k_h,9_d,],
+                                                          [autoplayOn | False]
+
+12.01.2025 15:46:37 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:37.980],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 17000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | TwoPairs],
+                                                          [balance | 617000],
+                                                          [before | 600000]
+
+12.01.2025 15:46:40 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:40.358],
+                                                          [window | Navigation]
+
+12.01.2025 15:46:42 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:42.472],
+                                                          [window | Quests]
+
+12.01.2025 15:46:42 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-12 08:46:42.730],
+                                                          [window | Закрыто]
+

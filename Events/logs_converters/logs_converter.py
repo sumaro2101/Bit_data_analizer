@@ -148,6 +148,10 @@ def clean_log_line(lines: List[str], index: int, pass_events: int, filtered_line
 
     # Проверяем различные форматы событий
     telegram_send_params = ['Send.', 'Start send file to telegram']
+    substrings_to_remove = [
+        "____", "GameAnalyticsSDK", 'Firebase', 'ParamsDict', '<Animate',
+        "No boobs", ' Log : ', 'Gammister.FunLand'
+    ]
     event_info = None
     is_currency_changed = False
     is_keys_changed = False
@@ -204,6 +208,7 @@ def clean_log_line(lines: List[str], index: int, pass_events: int, filtered_line
         formatted_line += f" | Params:{format_event_dict(params_list)}"
         filtered_lines.append(formatted_line + "\n")
         filtered_lines.append("\n")
+        print(add_colors(formatted_line, substrings_to_remove) + "\n")
         pass_events = 0
     else:
         pass_events = 0

@@ -538,12 +538,13 @@ class LogAnalyzer:
         Returns:
             list[Step]: Сгенерированные актуальные шаги.
         """
-
         list_of_steps = []
         pass_event = 0
         start = 0
         leng_actual = len(actual_events)
         for step_index, expected_step in enumerate(expected_steps):
+            if alternative:
+                expected_step = expected_step.alternative
             if start >= leng_actual:
                 return list_of_steps
             leng_expected = len(expected_step)
@@ -557,7 +558,10 @@ class LogAnalyzer:
             if leng_expected == 1 and expected_step[0].name in ['-',
                                                                 'nan',
                                                                 '']:
-                continue
+                if alternative:
+                    return []
+                if not expected_step.alternative:
+                    continue
             curr_expected_names = [event.name for event in expected_step]
             next_expected_names = self._get_next_steps_names(
                 index=step_index,
@@ -680,7 +684,6 @@ class LogAnalyzer:
             )
             if alternative:
                 return new_interval_step
-
             if expected_step.alternative:
                 interval_step_alternative = self._parse_steps(
                     actual_events=actual_events[start:],
@@ -693,6 +696,12 @@ class LogAnalyzer:
                     alternative_step=expected_step.alternative,
                     alternative_interval=interval_step_alternative,
                 )
+                expected_steps[step_index] = expected_step
+                if expected_step[0].name in ['-',
+                                             'nan',
+                                             '']:
+                    continue
+
             actual_step = Step(
                 step_number=expected_step.step_number,
                 action=expected_step.action,
@@ -720,6 +729,15 @@ class LogAnalyzer:
             interval=alternative_interval,
             step=alternative_step,
         )
+        if (equal_curr != len(expected_step) and
+            alternative_step[0].name in ['-',
+                                         'nan',
+                                         '']):
+            return alternative_step, alternative_interval
+        elif (equal_alt != len(alternative_step) and
+              expected_step[0].name in ['-', 'nan', '']):
+            return expected_step, curr_interval
+
         if equal_curr >= equal_alt:
             return expected_step, curr_interval
         else:
@@ -736,7 +754,7 @@ class LogAnalyzer:
             try:
                 index_event = names.index(event.name)
                 curr_event = interval_copy[index_event]
-            except IndexError:
+            except (IndexError, ValueError):
                 continue
             counter += self._check_parameters(
                 actual_event=curr_event,

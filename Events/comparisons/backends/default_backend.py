@@ -224,11 +224,7 @@ class DefaultBackend(Generic[S]):
                 expected_event=expected_step[0],
             )
             return
-        if expected_step.step_number == 15:
-            pass
-        if expected_step.alternative:
-            if expected_step.step_number != actual_step.step_number:
-                expected_step = expected_step.alternative
+
         for expected_event in expected_step:
             for index, event in enumerate(step):
                 if (not event.event.name == expected_event.name or
