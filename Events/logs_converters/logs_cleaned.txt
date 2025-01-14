@@ -153,7 +153,7 @@ ABTestingGameConfigVersion: 033eafa47441da070254407a579f4410
                                                           [trigger | auto]
 
 26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа | Params:
-                                                          [countPassed | 4]
+                                                          [countPassed | 5]
 
 13.01.2025 18:28:40 | EventName: CurrencyChanged | Params:
                                                           [PreciseTime | 2025-01-13 11:28:40.891],

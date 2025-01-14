@@ -255,6 +255,3 @@ ABTestingGameConfigVersion: 033eafa47441da070254407a579f4410
                                                           [balance | 10214000],
                                                           [before | 11514000]
 
-26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа | Params:
-                                                          [countPassed | 1]
-

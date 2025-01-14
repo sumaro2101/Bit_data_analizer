@@ -197,8 +197,8 @@ def clean_log_line(lines: List[str], index: int, pass_events: int, filtered_line
     # elif "BusinessEvents. StoreInitializationFailed" in rest_of_line:
     #     event_info = "EventName: StoreInitializationFailed"
     #     is_store_init = True
-    else:
-        telegram_send = True
+    # else:
+    #     telegram_send = True
 
     if not event_info:
         return None, pass_events
@@ -335,11 +335,15 @@ def parse_user_id(line: str) -> str:
     return "Unknown User"
 
 
-def process_different_results(line: str, lines: List[str], index: int) -> Optional[Tuple[str, str]]:
+def process_different_results(line: str, lines: List[str], index: int, pass_events: int, filtered_lines) -> Optional[Tuple[str, str]]:
     """
     Обрабатывает логи с ошибками рассинхронизации между клиентом и сервером.
     """
     error_marker = "The client's result is different from the server's result"
+    substrings_to_remove = [
+        "____", "GameAnalyticsSDK", 'Firebase', 'ParamsDict', '<Animate',
+        "No boobs", ' Log : ', 'Gammister.FunLand'
+    ]
     if error_marker not in line:
         return None
 
@@ -385,6 +389,13 @@ def process_different_results(line: str, lines: List[str], index: int) -> Option
 
     if not client_data or not server_data:
         return None
+    if pass_events > 2:
+        formatted_line = '26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа'
+        params_list = dict(countPassed=pass_events - 2)
+        formatted_line += f" | Params:{format_event_dict(params_list)}"
+        filtered_lines.append(formatted_line + "\n")
+        filtered_lines.append("\n")
+        print(add_colors(formatted_line, substrings_to_remove) + "\n")
 
     # Форматируем вывод для файла
     file_output = (
@@ -429,7 +440,7 @@ def sanitize_path(path: str) -> str:
     return path
 
 
-def process_side_quest_info(line: str) -> Optional[Tuple[str, str, bool]]:
+def process_side_quest_info(line: str, pass_events: int, filtered_lines) -> Optional[Tuple[str, str, bool]]:
     """
     Обрабатывает строку лога, связанную с прогрессом сайд-квеста.
 
@@ -439,6 +450,10 @@ def process_side_quest_info(line: str) -> Optional[Tuple[str, str, bool]]:
     """
     quest_progress_match = re.search(r'"QuestProgressResult":\s*{([^}]+)}', line)
     if quest_progress_match:
+        substrings_to_remove = [
+            "____", "GameAnalyticsSDK", 'Firebase', 'ParamsDict', '<Animate',
+            "No boobs", ' Log : ', 'Gammister.FunLand'
+        ]
         quest_progress_str = quest_progress_match.group(1)
 
         progress_match = re.search(r'"Progress":(\d+)', quest_progress_str)
@@ -467,6 +482,14 @@ def process_side_quest_info(line: str) -> Optional[Tuple[str, str, bool]]:
 
         result_for_file = f"Получено очков сайд-квеста: {progress}, Тип сайд квеста: {side_quest_type}{reward_info}"
         result_for_console = f"{BRIGHT_GREEN}Получено{RESET} очков сайд-квеста: {progress}, Тип сайд квеста: {side_quest_type}{reward_info}"
+        if pass_events > 2:
+            formatted_line = '26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа'
+            params_list = dict(countPassed=pass_events - 2)
+            formatted_line += f" | Params:{format_event_dict(params_list)}"
+            filtered_lines.append(formatted_line + "\n")
+            filtered_lines.append("\n")
+            print(add_colors(formatted_line, substrings_to_remove) + "\n")
+
         return result_for_file, result_for_console, progress > 0
     return None
 
@@ -526,7 +549,7 @@ def process_side_quest_info(line: str) -> Optional[Tuple[str, str, bool]]:
 #         return None
 
 
-def process_seasons_rules(line: str) -> Optional[Tuple[str, str]]:
+def process_seasons_rules(line: str, pass_events: int, filtered_lines) -> Optional[Tuple[str, str]]:
     """
     Обрабатывает строку лога, связанную с правилами сезонов.
 
@@ -536,6 +559,10 @@ def process_seasons_rules(line: str) -> Optional[Tuple[str, str]]:
     match = re.match(r'\[(.*?)] Log : SeasonsRules\. AddExp\. value:\s*(\d+)', line)
     if not match:
         return None
+    substrings_to_remove = [
+        "____", "GameAnalyticsSDK", 'Firebase', 'ParamsDict', '<Animate',
+        "No boobs", ' Log : ', 'Gammister.FunLand'
+    ]
 
     date_time = match.group(1)
     value = match.group(2)
@@ -547,11 +574,18 @@ def process_seasons_rules(line: str) -> Optional[Tuple[str, str]]:
     # Версия для консоли с цветами
     console_output = f"{BLUE}{date_time}{RESET} | {GREEN}Seasons AddExp{RESET} | Params:\n"
     console_output += f"                                                          {GREEN}[value | {value}]{RESET}"
+    if pass_events > 2:
+        formatted_line = '26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа'
+        params_list = dict(countPassed=pass_events - 2)
+        formatted_line += f" | Params:{format_event_dict(params_list)}"
+        filtered_lines.append(formatted_line + "\n")
+        filtered_lines.append("\n")
+        print(add_colors(formatted_line, substrings_to_remove) + "\n")
 
     return file_output, console_output
 
 
-def process_deferred_purchase(line: str) -> Optional[Tuple[str, str]]:
+def process_deferred_purchase(line: str, pass_events: int, filtered_lines) -> Optional[Tuple[str, str]]:
     """
     Обрабатывает строку лога, связанную с отложенными платежами.
 
@@ -562,6 +596,11 @@ def process_deferred_purchase(line: str) -> Optional[Tuple[str, str]]:
     deferred_start = "IAPService. OnDeferredPurchase" in line and "Product purchasing is deferred" in line
     # Проверяем успешное завершение отложенного платежа
     deferred_success = "IAPService. ProcessValidatedPurchaseAsync. Successfully validated Product:" in line
+
+    substrings_to_remove = [
+        "____", "GameAnalyticsSDK", 'Firebase', 'ParamsDict', '<Animate',
+        "No boobs", ' Log : ', 'Gammister.FunLand'
+    ]
 
     if not (deferred_start or deferred_success):
         return None
@@ -606,6 +645,14 @@ def process_deferred_purchase(line: str) -> Optional[Tuple[str, str]]:
         # Версия для консоли с цветами
         console_output = f"{BLUE}{date_time}{RESET} | {GREEN}Purchase Complete{RESET} | Params:{format_event_dict(params_dict, with_colors=True)}"
 
+    if pass_events > 2:
+        formatted_line = '26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа'
+        params_list = dict(countPassed=pass_events - 2)
+        formatted_line += f" | Params:{format_event_dict(params_list)}"
+        filtered_lines.append(formatted_line + "\n")
+        filtered_lines.append("\n")
+        print(add_colors(formatted_line, substrings_to_remove) + "\n")
+
     return file_output, console_output
 
 
@@ -649,8 +696,14 @@ def process_logs(file_path: str) -> Tuple[str, str, str, str, str]:
 
     for i, line in enumerate(lines):
         # Проверяем на ошибки рассинхронизации
-        different_results = process_different_results(line, lines, i)
+        different_results = process_different_results(line,
+                                                      lines,
+                                                      i,
+                                                      pass_events,
+                                                      filtered_lines,
+                                                      )
         if different_results:
+            pass_events = 0
             file_output, console_output = different_results
             filtered_lines.append(file_output + "\n")
             filtered_lines.append("\n")
@@ -658,8 +711,9 @@ def process_logs(file_path: str) -> Tuple[str, str, str, str, str]:
             continue
 
         # Проверяем на SeasonsRules
-        seasons_rules = process_seasons_rules(line)
+        seasons_rules = process_seasons_rules(line, pass_events, filtered_lines)
         if seasons_rules:
+            pass_events = 0
             file_output, console_output = seasons_rules
             filtered_lines.append(file_output + "\n")
             filtered_lines.append("\n")
@@ -667,8 +721,9 @@ def process_logs(file_path: str) -> Tuple[str, str, str, str, str]:
             continue
 
         # Добавляем обработку информации о сайд-квестах
-        side_quest_info = process_side_quest_info(line)
+        side_quest_info = process_side_quest_info(line, pass_events, filtered_lines)
         if side_quest_info:
+            pass_events = 0
             info_for_file, info_for_console, non_zero_progress = side_quest_info
             if non_zero_progress:
                 filtered_lines.append(f"{info_for_file}\n")
@@ -677,8 +732,9 @@ def process_logs(file_path: str) -> Tuple[str, str, str, str, str]:
             continue
 
         # Проверяем на отложенные платежи
-        deferred_purchase = process_deferred_purchase(line)
+        deferred_purchase = process_deferred_purchase(line, pass_events, filtered_lines)
         if deferred_purchase:
+            pass_events = 0
             file_output, console_output = deferred_purchase
             filtered_lines.append(file_output + "\n")
             filtered_lines.append("\n")
@@ -712,22 +768,7 @@ def process_logs(file_path: str) -> Tuple[str, str, str, str, str]:
         if not any(exclude in line.lower() for exclude in
                    ['unityengine', 'gammister.funland', 'system', 'spine.', ' syste',
                     '--------- beginning of main', 'zenject', 'Firebase']):
-            if '[13.01.2025 16:26:01]' in line:
-                pass
             cleaned_line, pass_events = clean_log_line(lines, i, pass_events, filtered_lines)
-            if 'Log :' in line:
-                if not cleaned_line and ('TelegramChatLogBehaviour. Send. Start send file to telegram' not in line and
-                                         'TelegramChatLogBehaviour. OnCompleteSend. Send result is Done: True' not in line):
-                    if pass_events > 2:
-                        formatted_line = '26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа'
-                        params_list = dict(countPassed=pass_events - 2)
-                        formatted_line += f" | Params:{format_event_dict(params_list)}"
-                        filtered_lines.append(formatted_line + "\n")
-                        filtered_lines.append("\n")
-                        print(add_colors(formatted_line, substrings_to_remove) + "\n")
-                        pass_events = 0
-                    else:
-                        pass_events = 0
             if cleaned_line:
                 event_info, params_list = cleaned_line
                 duplicates = check_duplicate_parameters(params_list)

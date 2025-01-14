@@ -1,0 +1,311 @@
+UserID: USER_6785e69faa7562206a6ab188
+Version: 1.14.10
+ABTestingVariant: default
+ABTestingGameConfigVersion: 2169155686e04143b0311b61dd2b06be
+
+14.01.2025 11:30:35 | EventName: AnalyticsInitialized | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [systemLanguage | Russian],
+                                                          [gameLanguage | en],
+                                                          [os | Android OS 14 / API-34 (UP1A.231005.007/X510XXU7BXK1)],
+                                                          [osFamily | Other],
+                                                          [deviceModel | samsung SM-X510],
+                                                          [deviceType | Handheld],
+                                                          [deviceUniqueIdentifier | d397aeae41097f02eae14a99b52c2c00],
+                                                          [processorType | ARM64 FP ASIMD AES],
+                                                          [processorCount | 8],
+                                                          [batteryLevel | 0,44],
+                                                          [batteryStatus | Charging],
+                                                          [systemMemorySizeMB | 5706],
+                                                          [splashScreenFinished | True],
+                                                          [sessionId | e19a785a-c46d-4a94-a055-a029b15cce11],
+                                                          [sessionDuration | 0],
+                                                          [PreciseTime | 2025-01-14 04:30:35.008]
+
+14.01.2025 11:30:35 | EventName: Cheats | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:35.029]
+
+14.01.2025 11:30:36 | EventName: LoadClientConfigStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,44],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-14 04:30:36.672],
+                                                          [sessionDuration | 1,000221],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 1.272278]
+
+14.01.2025 11:30:36 | EventName: LoadClientConfigCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,44],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-14 04:30:36.680],
+                                                          [sessionDuration | 1,000221],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 1.280717],
+                                                          [duration | 0.008449]
+
+14.01.2025 11:30:37 | EventName: AreYouSureOpen | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:37.770]
+
+14.01.2025 11:30:38 | EventName: AreYouSureOpenChoice | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:38.750],
+                                                          [choice | True]
+
+14.01.2025 11:30:39 | EventName: NotificationPermissionStatus | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:39.167],
+                                                          [permissionAllowed | False]
+
+14.01.2025 11:30:39 | EventName: LoginStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,44],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-14 04:30:39.282],
+                                                          [sessionDuration | 3,641553],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 3.882349],
+                                                          [method | Anonymous]
+
+14.01.2025 11:30:40 | EventName: LoginCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,44],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-14 04:30:40.346],
+                                                          [sessionDuration | 4,671508],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 4.946742],
+                                                          [duration | 1.064396],
+                                                          [method | Anonymous]
+
+14.01.2025 11:30:40 | EventName: ABTestingResolveCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,44],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-14 04:30:40.644],
+                                                          [sessionDuration | 4,970542],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 5.244751],
+                                                          [duration | 0.283465],
+                                                          [abTestingGroup | default]
+
+14.01.2025 11:30:41 | EventName: LoadGameStateStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,44],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-14 04:30:41.482],
+                                                          [sessionDuration | 4,970542],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 6.08188]
+
+14.01.2025 11:30:41 | EventName: LoadGameStateCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,44],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-01-14 04:30:41.996],
+                                                          [sessionDuration | 5,552383],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 6.596357],
+                                                          [duration | 0.514479]
+
+14.01.2025 11:30:44 | EventName: StoreInitializationCompleted | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:44.314]
+
+14.01.2025 11:30:45 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:45.706],
+                                                          [window | Poker]
+
+14.01.2025 11:30:46 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:46.118],
+                                                          [window | Закрыто]
+
+14.01.2025 11:30:46 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:46.533],
+                                                          [window | Закрыто]
+
+26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа | Params:
+                                                          [countPassed | 3]
+
+14.01.2025 11:30:54 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:54.613],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 39],
+                                                          [before | 40]
+
+14.01.2025 11:30:54 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:54.619],
+                                                          [combinationName | none],
+                                                          [cards | 2_c,4_d,k_s,8_s,t_d,],
+                                                          [autoplayOn | False]
+
+14.01.2025 11:30:54 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:54.622],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+14.01.2025 11:30:56 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:56.264],
+                                                          [combinationName | none],
+                                                          [cards | j_h,5_c,7_c,a_d,9_h,],
+                                                          [autoplayOn | False]
+
+14.01.2025 11:30:57 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-14 04:30:57.789],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 0],
+                                                          [fromWhere | Poker],
+                                                          [itemId | None],
+                                                          [balance | 317000],
+                                                          [before | 317000]
+
+26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа | Params:
+                                                          [countPassed | 1]
+
+14.01.2025 11:31:01 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:01.789],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 38],
+                                                          [before | 39]
+
+14.01.2025 11:31:01 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:01.792],
+                                                          [combinationName | set],
+                                                          [cards | k_d,4_s,k_h,k_c,8_s,],
+                                                          [autoplayOn | False]
+
+14.01.2025 11:31:01 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:01.794],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+14.01.2025 11:31:03 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:03.977],
+                                                          [combinationName | set],
+                                                          [cards | k_d,j_s,k_h,k_c,2_s,],
+                                                          [autoplayOn | False]
+
+14.01.2025 11:31:05 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:05.104],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 23000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | ThreeOfAKind],
+                                                          [balance | 340000],
+                                                          [before | 317000]
+
+14.01.2025 11:31:05 | EventName: OnboardingStepPassed | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:05.326],
+                                                          [stepName | autoplay_dialog_showed]
+
+14.01.2025 11:31:05 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:05.629],
+                                                          [window | NewContent],
+                                                          [contentType | Autoplay]
+
+26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа | Params:
+                                                          [countPassed | 4]
+
+14.01.2025 11:31:15 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:15.770],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 37],
+                                                          [before | 38]
+
+14.01.2025 11:31:15 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:15.774],
+                                                          [combinationName | pair],
+                                                          [cards | 5_d,k_d,2_h,5_c,9_s,],
+                                                          [autoplayOn | False]
+
+14.01.2025 11:31:15 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:15.776],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+14.01.2025 11:31:17 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:17.829],
+                                                          [window | PetsAttack]
+
+14.01.2025 11:31:19 | EventName: OnboardingStepPassed | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:19.720],
+                                                          [stepName | pets_attack_comix_showed]
+
+14.01.2025 11:31:27 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:27.728],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 330000],
+                                                          [fromWhere | Pets],
+                                                          [itemId | Attack],
+                                                          [balance | 670000],
+                                                          [before | 340000]
+
+26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа | Params:
+                                                          [countPassed | 2]
+
+14.01.2025 11:31:34 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:34.556],
+                                                          [window | Закрыто]
+
+14.01.2025 11:31:37 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:37.612]
+
+14.01.2025 11:31:37 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:37.616],
+                                                          [combinationName | pair],
+                                                          [cards | t_d,4_c,j_s,5_c,6_s,],
+                                                          [autoplayOn | False]
+
+14.01.2025 11:31:39 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:39.005],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 11000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | JackOrBetter],
+                                                          [balance | 681000],
+                                                          [before | 670000]
+
+26.10.1969 00:00:00 | EventName: Ожидаемое количество пропущенных шагов чек листа | Params:
+                                                          [countPassed | 7]
+
+14.01.2025 11:31:50 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:50.500],
+                                                          [window | Rooms]
+
+14.01.2025 11:31:52 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:52.216],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 2],
+                                                          [item_id | item_02]
+
+14.01.2025 11:31:52 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:52.219],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 600000],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 81000],
+                                                          [before | 681000]
+
+14.01.2025 11:31:52 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:52.560],
+                                                          [window | NotEnoughResource]
+
+14.01.2025 11:31:52 | EventName: FastBuyOpen | Params:
+                                                          [PreciseTime | 2025-01-14 04:31:52.568],
+                                                          [type | GoldRooms],
+                                                          [product_id | poker_tales_fastbuy_gold_room]
