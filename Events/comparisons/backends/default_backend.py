@@ -281,6 +281,7 @@ class DefaultBackend(Generic[S]):
         out_list_step = self._add_timeline_mark(
             correct_step=step_with_undefind,
             fill_step=matching_step,
+            expected_step=expected_step,
         )
 
         self._register_events(
@@ -309,6 +310,7 @@ class DefaultBackend(Generic[S]):
     def _add_timeline_mark(self,
                            correct_step: list[ER],
                            fill_step: list[ER],
+                           expected_step: S,
                            ) -> list[ER]:
         """
         Добавление метки корректности к каждому временному
@@ -324,35 +326,31 @@ class DefaultBackend(Generic[S]):
             list[ER]: Сгенерированный шаг.
         """
 
-        out_list_step = []
-        rigth_time_event = []
         wrong_time_event = []
-        for wr_event in correct_step:
-            if wr_event not in fill_step:
-                out_list_step.append(wr_event)
-            if not wr_event.found_match:
-                continue
-            if wr_event.expected in wrong_time_event:
-                continue
-            for st_event in fill_step:
-                if not st_event.found_match:
-                    if st_event not in out_list_step:
-                        out_list_step.append(st_event)
+        time_event = []
+        for expected in expected_step:
+            for correct in correct_step:
+                if expected.is_optional and correct.optional:
+                    if expected == correct.expected:
+                        time_event.append(correct.expected)
+                        break
+                    else:
+                        correct.wrong_time = True
+                        wrong_time_event.append(correct.expected)
+                if (not correct.expected or
+                   correct.expected in time_event or
+                   correct.expected in wrong_time_event or
+                   not correct.found_match):
                     continue
-                if st_event.wrong_time or st_event.expected in rigth_time_event:
-                    continue
-                if not st_event.expected == wr_event.expected and not st_event.expected.flexible_order:
-                    st_event.wrong_time = True
-                    out_list_step.append(st_event)
-                    wrong_time_event.append(st_event.expected)
+                if correct.expected not in time_event and correct.expected != expected:
+                    correct.wrong_time = True
+                    wrong_time_event.append(correct.expected)
                 else:
-                    rigth_time_event.append(st_event.expected)
-                    out_list_step.append(st_event)
+                    time_event.append(correct.expected)
                     break
-
-        del rigth_time_event
         del wrong_time_event
-        return out_list_step
+        del time_event
+        return correct_step
 
     def _add_undefind_events(self,
                              expected_step: S,
@@ -394,6 +392,8 @@ class DefaultBackend(Generic[S]):
                     continue
                 if ac_event.expected == ex_event:
                     to_write_events.append(ac_event)
+        if not list_usality:
+            to_write_events = step + to_write_events
         return to_write_events
 
     def _add_unexpected_events(self,
@@ -765,7 +765,7 @@ class DefaultBackend(Generic[S]):
                 if param_name in expected.parameters:
                     if param_name in mismatch_params or param_name in missing_params:
                         html_params.append(
-                            f'{param_name}=<span class="parameter-value-mismatch">{actual_value}</span>'
+                            f'{param_name}=<span class="text-danger">{actual_value}</span>'
                         )
                     else:
                         html_params.append(f"{param_name}={actual_value}")

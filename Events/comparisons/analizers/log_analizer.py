@@ -543,6 +543,8 @@ class LogAnalyzer:
         start = 0
         leng_actual = len(actual_events)
         for step_index, expected_step in enumerate(expected_steps):
+            if expected_step.step_number == 20:
+                pass
             if alternative:
                 expected_step = expected_step.alternative
             if start >= leng_actual:
@@ -607,7 +609,15 @@ class LogAnalyzer:
                         actual_next=actual_names,
                     )
                     if new_index is None:
-                        new_interval_step = []
+                        next_new_index = self._get_index(
+                            names=curr_expected_names,
+                            actual_next=actual_next_names,
+                            func=max,
+                        )
+                        if next_new_index is not None:
+                            new_interval_step = actual_events[start: start + leng_expected + next_new_index + 1]
+                        else:
+                            new_interval_step = []
                     else:
                         new_interval_step = actual_events[start: start + new_index]
                 else:
@@ -662,7 +672,8 @@ class LogAnalyzer:
                 next_event_step = None
             if (next_event_step and
                 not last_pass
-               and next_expected_names[0] == expected_step[-1].name):
+               and (next_expected_names[0] == expected_step[-1].name or
+                    new_interval_step[-1].name == next_event_step.name)):
                 equal_next = self._check_parameters(
                     actual_event=next_event_step,
                     expected_curr=expected_step[-1],
