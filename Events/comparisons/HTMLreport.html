@@ -628,20 +628,11 @@
     <tr>
       <td class="parameter-cell">22</td>
       <td class="parameter-cell">Выключить и включить музыку<br>(2 кнопка)</td>
-      <td class="parameter-cell"><span class="text-danger">MusicTESTToggle</span></td>
-      <td class="parameter-cell"><span class="text-danger">PreciseTime=2025-01-14 04:42:04.915, state=True</span></td>
-      <td class="parameter-cell"><span class="text-danger">✗</span></td>
-      <td class="parameter-cell"><span class="text-danger">Неожиданный ивент</span></td>
-      <td class="parameter-cell">2025-01-14 11:42:04</td>
-    </tr>
-    <tr>
-      <td class="parameter-cell"></td>
-      <td class="parameter-cell"></td>
       <td class="parameter-cell">MusicToggle</td>
-      <td class="parameter-cell"><span class="text-danger">PreciseTime=</span><br><span class="text-danger">state=True</span></td>
-      <td class="parameter-cell"><span class="text-danger">Ивент не найден</span></td>
-      <td class="parameter-cell"></td>
-      <td class="parameter-cell"></td>
+      <td class="parameter-cell">PreciseTime=2025-01-14 04:42:04.915<br>state=<span class="text-danger">TEST</span></td>
+      <td class="parameter-cell"><span class="text-danger">✗</span></td>
+      <td class="parameter-cell"><span class="text-danger"><span class="text-danger">Несоответствие параметра state: ожидалось 'True', получено 'TEST'</span></span></td>
+      <td class="parameter-cell">2025-01-14 11:42:04</td>
     </tr>
     <tr>
       <td class="parameter-cell"></td>
@@ -1808,10 +1799,10 @@
       <td class="parameter-cell"></td>
       <td class="parameter-cell"></td>
       <td class="parameter-cell">WindowOpen</td>
-      <td class="parameter-cell">PreciseTime=2025-01-14 04:53:37.675<br>window=<span class="text-danger">Rewards</span></td>
-      <td class="parameter-cell"><span class="text-danger">✗</span></td>
-      <td class="parameter-cell"><span class="text-danger"><span class="text-danger">Несоответствие параметра window: ожидалось 'Gifts', получено 'Rewards'</span></span></td>
-      <td class="parameter-cell">2025-01-14 11:53:37</td>
+      <td class="parameter-cell"><span class="text-danger">PreciseTime=</span><br><span class="text-danger">window=Gifts</span></td>
+      <td class="parameter-cell"><span class="text-danger">Ивент не найден</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
     </tr>
     <tr>
       <td class="parameter-cell">86</td>
@@ -1825,6 +1816,15 @@
     <tr>
       <td class="parameter-cell">87</td>
       <td class="parameter-cell">Вернуться в покер</td>
+      <td class="parameter-cell"><span class="text-danger">WindowOpen</span></td>
+      <td class="parameter-cell"><span class="text-danger">PreciseTime=2025-01-14 04:53:37.675, window=Rewards</span></td>
+      <td class="parameter-cell"><span class="text-danger">✗</span></td>
+      <td class="parameter-cell"><span class="text-danger">Неожиданный ивент</span></td>
+      <td class="parameter-cell">2025-01-14 11:53:37</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
       <td class="parameter-cell">WindowOpen</td>
       <td class="parameter-cell">PreciseTime=2025-01-14 04:53:46.324<br>window=Poker</td>
       <td class="parameter-cell"><span class="text-success">✓</span></td>

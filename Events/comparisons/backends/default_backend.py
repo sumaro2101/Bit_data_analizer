@@ -3,12 +3,12 @@ import re
 from typing import Generic, ClassVar
 from functools import partial
 
-from enums import DiscrepancyType
-from data_types import ER, HT, S, AE, EX, Discrepancies
+from comparisons.enums import DiscrepancyType
+from comparisons.data_types import ER, HT, S, AE, EX, Discrepancies
 from collections import defaultdict
-from dto import ResultBackend, EventResult
-from utils import do_formatted_action
-from table_config import (BLUE, COLUMN_WIDTHS,
+from comparisons.dto import ResultBackend, EventResult
+from comparisons.utils import do_formatted_action
+from comparisons.table_config import (BLUE, COLUMN_WIDTHS,
                           RED, WHITE, RESET, GREEN,
                           YELLOW,
                           )
@@ -936,8 +936,8 @@ class DefaultBackend(Generic[S]):
                     'timestamp': best_match.timestamp if best_match else None
                 })
 
-    def _check_event_match(self,
-                           expected: EX,
+    @staticmethod
+    def _check_event_match(expected: EX,
                            actual: AE,
                            ) -> tuple[bool, list[str]]:
         """

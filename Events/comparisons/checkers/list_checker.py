@@ -3,7 +3,7 @@ from pandas import DataFrame
 import numpy as np
 from typing import Any, List, Optional, cast
 
-from table_config import GREEN, RESET
+from comparisons.table_config import GREEN, RESET
 
 
 class ChecklistValidator:
@@ -24,10 +24,10 @@ class ChecklistValidator:
 
     # Словарь требуемых столбцов с их типами и допустимостью null-значений
     REQUIRED_COLUMNS = {
-        'Номер шага': {'type': 'numeric', 'allow_null': True},
-        'Действие': {'type': 'string', 'allow_null': True},
-        'Проверяем наличие ивента(ов)': {'type': 'string', 'allow_null': True},
-        'Параметры через запятую': {'type': 'string', 'allow_null': True}
+        "Номер шага": {"type": "numeric", "allow_null": True},
+        "Действие": {"type": "string", "allow_null": True},
+        "Проверяем наличие ивента(ов)": {"type": "string", "allow_null": True},
+        "Параметры через запятую": {"type": "string", "allow_null": True},
     }
 
     def __init__(self, logger):
@@ -65,7 +65,9 @@ class ChecklistValidator:
         current_xlsx_columns = set(df.columns)
         missing_columns = set(self.REQUIRED_COLUMNS.keys()) - current_xlsx_columns
         if missing_columns:
-            raise ValueError(f"Отсутствуют обязательные столбцы: {', '.join(missing_columns)}")
+            raise ValueError(
+                f"Отсутствуют обязательные столбцы: {', '.join(missing_columns)}"
+            )
 
         # Проверка типов данных и пустых значений
         for column, rules in self.REQUIRED_COLUMNS.items():
@@ -110,9 +112,9 @@ class ChecklistValidator:
         if not step_str:
             return None
 
-        if 'ALT' in step_str:
+        if "ALT" in step_str:
             # Берем первый номер из альтернативной последовательности
-            return int(step_str.split(',')[0].strip())
+            return int(step_str.split(",")[0].strip())
 
         try:
             return int(float(step_str))
@@ -147,7 +149,7 @@ class ChecklistValidator:
             non_empty_rows = df.loc[notna_mask]
 
             # Проверка на пустые значения только в значимых строках
-            if not rules['allow_null']:
+            if not rules["allow_null"]:
                 column_data = non_empty_rows[column]
                 null_mask = column_data.isnull()
                 null_indices = non_empty_rows.index[null_mask].tolist()
@@ -165,57 +167,62 @@ class ChecklistValidator:
         Проверяет корректность последовательности номеров шагов в чек-листе.
 
         Метод выполняет следующие проверки:
-        - Фильтрует строки с непустыми номерами шагов
-        - Преобразует номера шагов с учетом альтернативных путей (ALT)
-        - Проверяет правильность последовательности основных шагов (не ALT)
-        - Выявляет дублирующиеся номера шагов
+        - Обрезает данные до первой строки со значением 'STOP' (если оно есть),
+          игнорируя все строки после нее.
+        - Фильтрует строки с заполненными номерами шагов.
+        - Преобразует номера шагов с учетом возможных альтернативных путей (ALT).
+        - Проверяет правильность последовательности основных шагов (без ALT).
+        - Выявляет дублирующиеся номера шагов (исключая ALT).
 
         Args:
-            df (DataFrame): DataFrame с данными чек-листа для проверки
+            df (pd.DataFrame): DataFrame с данными чек-листа для проверки.
 
         Raises:
-            Exception: При возникновении ошибок в процессе валидации.
-                      Ошибка логируется перед повторным возбуждением.
+            Exception: При возникновении ошибок в процессе валидации
+                       (ошибка логируется перед повторным возбуждением).
 
-        Примечание:
-            Метод добавляет сообщения об ошибках в self.errors при обнаружении:
-            - Нарушений последовательности номеров шагов
-            - Дублирующихся номеров шагов (исключая ALT)
+        Примечания:
+            - Если значение 'STOP' в чек-листе отсутствует, будет проверен весь файл.
+            - Альтернативные пути ('ALT') при проверке последовательности пропускаются,
+              сравнение выполняется только для основных шагов.
+
+        Side Effects:
+            - При обнаружении ошибок валидации добавляет сообщения в self.errors.
+
+        Examples:
+            Чек-лист:
+            +------------+-----------+
+            | Номер шага | Действие   |
+            +------------+-----------+
+            | 1          | Открыть    |
+            | 2          | Кликнуть   |
+            | STOP       |            |
+            | 3          | Ввести текст |
+            +------------+-----------+
+
+            Результат:
+            - Будут проверены только шаги 1 и 2.
+            - Шаг 3 будет проигнорирован.
         """
         try:
-            # Фильтруем только строки с номерами шагов
-            steps_df = df[df['Номер шага'].notna()]
+            # Обрезаем чек-лист до первой строки с 'STOP'
+            stop_indices = df[df["Номер шага"] == "STOP"].index
+            if not stop_indices.empty:
+                df = df.loc[: stop_indices[0] - 1]
 
-            # Преобразуем номера шагов с учетом ALT
+            # Фильтруем только строки с заполненными номерами шагов
+            steps_df = df[df["Номер шага"].notna()]
+
             def parse_step(val: Any) -> Optional[int]:
                 """
-                Преобразует значение шага в целое число с учетом различных форматов и типов данных.
+                Преобразует значение шага в целое число.
 
-                Алгоритм преобразования:
-                1. Проверяет, является ли значение `val` Not a Number (NaN). Если да, возвращает `None`.
-                2. Если `val` является целым числом, возвращает его.
-                3. Если `val` является числом с плавающей точкой, преобразует его в целое число и возвращает.
-                4. Если `val` является строкой:
-                   - Удаляет начальные и конечные пробелы.
-                   - Если строка содержит 'ALT', извлекает первый номер шага перед 'ALT', преобразует его в целое число и возвращает.
-                   - В противном случае, пытается преобразовать строку в число с плавающей точкой, затем в целое число и возвращает.
-                5. Если ни одно из вышеперечисленных условий не выполняется, возвращает `None`.
-
-                Args:
-                    val (Any): Значение для преобразования. Может быть числом, строкой или содержать 'ALT'
-
-                Returns:
-                    Optional[int]: Целое число - номер шага, или None если преобразование невозможно
-
-                Examples:
-                    >>> parse_step(5)
-                    5
-                    >>> parse_step("123, 124 ALT")
-                    123
-                    >>> parse_step("invalid")
-                    None
-                    >>> parse_step(np.nan)
-                    None
+                Алгоритм:
+                - Если значение NaN — вернуть None.
+                - Если число — привести к int.
+                - Если строка:
+                    - Если содержит 'ALT' — взять только номер перед 'ALT'.
+                    - Иначе попытаться привести к int через float.
                 """
                 if pd.isna(val):
                     return None
@@ -223,36 +230,39 @@ class ChecklistValidator:
                     return int(val)
                 if isinstance(val, (str, np.str_)):
                     val_str = str(val).strip()
-                    if 'ALT' in val_str:
-                        return int(val_str.split(' ')[0].strip())
+                    if "ALT" in val_str:
+                        return int(val_str.split(" ")[0].strip())
                     try:
                         return int(float(val_str))
                     except (ValueError, TypeError):
                         return None
                 return None
 
-            # Безопасное преобразование с явным приведением к Series
-            parsed_steps = pd.Series(steps_df['Номер шага']).apply(parse_step)
+            # Преобразуем номера шагов в удобный вид для проверки
+            parsed_steps = pd.Series(steps_df["Номер шага"]).apply(parse_step)
             steps_df = steps_df.assign(parsed_step=parsed_steps)
 
-            # Проверяем последовательность только для основных шагов (не ALT)
-            main_steps_mask = ~steps_df['Номер шага'].astype(str).str.contains('ALT', na=False)
-            main_steps = cast(DataFrame, steps_df[main_steps_mask])
+            # Оставляем только основные шаги (без ALT) для проверки
+            main_steps_mask = (
+                ~steps_df["Номер шага"].astype(str).str.contains("ALT", na=False)
+            )
+            main_steps = steps_df[main_steps_mask]
 
-            step_numbers = cast(List[int], main_steps['parsed_step'].dropna().tolist())
+            step_numbers = main_steps["parsed_step"].dropna().tolist()
 
+            # Проверка на правильность последовательности
             if step_numbers != sorted(step_numbers):
                 self.errors.append("Нарушена последовательность номеров шагов")
 
-            # Проверяем дубликаты
-            duplicates = cast(DataFrame, main_steps[main_steps.duplicated(['parsed_step'], keep=False)])
-
+            # Проверка на дублирование шагов
+            duplicates = main_steps[main_steps.duplicated(["parsed_step"], keep=False)]
             if not duplicates.empty:
-                duplicate_steps = cast(List[int], duplicates['parsed_step'].unique().tolist())
+                duplicate_steps = duplicates["parsed_step"].unique().tolist()
                 sorted_steps = sorted(duplicate_steps)
                 self.errors.append(
                     f"Обнаружены повторяющиеся номера шагов (не ALT): {sorted_steps}"
                 )
+
         except Exception as e:
             self.logger.error(f"Ошибка при валидации номеров шагов: {str(e)}")
             raise
@@ -281,18 +291,22 @@ class ChecklistValidator:
             - Неправильного количества частей параметра (должно быть 2)
         """
         try:
-            param_rows = cast(DataFrame, df[df['Параметры через запятую'].notna()])
+            param_rows = cast(DataFrame, df[df["Параметры через запятую"].notna()])
 
-            for idx, row in enumerate(param_rows.itertuples(), start=1):  # Используем enumerate
-                params = row[1]  # Используем номер столбца вместо названия (например, 'Параметры через запятую')
+            for idx, row in enumerate(
+                param_rows.itertuples(), start=1
+            ):  # Используем enumerate
+                params = row[
+                    1
+                ]  # Используем номер столбца вместо названия (например, 'Параметры через запятую')
                 if not isinstance(params, str):
                     continue
 
-                for param in str(params).split(','):
+                for param in str(params).split(","):
                     param = param.strip()
                     if param:
-                        if '|' in param:
-                            parts = param.split('|')
+                        if "|" in param:
+                            parts = param.split("|")
                             if len(parts) != 2 or not all(p.strip() for p in parts):
                                 self.errors.append(
                                     f"Некорректный формат параметра '{param}' в строке {idx + 1}"  # `idx` уже число
