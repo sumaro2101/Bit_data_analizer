@@ -7,9 +7,9 @@ import numpy as np
 from datetime import datetime
 
 from .exceptions import FunctionNotProvideError
-from comparisons.dto import ActualEvent, ExpectedEvent, ResultBackend, Step
-from comparisons.enums import DiscrepancyType
-from comparisons.table_config import (
+from dto import ActualEvent, ExpectedEvent, ResultBackend, Step
+from enums import DiscrepancyType
+from table_config import (
     GREEN,
     HEADERS,
     NAME_CHECK_LIST,
@@ -19,7 +19,7 @@ from comparisons.table_config import (
     IGNORED_EVENTS,
     HTML_TEMPLATE,
 )
-from comparisons.backends import DefaultBackend
+from backends import DefaultBackend
 
 
 class LogAnalyzer:
@@ -612,6 +612,8 @@ class LogAnalyzer:
         start = 0
         leng_actual = len(actual_events)
         for step_index, expected_step in enumerate(expected_steps):
+            if expected_step.step_number == 22:
+                pass
             if alternative:
                 expected_step = expected_step.alternative
             if start >= leng_actual:
@@ -632,6 +634,16 @@ class LogAnalyzer:
             next_expected_names = self._get_next_steps_names(
                 index=step_index, expected_steps=expected_steps
             )
+            if not next_expected_names:
+                new_interval_step = actual_events[start:]
+                actual_step = Step(
+                    step_number=expected_step.step_number,
+                    action=expected_step.action,
+                    events=new_interval_step,
+                )
+                list_of_steps.append(actual_step)
+                start += len(new_interval_step)
+                continue
             actual_next_names = [
                 event.name
                 for event in actual_events[
@@ -713,7 +725,9 @@ class LogAnalyzer:
                 last_index = self._get_last_index(
                     name=last_expected_event.name, curr_interval=actual_names
                 )
-                if last_index != 0 and last_index != len(new_interval_step) - 1:
+                if ((last_index != 0 and
+                     last_index != len(new_interval_step) - 1) or
+                   (last_index == 0 and leng_expected > 1)):
                     first_next_event = next_expected_names[0]
                     last_actual_event = curr_expected_names[-1]
                     curr_interval_names = [event.name for event in new_interval_step]
@@ -941,10 +955,7 @@ class LogAnalyzer:
         try:
             next_expected_step = expected_steps[index]
         except IndexError:
-            index -= 1
-            next_expected_step = expected_steps[index]
-            next_expected_names = [event.name for event in next_expected_step]
-            return next_expected_names
+            return None
         while next_expected_step[0].name in [
             "",
             "-",
@@ -1047,7 +1058,8 @@ class LogAnalyzer:
         Returns:
             bool: Результат проверки равенства.
         """
-
+        if not actual_event or expected_curr:
+            return False
         actual_param = {
             key: value
             for key, value in actual_event.parameters.items()

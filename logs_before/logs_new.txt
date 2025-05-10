@@ -1,0 +1,543 @@
+UserID: USER_68187a5ce91e78802f366c47
+Version: 1.15.5
+ABTestingVariant: default
+ABTestingGameConfigVersion: Unknown Config Version
+
+05.05.2025 15:42:45 | EventName: AnalyticsInitialized | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [systemLanguage | Russian],
+                                                          [gameLanguage | en],
+                                                          [os | Android OS 14 / API-34 (UP1A.231005.007/X510XXS7BYB6)],
+                                                          [osFamily | Other],
+                                                          [deviceModel | samsung SM-X510],
+                                                          [deviceType | Handheld],
+                                                          [deviceUniqueIdentifier | d397aeae41097f02eae14a99b52c2c00],
+                                                          [processorType | ARM64 FP ASIMD AES],
+                                                          [processorCount | 8],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [systemMemorySizeMB | 5706],
+                                                          [splashScreenFinished | True],
+                                                          [sessionId | 754bcf03-9a25-45af-95b1-7b55727c8d06],
+                                                          [sessionDuration | 0],
+                                                          [PreciseTime | 2025-05-05 08:42:45.952],
+                                                          [Store | GooglePlay]
+
+05.05.2025 15:42:45 | EventName: Cheats | Params:
+                                                          [PreciseTime | 2025-05-05 08:42:45.990]
+
+05.05.2025 15:42:46 | EventName: AssetBundlesNotLoaded | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:42:46.823],
+                                                          [sessionDuration | 0],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | undefined],
+                                                          [percentComplete | 1],
+                                                          [isDone | True],
+                                                          [operation | Resource<String>(catalog_2025.04.30.12.01.01.hash)]
+
+05.05.2025 15:42:46 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:42:46.856],
+                                                          [sessionDuration | 0],
+                                                          [splashScreenFinished | True],
+                                                          [duration | undefined],
+                                                          [interruptsCount | 0]
+
+05.05.2025 15:42:48 | EventName: NoInternetConnection | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:42:48.621],
+                                                          [sessionDuration | 1,168403],
+                                                          [splashScreenFinished | True]
+
+05.05.2025 15:43:01 | EventName: LoadClientConfigStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:43:01.179],
+                                                          [sessionDuration | 13,78257],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 12.972887]
+
+05.05.2025 15:43:02 | EventName: LoadClientConfigCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:43:02.278],
+                                                          [sessionDuration | 14,39723],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 14.074674],
+                                                          [duration | 1.101792]
+
+05.05.2025 15:43:11 | EventName: AreYouSureOpen | Params:
+                                                          [PreciseTime | 2025-05-05 08:43:11.280]
+
+05.05.2025 15:43:15 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:43:15.017],
+                                                          [sessionDuration | 27,32254],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 26.757937],
+                                                          [interruptsCount | 1]
+
+05.05.2025 15:43:19 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:43:19.486],
+                                                          [sessionDuration | 27,32254],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 31.281685],
+                                                          [interruptsCount | 1]
+
+05.05.2025 15:43:27 | EventName: AreYouSureOpenChoice | Params:
+                                                          [PreciseTime | 2025-05-05 08:43:27.318],
+                                                          [choice | False]
+
+05.05.2025 15:43:32 | EventName: PrivacyPolicyClicked | Params:
+                                                          [PreciseTime | 2025-05-05 08:43:32.558],
+                                                          [link | privacy_policy]
+
+05.05.2025 15:43:32 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:43:32.671],
+                                                          [sessionDuration | 40,45069],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 44.451617],
+                                                          [interruptsCount | 2]
+
+05.05.2025 15:43:39 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:43:39.375],
+                                                          [sessionDuration | 40,45069],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 51.081511],
+                                                          [interruptsCount | 2]
+
+05.05.2025 15:43:43 | EventName: PrivacyPolicyClicked | Params:
+                                                          [PreciseTime | 2025-05-05 08:43:43.369],
+                                                          [link | terms_and_conditions]
+
+05.05.2025 15:43:43 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:43:43.457],
+                                                          [sessionDuration | 44,51846],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 55.245246],
+                                                          [interruptsCount | 3]
+
+05.05.2025 15:43:49 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:43:49.395],
+                                                          [sessionDuration | 44,51846],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 61.17113],
+                                                          [interruptsCount | 3]
+
+05.05.2025 15:43:52 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-05 08:43:52.153],
+                                                          [window | PrivacyPolicy]
+
+05.05.2025 15:43:52 | EventName: LoginStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:43:52.447],
+                                                          [sessionDuration | 47,42899],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 64.101227],
+                                                          [method | Facebook]
+
+05.05.2025 15:43:52 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,3],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:43:52.504],
+                                                          [sessionDuration | 47,42899],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 64.280873],
+                                                          [interruptsCount | 4]
+
+05.05.2025 15:44:04 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,29],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:44:04.067],
+                                                          [sessionDuration | 47,42899],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 75.859483],
+                                                          [interruptsCount | 4]
+
+05.05.2025 15:44:04 | EventName: NotificationPermissionStatus | Params:
+                                                          [PreciseTime | 2025-05-05 08:44:04.083],
+                                                          [permissionAllowed | True]
+
+05.05.2025 15:44:04 | EventName: LoginCancelled | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,29],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:44:04.162],
+                                                          [sessionDuration | 47,44899],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 75.955896],
+                                                          [duration | 11.854673],
+                                                          [method | Facebook]
+
+05.05.2025 15:44:08 | EventName: AreYouSureOpen | Params:
+                                                          [PreciseTime | 2025-05-05 08:44:08.846]
+
+05.05.2025 15:44:10 | EventName: AreYouSureOpenChoice | Params:
+                                                          [PreciseTime | 2025-05-05 08:44:10.672],
+                                                          [choice | True]
+
+05.05.2025 15:44:10 | EventName: NotificationPermissionStatus | Params:
+                                                          [PreciseTime | 2025-05-05 08:44:10.895],
+                                                          [permissionAllowed | True]
+
+05.05.2025 15:44:11 | EventName: LoginStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,29],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:44:11.004],
+                                                          [sessionDuration | 54,38169],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 82.800103],
+                                                          [method | Anonymous]
+
+05.05.2025 15:44:12 | EventName: LoginCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,29],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:44:12.264],
+                                                          [sessionDuration | 55,51139],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 84.060855],
+                                                          [duration | 1.260755],
+                                                          [method | Anonymous]
+
+05.05.2025 15:44:12 | EventName: ABTestingResolveCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,29],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:44:12.666],
+                                                          [sessionDuration | 55,97649],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 84.462871],
+                                                          [duration | 0.373427],
+                                                          [abTestingGroup | default]
+
+05.05.2025 15:44:12 | EventName: LoadGameStateStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,29],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:44:12.690],
+                                                          [sessionDuration | 55,97649],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 84.48649]
+
+05.05.2025 15:44:14 | EventName: LoadGameStateCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,29],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:44:14.324],
+                                                          [sessionDuration | 56,59114],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 86.121043],
+                                                          [duration | 1.634556]
+
+05.05.2025 15:44:17 | EventName: MainMenuFirstTimeOpen | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,29],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-05 08:44:17.699],
+                                                          [sessionDuration | 59,23359],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 89.497066],
+                                                          [interruptsCount | 4]
+
+05.05.2025 15:44:18 | EventName: NewStickerQuests | Params:
+                                                          [PreciseTime | 2025-05-05 08:44:18.415]
+
+05.05.2025 15:44:18 | EventName: StoreInitializationCompleted | Params:
+                                                          [PreciseTime | 2025-05-05 08:44:18.566]
+
+05.05.2025 15:44:18 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-05 08:44:18.948],
+                                                          [window | Poker]
+
+05.05.2025 15:44:19 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-05 08:44:19.753],
+                                                          [window | Закрыто]
+
+05.05.2025 15:44:21 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-05 08:44:21.005],
+                                                          [window | Закрыто]
+
+05.05.2025 15:46:27 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:27.109],
+                                                          [content | HeaderGoldPlus]
+
+05.05.2025 15:46:28 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:28.570],
+                                                          [content | FooterQuests]
+
+05.05.2025 15:46:29 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:29.318],
+                                                          [content | FooterRooms]
+
+05.05.2025 15:46:31 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:31.162],
+                                                          [content | FooterCollection]
+
+05.05.2025 15:46:31 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:31.791],
+                                                          [content | FooterFriends]
+
+05.05.2025 15:46:38 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:38.820],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 4],
+                                                          [before | 5]
+
+05.05.2025 15:46:38 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:38.849],
+                                                          [combinationName | flush],
+                                                          [cards | 4♠️  2♠️  10♠️  5♠️  6♠️],
+                                                          [autoplayOn | False]
+
+05.05.2025 15:46:38 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:38.854],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+05.05.2025 15:46:45 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:45.009],
+                                                          [combinationName | flush],
+                                                          [cards | 4♠️  2♠️  10♠️  5♠️  6♠️],
+                                                          [autoplayOn | False]
+
+05.05.2025 15:46:45 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:45.049],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 10000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Flush],
+                                                          [balance | 10000],
+                                                          [before | 0]
+
+05.05.2025 15:46:47 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:47.616],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 3],
+                                                          [before | 4]
+
+05.05.2025 15:46:47 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:47.623],
+                                                          [combinationName | none],
+                                                          [cards | 3♥️  9♥️  7♥️  💂♥️  8♣️],
+                                                          [autoplayOn | False]
+
+05.05.2025 15:46:47 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:47.628],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+05.05.2025 15:46:50 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:50.453]
+
+05.05.2025 15:46:50 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:50.458],
+                                                          [combinationName | flush],
+                                                          [cards | 3♥️  9♥️  7♥️  💂♥️  👩🏼♥️],
+                                                          [autoplayOn | False]
+
+05.05.2025 15:46:51 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:51.372],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 10000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Flush],
+                                                          [balance | 20000],
+                                                          [before | 10000]
+
+05.05.2025 15:46:55 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:55.221],
+                                                          [window | AddFriends]
+
+05.05.2025 15:46:55 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-05 08:46:55.228],
+                                                          [window | Social]
+
+05.05.2025 15:47:02 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:02.076],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 2],
+                                                          [before | 3]
+
+05.05.2025 15:47:02 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:02.080],
+                                                          [combinationName | none],
+                                                          [cards | 8♦️  👩🏼♦️  💂♦️  10♦️  5♣️],
+                                                          [autoplayOn | False]
+
+05.05.2025 15:47:02 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:02.083],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+05.05.2025 15:47:03 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:03.915]
+
+05.05.2025 15:47:03 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:03.919],
+                                                          [combinationName | pair],
+                                                          [cards | 8♦️  👩🏼♦️  💂♦️  10♦️  10♥️],
+                                                          [autoplayOn | False]
+
+05.05.2025 15:47:04 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:04.807],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 1400],
+                                                          [fromWhere | Poker],
+                                                          [itemId | JackOrBetter],
+                                                          [balance | 21400],
+                                                          [before | 20000]
+
+05.05.2025 15:47:07 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:07.246],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 1],
+                                                          [before | 2]
+
+05.05.2025 15:47:07 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:07.251],
+                                                          [combinationName | doper],
+                                                          [cards | 👑♦️  8♥️  8♣️  👑♠️  6♠️],
+                                                          [autoplayOn | False]
+
+05.05.2025 15:47:07 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:07.255],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+05.05.2025 15:47:11 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:11.400]
+
+05.05.2025 15:47:11 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:11.404],
+                                                          [combinationName | none],
+                                                          [cards | 👩🏼♠️  🂡♥️  2♣️  7♣️  5♥️],
+                                                          [autoplayOn | False]
+
+05.05.2025 15:47:12 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:12.811],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 0],
+                                                          [fromWhere | Poker],
+                                                          [itemId | None],
+                                                          [balance | 21400],
+                                                          [before | 21400]
+
+05.05.2025 15:47:13 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:13.880],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 0],
+                                                          [before | 1]
+
+05.05.2025 15:47:13 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:13.886],
+                                                          [combinationName | pair],
+                                                          [cards | 7♠️  3♣️  7♥️  6♣️  🂡♥️],
+                                                          [autoplayOn | False]
+
+05.05.2025 15:47:13 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:13.892],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+05.05.2025 15:47:16 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:16.817]
+
+05.05.2025 15:47:16 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:16.821],
+                                                          [combinationName | none],
+                                                          [cards | 8♥️  👑♦️  5♦️  2♣️  4♥️],
+                                                          [autoplayOn | False]
+
+05.05.2025 15:47:18 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:18.241],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 0],
+                                                          [fromWhere | Poker],
+                                                          [itemId | None],
+                                                          [balance | 21400],
+                                                          [before | 21400]
+
+05.05.2025 15:47:20 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:20.873],
+                                                          [content | FooterRooms]
+
+05.05.2025 15:47:21 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:21.315],
+                                                          [window | Rooms]
+
+05.05.2025 15:47:21 | EventName: RoomStarted | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:21.736],
+                                                          [roomId | 001_king_throne_room]
+
+05.05.2025 15:47:22 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:22.381],
+                                                          [window | NewContent],
+                                                          [contentType | Rooms]
+
+05.05.2025 15:47:22 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-05 08:47:22.384],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 3500],
+                                                          [fromWhere | Onboarding],
+                                                          [itemId | NewContent_Rooms],
+                                                          [balance | 24900],
+                                                          [before | 21400]
+

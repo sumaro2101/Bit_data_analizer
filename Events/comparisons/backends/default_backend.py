@@ -3,12 +3,12 @@ import re
 from typing import Generic, ClassVar
 from functools import partial
 
-from comparisons.enums import DiscrepancyType
-from comparisons.data_types import ER, HT, S, AE, EX, Discrepancies
+from enums import DiscrepancyType
+from data_types import ER, HT, S, AE, EX, Discrepancies
 from collections import defaultdict
-from comparisons.dto import ResultBackend, EventResult
-from comparisons.utils import do_formatted_action
-from comparisons.table_config import (BLUE, COLUMN_WIDTHS,
+from dto import ResultBackend, EventResult
+from utils import do_formatted_action
+from table_config import (BLUE, COLUMN_WIDTHS,
                           RED, WHITE, RESET, GREEN,
                           YELLOW,
                           )
@@ -368,7 +368,6 @@ class DefaultBackend(Generic[S]):
         Returns:
             list[ER]: Сгенерированный шаг.
         """
-
         to_write_events = []
         pass_events = []
         for ex_event in expected_step:
@@ -392,6 +391,7 @@ class DefaultBackend(Generic[S]):
                     continue
                 if ac_event.expected == ex_event:
                     to_write_events.append(ac_event)
+                    break
         if not list_usality:
             to_write_events = step + to_write_events
         return to_write_events

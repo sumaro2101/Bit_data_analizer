@@ -3,7 +3,7 @@ from pandas import DataFrame
 import numpy as np
 from typing import Any, List, Optional, cast
 
-from comparisons.table_config import GREEN, RESET
+from table_config import GREEN, RESET
 
 
 class ChecklistValidator:
