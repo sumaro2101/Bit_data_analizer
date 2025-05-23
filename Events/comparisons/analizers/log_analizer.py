@@ -2,6 +2,7 @@ from collections.abc import Callable
 import logging
 import pathlib
 import re
+
 import pandas as pd
 import numpy as np
 from datetime import datetime
@@ -10,16 +11,40 @@ from .exceptions import FunctionNotProvideError
 from dto import ActualEvent, ExpectedEvent, ResultBackend, Step
 from enums import DiscrepancyType
 from table_config import (
-    GREEN,
-    HEADERS,
-    NAME_CHECK_LIST,
-    RED,
-    RESET,
-    WHITE,
-    IGNORED_EVENTS,
-    HTML_TEMPLATE,
-)
+    GREEN, HEADERS,
+    NAME_CHECK_LIST, RED, RESET, WHITE,
+    IGNORED_EVENTS, HTML_TEMPLATE
+    )
 from backends import DefaultBackend
+
+
+def find_start_sequence(actual_events: list[ActualEvent]) -> None | int:
+    """
+    Ищет в логах последовательность событий, соответствующую маркеру START.
+
+    Последовательность:
+    1. WindowOpen с window=Navigation
+    2. WindowOpen с window=Закрыто
+    3. WindowOpen с window=Navigation
+    4. WindowOpen с window=Закрыто
+
+    Returns:
+        Optional[int]: Индекс после последовательности или None, если не найдена
+    """
+    pattern = [
+        {"name": "WindowOpen", "window": "Navigation"},
+        {"name": "WindowOpen", "window": "Закрыто"},
+        {"name": "WindowOpen", "window": "Navigation"},
+        {"name": "WindowOpen", "window": "Закрыто"},
+    ]
+    for i in range(len(actual_events) - len(pattern) + 1):
+        if all(
+                actual_events[i + j].name == pattern[j]["name"] and
+                actual_events[i + j].parameters.get("window") == pattern[j]["window"]
+                for j in range(len(pattern))
+        ):
+            return i + len(pattern)
+    return None
 
 
 class LogAnalyzer:
@@ -67,34 +92,25 @@ class LogAnalyzer:
         self.actual_events: list[ActualEvent] = []
         self.user_id: str | None = None
 
-        # Проверяем существование файла логов
         if not self.log_path.exists():
             raise FileNotFoundError(f"Файл лога не найден по пути: {self.log_path}")
 
-        # Сначала очищаем все существующие обработчики
-        root_logger = logging.getLogger()
-        for handler in root_logger.handlers[:]:
-            root_logger.removeHandler(handler)
-
         # Настройка логирования
         log_format = "%(asctime)s - %(levelname)s - %(message)s"
-
-        # Создаем файловый обработчик
         file_handler = logging.FileHandler("analysis.log", encoding="utf-8")
         file_handler.setLevel(logging.INFO)
         file_handler.setFormatter(logging.Formatter(log_format))
-
-        # Создаем консольный обработчик
         console_handler = logging.StreamHandler()
         console_handler.setLevel(logging.INFO)
         console_format = logging.Formatter("%(message)s")
         console_handler.setFormatter(console_format)
-
-        # Настраиваем корневой логгер
+        root_logger = logging.getLogger()
+        # Сначала очищаем все существующие обработчики
+        for handler in root_logger.handlers[:]:
+            root_logger.removeHandler(handler)
         root_logger.setLevel(logging.INFO)
         root_logger.addHandler(file_handler)
         root_logger.addHandler(console_handler)
-
         self.logger = logging.getLogger(__name__)
 
     def generate_html_report(
@@ -226,48 +242,13 @@ class LogAnalyzer:
         try:
             self.logger.info(f"{WHITE}Начинаем чтение чек-листа из Excel{RESET}")
             df_check = pd.read_excel(self.checklist_path)
-
-            # --- Поддержка START ---
-            start_indices = df_check[df_check["Номер шага"] == "START"].index
-            if not start_indices.empty:
-                start_index = start_indices[0] + 1
-                # Находим первый валидный шаг после START (не NaN и не пустой)
-                first_valid_step_index = (
-                    df_check.loc[start_index:]
-                    .index[df_check.loc[start_index:]["Номер шага"].notna()]
-                    .min()
-                )
-                if pd.isna(first_valid_step_index):
-                    raise ValueError("Нет валидных шагов после START")
-                df_check = df_check.loc[first_valid_step_index:]
-            else:
-                # Если START отсутствует, начинаем с первого валидного шага
-                first_valid_step_index = df_check.index[
-                    df_check["Номер шага"].notna()
-                ].min()
-                if pd.isna(first_valid_step_index):
-                    raise ValueError("Нет валидных шагов в чек-листе")
-                df_check = df_check.loc[first_valid_step_index:]
-
-            # --- Поддержка STOP ---
-            stop_indices = df_check[df_check["Номер шага"] == "STOP"].index
-            if not stop_indices.empty:
-                df_check = df_check.loc[: stop_indices[0] - 1]
-
-            self.logger.debug(
-                f"Первые строки чек-листа после обрезки START/STOP:\n{df_check.head()}"
-            )
-
             df_check_filtered = df_check.copy()
 
             def parse_step_safely(val):
-                """
-                Безопасно парсит значение шага, учитывая возможные типы и маркер 'ALT'.
-                """
                 try:
                     if pd.isna(val):
                         return None
-                    if isinstance(val, str) and "ALT" in val:
+                    if isinstance(val, str) and ("ALT" or "START" or "STOP" in val):
                         return val
                     return int(float(str(val)))
                 except (ValueError, TypeError):
@@ -277,7 +258,6 @@ class LogAnalyzer:
                 parse_step_safely
             )
 
-            # Инициализируем с первым валидным шагом
             first_step_row = df_check_filtered.iloc[0]
             current_step = parse_step_safely(first_step_row["Номер шага"])
             last_valid_step = current_step
@@ -311,7 +291,9 @@ class LogAnalyzer:
             flexible_inside = False
             has_events_inside = True
             processed_empty_actions_step = False
-            first_in_step = True
+            first_in_step = False
+            stop_action = False
+            has_pass_events = False
 
             for index, row in df_check.iterrows():
                 event_value = row["Проверяем наличие ивента(ов)"]
@@ -342,6 +324,7 @@ class LogAnalyzer:
                         events=list_of_expected_event_step,
                         has_events_inside=has_events_inside,
                         flexible_inside=flexible_inside,
+                        pass_expected=stop_action,
                     )
                     if alternative:
                         steps_numbers = [step_n.step_number for step_n in list_out]
@@ -377,8 +360,8 @@ class LogAnalyzer:
                 current_event_str_raw_lines = event_value.split("\n")
                 is_has_events = True
                 if (
-                    current_event_str_raw_lines
-                    and current_event_str_raw_lines[0] == "-"
+                        current_event_str_raw_lines
+                        and current_event_str_raw_lines[0] == "-"
                 ):
                     is_has_events = False
                     has_events_inside = False
@@ -386,8 +369,8 @@ class LogAnalyzer:
                 for current_event_str_raw in current_event_str_raw_lines:
                     current_event_str_trimmed = current_event_str_raw.strip()
                     if (
-                        not current_event_str_trimmed
-                        and not processed_empty_actions_step
+                            not current_event_str_trimmed
+                            and not processed_empty_actions_step
                     ):
                         continue
 
@@ -422,6 +405,14 @@ class LogAnalyzer:
                     list_of_expected_event_step.append(event)
                     first_in_step = False
 
+                if step_value == 'START':
+                    list_out = self._switch_pass_marker_events(list_out)
+                    stop_action = False
+                    has_pass_events = True
+
+                if step_value == 'STOP':
+                    stop_action = True
+
             if list_of_expected_event_step:
                 step = Step(
                     step_number=current_step,
@@ -429,20 +420,32 @@ class LogAnalyzer:
                     events=list_of_expected_event_step,
                     has_events_inside=has_events_inside,
                     flexible_inside=flexible_inside,
+                    pass_expected=stop_action,
                 )
                 list_out.append(step)
 
             self.logger.info(
                 f"{WHITE}Успешно обработано {len(list_out)} шагов (с учётом START/STOP){RESET}"
             )
-            return list_out
+            return has_pass_events, list_out
 
         except Exception as e:
             self.logger.error(f"Ошибка при чтении чек-листа: {str(e)}")
             raise e
 
+    def _switch_pass_marker_events(self,
+                                   expected_events: list[Step],
+                                   ) -> list[Step]:
+        """
+        Меняет у всех объектов значение флага ``pass_event`` на ``True``
+        """
+        for event in expected_events:
+            event.pass_expected = True
+        return expected_events
+
     def parse_logs(
         self,
+        has_pass_events: bool,
         expected_steps: list[Step],
     ) -> list[Step]:
         """
@@ -465,14 +468,11 @@ class LogAnalyzer:
         try:
             self.logger.info(f"{WHITE}Начинаем чтение лог-файла{RESET}")
             with open(self.log_path, "r", encoding="utf-8") as f:
-                # Читаем первую строку для получения UserID
                 first_line = f.readline().strip()
                 if "UserID:" in first_line:
                     self.user_id = first_line.split("UserID:")[1].strip()
 
-                # Перемещаемся в начало файла для полного парсинга
                 f.seek(0)
-
                 current_event = None
                 current_time = None
                 current_params = {}
@@ -484,19 +484,15 @@ class LogAnalyzer:
                     if not line:
                         continue
 
-                    # Если строка начинается с даты, это новое событие
                     if re.match(r"\d{2}\.\d{2}\.\d{4}", line) or re.match(
-                        r"\d{1}/\d{1}/\d{4}", line
+                            r"\d{1}/\d{1}/\d{4}", line
                     ):
-                        # Сохраняем предыдущее событие, если оно есть
                         if current_event is not None:
-                            # Проверяем, не находится ли событие в списке игнорируемых
                             if current_event not in self.IGNORED_EVENTS:
                                 if current_param_line:
                                     self._process_param_line(
                                         current_param_line, current_params
                                     )
-
                                 event = ActualEvent(
                                     name=current_event,
                                     parameters=current_params.copy(),
@@ -505,7 +501,6 @@ class LogAnalyzer:
                                 actual_events.append(event)
                                 self.logger.debug(f"Добавлено событие: {current_event}")
 
-                        # Парсим новое событие
                         parts = line.split("|")
                         time = parts[0].strip()
                         if len(parts) >= 2:
@@ -520,33 +515,41 @@ class LogAnalyzer:
                             event_part = parts[1].strip()
 
                             if "EventName:" in event_part:
-                                current_event = event_part.split("EventName:")[
-                                    1
-                                ].strip()
+                                current_event = event_part.split("EventName:")[1].strip()
                             else:
                                 current_event = event_part.strip()
 
                             current_params = {}
                             current_param_line = ""
 
-                    # Обрабатываем строки с параметрами
                     elif line.startswith("["):
                         current_param_line += line.strip()
 
-                # Добавляем последнее событие, если оно не в списке игнорируемых
                 if (
-                    current_event is not None
-                    and current_event not in self.IGNORED_EVENTS
+                        current_event is not None
+                        and current_event not in self.IGNORED_EVENTS
                 ):
                     if current_param_line:
                         self._process_param_line(current_param_line, current_params)
-
                     event = ActualEvent(
                         name=current_event,
                         parameters=current_params.copy(),
                         timestamp=current_time or datetime.now(),
                     )
                     actual_events.append(event)
+
+            # Синхронизация с маркером START
+            if has_pass_events:
+                start_index = find_start_sequence(actual_events)
+                if start_index is not None:
+                    actual_events = actual_events[start_index:]
+                    self.logger.info(
+                        "Логи обрезаны до событий после последовательности маркера START"
+                    )
+                else:
+                    self.logger.warning(
+                        "Последовательность маркера START не найдена в логах, анализ будет проведен с начала логов"
+                    )
 
             self.logger.info(
                 f"{WHITE}Успешно прочитано {len(actual_events)} фактических событий{RESET}"
@@ -583,37 +586,35 @@ class LogAnalyzer:
             list[Step]: Список актуальных шагов, соответствующих ожидаемым.
         """
         list_of_steps = []
-        if expected_steps:
-            start_step = expected_steps[0]
-            # Находим индекс первого события, соответствующего start_step
-            for i, event in enumerate(actual_events):
-                for expected_event in start_step:
-                    is_match, _ = DefaultBackend._check_event_match(
-                        expected=expected_event, actual=event
-                    )
-                    if is_match:
-                        start_index = i
-                        break
-                else:
-                    continue
-                break
-            else:
-                self.logger.warning(
-                    "Не найдено соответствие для первого шага после START, анализ начат с начала логов"
-                )
-                start_index = 0
-        else:
-            start_index = 0
-
-        # Обрезаем actual_events до начала анализа
-        actual_events = actual_events[start_index:]
-
         pass_event = 0
         start = 0
         leng_actual = len(actual_events)
+        pass_action = False
         for step_index, expected_step in enumerate(expected_steps):
-            if expected_step.step_number == 22:
-                pass
+            if expected_step.step_number in ["START", "STOP"]:
+                continue
+            if expected_step.pass_expected:
+                pass_action = True
+                continue
+            elif pass_action and not expected_step.pass_expected:
+                first_event = expected_step[0]
+                if first_event.name == '-':
+                    continue
+                curr_actual_steps = actual_events[start:]
+                pass_action = False
+                for event in curr_actual_steps:
+                    if event.name.lower() == first_event.name.lower():
+                        is_some = self._check_parameters(
+                            actual_event=event,
+                            expected_curr=first_event
+                        )
+                        if not is_some:
+                            start += 1
+                            continue
+                        else:
+                            break
+                    start += 1
+                    continue
             if alternative:
                 expected_step = expected_step.alternative
             if start >= leng_actual:
@@ -625,7 +626,9 @@ class LogAnalyzer:
                     list_of_steps=list_of_steps, expected_step=expected_step
                 )
                 continue
-            if leng_expected == 1 and expected_step[0].name in ["-", "nan", ""]:
+            if leng_expected == 1 and expected_step[0].name in ["-",
+                                                                "nan",
+                                                                ""]:
                 if alternative:
                     return []
                 if not expected_step.alternative:
@@ -795,13 +798,6 @@ class LogAnalyzer:
                     ]
 
             actual_names = [event.name for event in new_interval_step]
-            pass_event, first_event = self._find_pass_step(
-                actual_names=actual_names,
-                actual_events=actual_events,
-                start=start,
-                pass_event=pass_event,
-                new_interval_step=new_interval_step,
-            )
             if alternative:
                 return new_interval_step
             if expected_step.alternative:
@@ -1058,22 +1054,27 @@ class LogAnalyzer:
         Returns:
             bool: Результат проверки равенства.
         """
-        if not actual_event or expected_curr:
+        if not actual_event or not expected_curr:
             return False
         actual_param = {
             key: value
             for key, value in actual_event.parameters.items()
             if key != "PreciseTime"
         }
-        expected_curr = {
+        expected_param = {
             key: value
             for key, value in expected_curr.parameters.items()
             if key != "PreciseTime" or value
         }
         full_params = {
-            key: value for key, value in actual_param.items() if key in expected_curr
+            key: value for key, value in actual_param.items() if key in expected_param
         }
-        return full_params == expected_curr
+        if not expected_param:
+            if not actual_param:
+                return True
+            else:
+                return False
+        return full_params == expected_param
 
     def _process_param_line(self, param_line: str, params: dict) -> None:
         """
@@ -1169,8 +1170,8 @@ class LogAnalyzer:
             ResultBackend: Сущность результата после анализа.
         """
 
-        expected_steps = self.parse_checklist()
-        actual_steps = self.parse_logs(expected_steps)
+        has_pass_events, expected_steps = self.parse_checklist()
+        actual_steps = self.parse_logs(has_pass_events, expected_steps)
         result = self.backend(
             actial_events=actual_steps,
             expected_events=expected_steps,

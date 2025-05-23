@@ -76,6 +76,8 @@ class DefaultBackend(Generic[S]):
         """
         actual_event_index = 0
         for expected_step in expected_events:
+            if expected_step.pass_expected or expected_step.step_number in ['START', 'STOP']:
+                continue
             if not expected_step.has_events_inside:
                 self._register_no_expect_action(
                     expected_step=expected_step,
@@ -936,8 +938,8 @@ class DefaultBackend(Generic[S]):
                     'timestamp': best_match.timestamp if best_match else None
                 })
 
-    @staticmethod
-    def _check_event_match(expected: EX,
+    def _check_event_match(self,
+                           expected: EX,
                            actual: AE,
                            ) -> tuple[bool, list[str]]:
         """
