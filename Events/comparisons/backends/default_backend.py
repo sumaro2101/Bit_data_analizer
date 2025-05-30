@@ -334,21 +334,21 @@ class DefaultBackend(Generic[S]):
             for correct in correct_step:
                 if expected.is_optional and correct.optional:
                     if expected == correct.expected:
-                        time_event.append(correct.expected)
+                        time_event.append(correct.event)
                         break
                     else:
                         correct.wrong_time = True
-                        wrong_time_event.append(correct.expected)
+                        wrong_time_event.append(correct.event)
                 if (not correct.expected or
-                   correct.expected in time_event or
-                   correct.expected in wrong_time_event or
+                   correct.event in time_event or
+                   correct.event in wrong_time_event or
                    not correct.found_match):
                     continue
-                if correct.expected not in time_event and correct.expected != expected:
+                if correct.event not in time_event and correct.expected != expected:
                     correct.wrong_time = True
-                    wrong_time_event.append(correct.expected)
+                    wrong_time_event.append(correct.event)
                 else:
-                    time_event.append(correct.expected)
+                    time_event.append(correct.event)
                     break
         del wrong_time_event
         del time_event
@@ -391,7 +391,7 @@ class DefaultBackend(Generic[S]):
                         pass_events.append(ac_event)
                         to_write_events.append(ac_event)
                     continue
-                if ac_event.expected == ex_event:
+                if ac_event.expected == ex_event and ac_event not in to_write_events:
                     to_write_events.append(ac_event)
                     break
         if not list_usality:

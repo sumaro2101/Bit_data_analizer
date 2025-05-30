@@ -77,6 +77,21 @@ class ActualEvent:
     timestamp: datetime
     pass_count: int = 0
 
+    def __eq__(self, other):
+        """
+        Проверяет равенство двух объектов ExpectedEvent.
+
+        Args:
+            other: Объект для сравнения
+
+        Returns:
+            bool: True, если объекты эквивалентны, иначе False
+        """
+        if not isinstance(other, ExpectedEvent):
+            return False
+        return (self.name == other.name and
+                self.parameters == other.parameters)
+
 
 @dataclass
 class ResultBackend:

@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+                <html>
+                <head>
+                <meta charset="utf-8">
+                <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+                <style>
+                .table-container { margin: 20px }
+                .table { table-layout: fixed; width: 100% }
+                .table td { white-space: normal !important; word-wrap: break-word; vertical-align: top }
+                .parameter-cell { overflow-x: auto; max-height: none !important; white-space: normal !important }
+                .table th:nth-child(1) { width: 5% }
+                .table th:nth-child(2) { width: 15% }
+                .table th:nth-child(3) { width: 15% }
+                .table th:nth-child(4) { width: 30% }
+                .table th:nth-child(5) { width: 5% }
+                .table th:nth-child(6) { width: 20% }
+                .table th:nth-child(7) { width: 10% }
+                .text-success { color: #3cb371 !important; font-weight: bold }
+                .text-danger { color: #dc3545 !important; font-weight: bold }
+                .text-warning { color: #CCCC00 !important; font-weight: bold }  <!-- Добавлен стиль для желтого -->
+                .parameter-value-mismatch { color: #dc3545 !important; font-weight: bold }
+                .table th { text-align: left; background-color: #f8f9fa; padding: 10px }
+                .user-id { color: #0d6efd; font-size: 1.5em; padding: 10px }
+                </style>
+                </head>
+                <body>
+                <div class="table-container">
+                <div class="user-id">UserID: USER_683687cdea65a99969048ef7</div>
+                <table border="1" class="dataframe table table-striped table-bordered">
+  <thead>
+    <tr style="text-align: right;">
+      <th>Шаг</th>
+      <th>Действие</th>
+      <th>Имя ивента</th>
+      <th>Параметры</th>
+      <th>Результат проверки</th>
+      <th>Различия с логами</th>
+      <th>Временная метка</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td class="parameter-cell">132</td>
+      <td class="parameter-cell">Перейти в петов</td>
+      <td class="parameter-cell">WindowOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:02:52.062<br>window=Pets</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:02:52</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell">133</td>
+      <td class="parameter-cell">Нажать на пета в клетке</td>
+      <td class="parameter-cell">WindowOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:02:55.164<br>window=PetsRescuing</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:02:55</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">TryRescuePet</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:02:55.168<br>PetName=mushroom</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:02:55</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell">134</td>
+      <td class="parameter-cell">Нажать на бочку посередине<br>ЕСЛИ НЕ УГАДАЛИ - НАЖАТЬ КРЕСТИК</td>
+      <td class="parameter-cell">BarrelOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:02:59.360<br>barrelIndex=1</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:02:59</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">TryRescuePet <span style="color: #CCCC00;">[?]</span></td>
+      <td class="parameter-cell"><span class="text-warning">PreciseTime=</span><br><span class="text-warning">PetName=mushroom</span></td>
+      <td class="parameter-cell"><span class="text-warning">✗</span></td>
+      <td class="parameter-cell"><span class="text-danger"><span class="text-warning">Опциональный ивент не найден, но это нормально</span></span></td>
+      <td class="parameter-cell"></td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">PetRescued <span style="color: #CCCC00;">[?]</span></td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:01.463</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:01</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">WindowOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:03.991<br>window=Закрыто</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:03</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell">135</td>
+      <td class="parameter-cell">Выйти из модуля петов</td>
+      <td class="parameter-cell">WindowOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:06.116<br>window=Poker</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:06</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell">136</td>
+      <td class="parameter-cell">Через читы зайти в лотерею</td>
+      <td class="parameter-cell">WindowOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:07.292<br>window=Navigation</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:07</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">WindowOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:08.192<br>window=CheatMenu</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:08</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">WindowOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:08.412<br>window=Закрыто</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:08</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">WindowOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:11.223<br>window=SuperGame</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:11</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">SuperGameLaunch</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:11.672<br>superGame=Lottery</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:11</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell">137</td>
+      <td class="parameter-cell">Вызвать тултип большой ракушки</td>
+      <td class="parameter-cell">Нет ожидаемых ивентов</td>
+      <td class="parameter-cell"><span class="text-success">Нет ожидаемых параметров</span></td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">None</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell">138</td>
+      <td class="parameter-cell">Сыграть до конца в супер игру.<br>Если появится окно доп попытки, просто ждать пока таймер не кончится</td>
+      <td class="parameter-cell">SuperBuyPanel <span style="color: #CCCC00;">[?]</span></td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:16.170<br>superGame=lottery</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:16</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">CurrencyChanged</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:31.187<br>eventType=Начисление<br>currencyName=Apple<br>value=3<br>fromWhere=SuperGame<br>itemId=Lottery<br>balance=36<br>before=35</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:31</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">CurrencyChanged</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:31.191<br>eventType=Начисление<br>currencyName=Apple<br>value=1<br>fromWhere=SuperGame<br>itemId=Lottery<br>balance=36<br>before=35</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:31</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">CurrencyChanged</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:31.194<br>eventType=Начисление<br>currencyName=Gold<br>value=750000<br>fromWhere=SuperGame<br>itemId=Lottery<br>balance=10385400<br>before=10015400</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:31</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">CurrencyChanged</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:31.198<br>eventType=Начисление<br>currencyName=Gold<br>value=370000<br>fromWhere=SuperGame<br>itemId=Lottery<br>balance=10385400<br>before=10015400</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:31</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">CurrencyChanged <span style="color: #CCCC00;">[?]</span></td>
+      <td class="parameter-cell"><span class="text-warning">PreciseTime=</span><br><span class="text-warning">eventType=Начисление</span><br><span class="text-warning">currencyName=</span><br><span class="text-warning">value=</span><br><span class="text-warning">fromWhere=SuperGame</span><br><span class="text-warning">itemId=Lottery</span><br><span class="text-warning">balance=</span><br><span class="text-warning">before=</span></td>
+      <td class="parameter-cell"><span class="text-warning">✓</span></td>
+      <td class="parameter-cell"><span class="text-danger"><span class="text-warning">Опциональный ивент не найден, но это нормально</span></span></td>
+      <td class="parameter-cell"></td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">CurrencyChanged <span style="color: #CCCC00;">[?]</span></td>
+      <td class="parameter-cell"><span class="text-warning">PreciseTime=</span><br><span class="text-warning">eventType=Начисление</span><br><span class="text-warning">currencyName=</span><br><span class="text-warning">value=</span><br><span class="text-warning">fromWhere=SuperGame</span><br><span class="text-warning">itemId=Lottery</span><br><span class="text-warning">balance=</span><br><span class="text-warning">before=</span></td>
+      <td class="parameter-cell"><span class="text-warning">✓</span></td>
+      <td class="parameter-cell"><span class="text-danger"><span class="text-warning">Опциональный ивент не найден, но это нормально</span></span></td>
+      <td class="parameter-cell"></td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">SuperGameFinish</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:31.201<br>superGame=Lottery</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:31</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">WindowOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:03:32.214<br>window=Win</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:03:32</td>
+    </tr>
+    <tr>
+      <td class="parameter-cell">139</td>
+      <td class="parameter-cell">Нажать для сбора наград<br><br>Если выиграли в супер игре - карт паки тоже налутать</td>
+      <td class="parameter-cell">WindowOpen <span style="color: #CCCC00;">[?]</span></td>
+      <td class="parameter-cell"><span class="text-warning">PreciseTime=</span><br><span class="text-warning">window=CardPacks</span></td>
+      <td class="parameter-cell"><span class="text-warning">✗</span></td>
+      <td class="parameter-cell"><span class="text-danger"><span class="text-warning">Опциональный ивент не найден, но это нормально</span></span></td>
+      <td class="parameter-cell"></td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">CardCollected <span style="color: #CCCC00;">[?]</span></td>
+      <td class="parameter-cell"><span class="text-warning">PreciseTime=</span><br><span class="text-warning">collection=</span><br><span class="text-warning">suit=</span><br><span class="text-warning">rank=</span><br><span class="text-warning">isNew=True</span><br><span class="text-warning">fromWhere=lottery</span></td>
+      <td class="parameter-cell"><span class="text-warning">✓</span></td>
+      <td class="parameter-cell"><span class="text-danger"><span class="text-warning">Опциональный ивент не найден, но это нормально</span></span></td>
+      <td class="parameter-cell"></td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">CardCollected <span style="color: #CCCC00;">[?]</span></td>
+      <td class="parameter-cell"><span class="text-warning">PreciseTime=</span><br><span class="text-warning">collection=</span><br><span class="text-warning">suit=</span><br><span class="text-warning">rank=</span><br><span class="text-warning">isNew=True</span><br><span class="text-warning">fromWhere=lottery</span></td>
+      <td class="parameter-cell"><span class="text-warning">✓</span></td>
+      <td class="parameter-cell"><span class="text-danger"><span class="text-warning">Опциональный ивент не найден, но это нормально</span></span></td>
+      <td class="parameter-cell"></td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">CardCollected <span style="color: #CCCC00;">[?]</span></td>
+      <td class="parameter-cell"><span class="text-warning">PreciseTime=</span><br><span class="text-warning">collection=</span><br><span class="text-warning">suit=</span><br><span class="text-warning">rank=</span><br><span class="text-warning">isNew=True</span><br><span class="text-warning">fromWhere=lottery</span></td>
+      <td class="parameter-cell"><span class="text-warning">✓</span></td>
+      <td class="parameter-cell"><span class="text-danger"><span class="text-warning">Опциональный ивент не найден, но это нормально</span></span></td>
+      <td class="parameter-cell"></td>
+    </tr>
+    <tr>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">WindowOpen</td>
+      <td class="parameter-cell">PreciseTime=2025-05-28 07:04:15.176<br>window=Закрыто</td>
+      <td class="parameter-cell"><span class="text-success">✓</span></td>
+      <td class="parameter-cell"></td>
+      <td class="parameter-cell">2025-05-28 14:04:15</td>
+    </tr>
+  </tbody>
+</table>
+                </div>
+                </body>
+                </html>

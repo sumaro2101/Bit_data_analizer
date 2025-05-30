@@ -8,14 +8,14 @@ import pandas as pd
 import numpy as np
 from datetime import datetime
 
-from comparisons.analizers.exceptions import FunctionNotProvideError
-from comparisons.dto import ActualEvent, ExpectedEvent, ResultBackend, Step
-from comparisons.enums import DiscrepancyType
-from comparisons.table_config import (
+from analizers.exceptions import FunctionNotProvideError
+from dto import ActualEvent, ExpectedEvent, ResultBackend, Step
+from enums import DiscrepancyType
+from table_config import (
     GREEN, HEADERS, RED, RESET, WHITE,
     IGNORED_EVENTS, HTML_TEMPLATE
     )
-from comparisons.backends.default_backend import DefaultBackend
+from backends.default_backend import DefaultBackend
 
 
 def find_start_sequence(actual_events: list[ActualEvent]) -> Optional[int]:
