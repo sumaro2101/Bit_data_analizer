@@ -2,23 +2,23 @@ from collections.abc import Callable
 import logging
 import pathlib
 import re
+from typing import Optional
 
 import pandas as pd
 import numpy as np
 from datetime import datetime
 
-from .exceptions import FunctionNotProvideError
-from dto import ActualEvent, ExpectedEvent, ResultBackend, Step
-from enums import DiscrepancyType
-from table_config import (
-    GREEN, HEADERS,
-    NAME_CHECK_LIST, RED, RESET, WHITE,
+from comparisons.analizers.exceptions import FunctionNotProvideError
+from comparisons.dto import ActualEvent, ExpectedEvent, ResultBackend, Step
+from comparisons.enums import DiscrepancyType
+from comparisons.table_config import (
+    GREEN, HEADERS, RED, RESET, WHITE,
     IGNORED_EVENTS, HTML_TEMPLATE
     )
-from backends import DefaultBackend
+from comparisons.backends.default_backend import DefaultBackend
 
 
-def find_start_sequence(actual_events: list[ActualEvent]) -> None | int:
+def find_start_sequence(actual_events: list[ActualEvent]) -> Optional[int]:
     """
     Ищет в логах последовательность событий, соответствующую маркеру START.
 
@@ -68,7 +68,7 @@ class LogAnalyzer:
     # Список событий, которые нужно игнорировать при анализе
     IGNORED_EVENTS = IGNORED_EVENTS
 
-    def __init__(self, log_path: str):
+    def __init__(self, log_path: str, checklist_path: pathlib.Path):
         """
         Инициализирует экземпляр LogAnalyzer.
 
@@ -80,13 +80,13 @@ class LogAnalyzer:
 
         Args:
             log_path (str): Путь к файлу логов
+            checklist_path (pathlib.Path): Путь к файлу чек-листа
 
         Raises:
             FileNotFoundError: Если файл логов не найден по указанному пути
         """
-        main_dir = pathlib.Path(__file__).resolve().parent.parent
         self.backend = DefaultBackend[Step]
-        self.checklist_path = main_dir.joinpath("checklist", NAME_CHECK_LIST)
+        self.checklist_path = checklist_path
         self.log_path = pathlib.Path(log_path)
         self.expected_events: list[ExpectedEvent] = []
         self.actual_events: list[ActualEvent] = []
@@ -232,6 +232,7 @@ class LogAnalyzer:
 
         Исключения:
             ValueError: Если после `START` нет валидных шагов или в чек-листе нет шагов вообще.
+            FileNotFoundError: Если чек-лист не является файлом.
             Exception: При ошибках чтения или парсинга чек-листа.
 
         Примеры:
@@ -240,6 +241,8 @@ class LogAnalyzer:
             - Если `START` отсутствует, обработка начинается с первого валидного шага в файле.
         """
         try:
+            if not self.checklist_path.is_file():
+                raise FileNotFoundError(f"Чек-лист не является файлом: {self.checklist_path}")
             self.logger.info(f"{WHITE}Начинаем чтение чек-листа из Excel{RESET}")
             df_check = pd.read_excel(self.checklist_path)
             df_check_filtered = df_check.copy()

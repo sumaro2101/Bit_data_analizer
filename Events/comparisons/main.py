@@ -1,4 +1,5 @@
 import logging
+import subprocess
 import sys
 import os
 import time
@@ -6,9 +7,29 @@ import pathlib
 import pandas as pd
 import webbrowser
 
-from table_config import NAME_CHECK_LIST
-from analizers import LogAnalyzer
-from checkers import ChecklistValidator
+from analizers.log_analizer import LogAnalyzer
+from checkers.list_checker import ChecklistValidator
+
+
+def find_checklist_file(checklist_dir):
+    """
+    Находит единственный .xlsx файл в папке checklist, игнорируя временные файлы Excel.
+
+    Args:
+        checklist_dir (pathlib.Path): Путь к папке checklist.
+
+    Returns:
+        pathlib.Path or None: Путь к единственному .xlsx файлу или None, если файл не найден
+        или их больше одного.
+    """
+    xlsx_files = [f for f in checklist_dir.glob('*.xlsx') if not f.name.startswith('~$')]
+    if len(xlsx_files) == 0:
+        print("Ошибка: Чек-лист не найден в папке checklist.")
+        return None
+    elif len(xlsx_files) > 1:
+        print("Ошибка: Обнаружено более одного .xlsx файла в папке checklist. Оставьте только один чек-лист.")
+        return None
+    return xlsx_files[0]
 
 
 def main():
@@ -81,11 +102,19 @@ def main():
     try:
         # Проверяем чек-лист
         current_dir = pathlib.Path(__file__).resolve().parent
-        checklist_path = current_dir.joinpath('checklist', NAME_CHECK_LIST)
+        checklist_dir = current_dir.joinpath('checklist')
 
-        if not checklist_path.exists():
-            print(f"Ошибка: файл чек-листа не найден по пути: {checklist_path}")
+        # Проверка существования папки checklist
+        if not checklist_dir.is_dir():
+            print("Ошибка: Папка checklist не найдена.")
             sys.exit(1)
+
+        # Поиск чек-листа
+        checklist_path = find_checklist_file(checklist_dir)
+        if checklist_path is None:
+            print("Программа завершена из-за ошибки с чек-листом.")
+            sys.exit(1)
+        print(f"Используется чек-лист: {checklist_path.name}")
 
         # Настраиваем логирование
         logging.basicConfig(level=logging.INFO, format='%(message)s')
@@ -117,7 +146,7 @@ def main():
                 # Попытка анализа логов
                 try:
                     # Анализ логов
-                    analyzer = LogAnalyzer(log_path)
+                    analyzer = LogAnalyzer(log_path, checklist_path)
                     analyzer.analyze()
 
                     # Меню дальнейших действий
@@ -131,7 +160,7 @@ def main():
                             log_path = choice
                             try:
                                 # Сразу запускаем анализ новых логов
-                                analyzer = LogAnalyzer(log_path)
+                                analyzer = LogAnalyzer(log_path, checklist_path)
                                 analyzer.analyze()
                                 continue  # Продолжаем внутренний цикл с меню выбора действий
                             except Exception as e:
@@ -143,8 +172,15 @@ def main():
                         elif choice.lower() == 'y':
                             html_report_path = current_dir.joinpath('HTMLreport.html')
                             if html_report_path.exists():
-                                webbrowser.open_new_tab(html_report_path.as_posix())
-                                print("HTML отчёт открыт в браузере.")
+                                print(f"Попытка открыть файл: {html_report_path.as_posix()}")
+                                try:
+                                    if os.name == 'posix':  # macOS и Linux
+                                        subprocess.run(['open', html_report_path.as_posix()], check=True)
+                                    else:  # Windows и другие
+                                        webbrowser.open_new_tab(html_report_path.as_posix())
+                                    print("HTML отчёт открыт в браузере.")
+                                except Exception as e:
+                                    print(f"Ошибка при открытии отчета: {e}")
                             else:
                                 print("HTML отчёт не найден. Проверьте, был ли он успешно создан.")
                             continue

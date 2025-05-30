@@ -1,0 +1,1918 @@
+UserID: USER_68300aa9744a5f9a69767045
+Version: 1.16.1
+ABTestingVariant: default
+ABTestingGameConfigVersion: Unknown Config Version
+
+23.05.2025 12:38:26 | EventName: AnalyticsInitialized | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [systemLanguage | Russian],
+                                                          [gameLanguage | en],
+                                                          [os | Android OS 14 / API-34 (UP1A.231005.007/X510XXS7BYB6)],
+                                                          [osFamily | Other],
+                                                          [deviceModel | samsung SM-X510],
+                                                          [deviceType | Handheld],
+                                                          [deviceUniqueIdentifier | d397aeae41097f02eae14a99b52c2c00],
+                                                          [processorType | ARM64 FP ASIMD AES],
+                                                          [processorCount | 8],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [systemMemorySizeMB | 5706],
+                                                          [splashScreenFinished | True],
+                                                          [sessionId | b6fd1d53-cb48-47ac-8694-8522bf0d069e],
+                                                          [sessionDuration | 0],
+                                                          [PreciseTime | 2025-05-23 05:38:26.544],
+                                                          [Store | GooglePlay]
+
+23.05.2025 12:38:26 | EventName: Cheats | Params:
+                                                          [PreciseTime | 2025-05-23 05:38:26.577]
+
+23.05.2025 12:38:27 | EventName: AssetBundlesNotLoaded | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:38:27.572],
+                                                          [sessionDuration | 0],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | undefined],
+                                                          [percentComplete | 1],
+                                                          [isDone | True],
+                                                          [operation | Resource<String>(catalog_2025.05.17.19.17.01.hash)]
+
+23.05.2025 12:38:27 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:38:27.586],
+                                                          [sessionDuration | 0],
+                                                          [splashScreenFinished | True],
+                                                          [duration | undefined],
+                                                          [interruptsCount | 0]
+
+23.05.2025 12:38:29 | EventName: NoInternetConnection | Params:
+                                                          [internetReachability | NotReachable],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:38:29.353],
+                                                          [sessionDuration | 1,134163],
+                                                          [splashScreenFinished | True]
+
+23.05.2025 12:39:12 | EventName: LoadClientConfigStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:39:12.277],
+                                                          [sessionDuration | 44,12609],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 43.306869]
+
+23.05.2025 12:39:12 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:39:12.568],
+                                                          [sessionDuration | 44,39187],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 43.599498],
+                                                          [interruptsCount | 1]
+
+23.05.2025 12:39:19 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:39:19.140],
+                                                          [sessionDuration | 44,39187],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 50.169269],
+                                                          [interruptsCount | 1]
+
+23.05.2025 12:39:20 | EventName: LoadClientConfigCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:39:20.062],
+                                                          [sessionDuration | 44,41187],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 51.093591],
+                                                          [duration | 7.786725]
+
+23.05.2025 12:39:20 | EventName: NotificationPermissionStatus | Params:
+                                                          [PreciseTime | 2025-05-23 05:39:20.118],
+                                                          [permissionAllowed | True]
+
+23.05.2025 12:39:28 | EventName: PrivacyPolicyClicked | Params:
+                                                          [PreciseTime | 2025-05-23 05:39:28.339],
+                                                          [link | terms_and_conditions]
+
+23.05.2025 12:39:28 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:39:28.430],
+                                                          [sessionDuration | 51,64369],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 59.461071],
+                                                          [interruptsCount | 2]
+
+23.05.2025 12:39:34 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:39:34.797],
+                                                          [sessionDuration | 51,64369],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 65.827064],
+                                                          [interruptsCount | 2]
+
+23.05.2025 12:39:37 | EventName: PrivacyPolicyClicked | Params:
+                                                          [PreciseTime | 2025-05-23 05:39:37.579],
+                                                          [link | privacy_policy]
+
+23.05.2025 12:39:37 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:39:37.650],
+                                                          [sessionDuration | 54,47665],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 68.681682],
+                                                          [interruptsCount | 3]
+
+23.05.2025 12:40:14 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,92],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:40:14.412],
+                                                          [sessionDuration | 54,47665],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 105.441847],
+                                                          [interruptsCount | 3]
+
+23.05.2025 12:41:22 | EventName: AgeConfirmationWindow | Params:
+                                                          [PreciseTime | 2025-05-23 05:41:22.946],
+                                                          [PlayerAge | 49]
+
+23.05.2025 12:41:22 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:41:22.961],
+                                                          [window | PrivacyPolicy]
+
+23.05.2025 12:41:33 | EventName: AreYouSureOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:41:33.233]
+
+23.05.2025 12:41:35 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:41:35.418],
+                                                          [sessionDuration | 135,1438],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 186.445034],
+                                                          [interruptsCount | 4]
+
+23.05.2025 12:41:38 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:41:38.679],
+                                                          [sessionDuration | 135,1438],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 189.710568],
+                                                          [interruptsCount | 4]
+
+23.05.2025 12:41:46 | EventName: AreYouSureOpenChoice | Params:
+                                                          [PreciseTime | 2025-05-23 05:41:46.240],
+                                                          [choice | False]
+
+23.05.2025 12:41:46 | EventName: LoginStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:41:46.556],
+                                                          [sessionDuration | 143,0436],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 197.586346],
+                                                          [method | Facebook]
+
+23.05.2025 12:41:46 | EventName: MainMenuFirstTimeOpenPause | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:41:46.657],
+                                                          [sessionDuration | 143,1101],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 197.687001],
+                                                          [interruptsCount | 5]
+
+23.05.2025 12:41:56 | EventName: MainMenuFirstTimeOpenResume | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:41:56.462],
+                                                          [sessionDuration | 143,1101],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 207.485101],
+                                                          [interruptsCount | 5]
+
+23.05.2025 12:41:56 | EventName: LoginCancelled | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:41:56.546],
+                                                          [sessionDuration | 143,1301],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 207.547929],
+                                                          [duration | 9.961631],
+                                                          [method | Facebook]
+
+23.05.2025 12:42:01 | EventName: AreYouSureOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:01.759]
+
+23.05.2025 12:42:03 | EventName: AreYouSureOpenChoice | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:03.836],
+                                                          [choice | True]
+
+23.05.2025 12:42:04 | EventName: LoginStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:42:04.150],
+                                                          [sessionDuration | 150,8159],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 215.180454],
+                                                          [method | Anonymous]
+
+23.05.2025 12:42:06 | EventName: LoginCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:42:06.556],
+                                                          [sessionDuration | 153,1085],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 217.586617],
+                                                          [duration | 2.406166],
+                                                          [method | Anonymous]
+
+23.05.2025 12:42:06 | EventName: ABTestingResolveCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:42:06.858],
+                                                          [sessionDuration | 153,4739],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 217.88893],
+                                                          [duration | 0.275507],
+                                                          [abTestingGroup | default]
+
+23.05.2025 12:42:06 | EventName: LoadGameStateStarted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:42:06.882],
+                                                          [sessionDuration | 153,4739],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 217.912626]
+
+23.05.2025 12:42:08 | EventName: LoadGameStateCompleted | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:42:08.783],
+                                                          [sessionDuration | 154,1384],
+                                                          [splashScreenFinished | True],
+                                                          [startupDuration | 219.814684],
+                                                          [duration | 1.90206]
+
+23.05.2025 12:42:11 | EventName: MainMenuFirstTimeOpen | Params:
+                                                          [internetReachability | ReachableViaLocalAreaNetwork],
+                                                          [batteryLevel | 0,91],
+                                                          [batteryStatus | Charging],
+                                                          [PreciseTime | 2025-05-23 05:42:11.296],
+                                                          [sessionDuration | 155,7997],
+                                                          [splashScreenFinished | True],
+                                                          [duration | 222.32791],
+                                                          [interruptsCount | 5]
+
+23.05.2025 12:42:11 | EventName: StoreInitializationCompleted | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:11.457]
+
+23.05.2025 12:42:12 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:12.682],
+                                                          [window | Poker]
+
+23.05.2025 12:42:13 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:13.115],
+                                                          [window | Закрыто]
+
+23.05.2025 12:42:14 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:14.659],
+                                                          [window | Закрыто]
+
+23.05.2025 12:42:15 | EventName: OnboardingSpecial | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:15.607],
+                                                          [specialDescr | LionGreeting]
+
+23.05.2025 12:42:15 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:15.744],
+                                                          [order | 1]
+
+23.05.2025 12:42:20 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:20.146],
+                                                          [window | Navigation]
+
+23.05.2025 12:42:33 | EventName: LoginStarted | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:33.804],
+                                                          [method | FacebookInApp]
+
+23.05.2025 12:42:50 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:50.352],
+                                                          [window | AccountChoice]
+
+23.05.2025 12:42:53 | EventName: AccountChoice | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:53.696],
+                                                          [accounts | 67e2395583588488626278af;68300aa9744a5f9a69767045],
+                                                          [choice | 67e2395583588488626278af]
+
+23.05.2025 12:42:54 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:54.005],
+                                                          [window | AccountLoad]
+
+23.05.2025 12:42:57 | EventName: AccountLoad | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:57.985],
+                                                          [choice | False]
+
+23.05.2025 12:42:58 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:42:58.525],
+                                                          [window | AccountChoice]
+
+23.05.2025 12:43:00 | EventName: AccountChoice | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:00.624],
+                                                          [accounts | 67e2395583588488626278af;68300aa9744a5f9a69767045],
+                                                          [choice | 68300aa9744a5f9a69767045]
+
+23.05.2025 12:43:04 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:04.549],
+                                                          [window | Закрыто]
+
+23.05.2025 12:43:22 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:22.024],
+                                                          [content | HeaderGoldPlus]
+
+23.05.2025 12:43:23 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:23.335],
+                                                          [content | FooterQuests]
+
+23.05.2025 12:43:24 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:24.247],
+                                                          [content | FooterRooms]
+
+23.05.2025 12:43:27 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:27.105],
+                                                          [content | FooterCollection]
+
+23.05.2025 12:43:27 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:27.869],
+                                                          [content | FooterFriends]
+
+23.05.2025 12:43:31 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:31.761],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 4],
+                                                          [before | 5]
+
+23.05.2025 12:43:31 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:31.843],
+                                                          [combinationName | flush],
+                                                          [cards | 4♠️  2♠️  10♠️  5♠️  6♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:43:31 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:31.850],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:43:33 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:33.385],
+                                                          [order | 2]
+
+23.05.2025 12:43:35 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:35.849],
+                                                          [order | 3]
+
+23.05.2025 12:43:37 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:37.619],
+                                                          [combinationName | flush],
+                                                          [cards | 4♠️  2♠️  10♠️  5♠️  6♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:43:37 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:37.663],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 10000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Flush],
+                                                          [balance | 10000],
+                                                          [before | 0]
+
+23.05.2025 12:43:38 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:38.590],
+                                                          [order | 4]
+
+23.05.2025 12:43:41 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:41.845],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 3],
+                                                          [before | 4]
+
+23.05.2025 12:43:41 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:41.849],
+                                                          [combinationName | none],
+                                                          [cards | 3♥️  9♥️  7♥️  💂♥️  8♣️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:43:41 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:41.854],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:43:43 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:43.310],
+                                                          [order | 5]
+
+23.05.2025 12:43:44 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:44.937]
+
+23.05.2025 12:43:44 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:44.941],
+                                                          [combinationName | flush],
+                                                          [cards | 3♥️  9♥️  7♥️  💂♥️  👩🏼♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:43:45 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:45.828],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 10000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Flush],
+                                                          [balance | 20000],
+                                                          [before | 10000]
+
+23.05.2025 12:43:48 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:48.891],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 2],
+                                                          [before | 3]
+
+23.05.2025 12:43:48 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:48.900],
+                                                          [combinationName | pair],
+                                                          [cards | 👑♦️  👑♣️  7♦️  💂♠️  3♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:43:48 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:48.905],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:43:50 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:50.916],
+                                                          [combinationName | pair],
+                                                          [cards | 👑♦️  👑♣️  2♠️  4♥️  👩🏼♣️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:43:52 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:52.090],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 1400],
+                                                          [fromWhere | Poker],
+                                                          [itemId | JackOrBetter],
+                                                          [balance | 21400],
+                                                          [before | 20000]
+
+23.05.2025 12:43:55 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:55.257],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 1],
+                                                          [before | 2]
+
+23.05.2025 12:43:55 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:55.262],
+                                                          [combinationName | doper],
+                                                          [cards | 👑♠️  👑♦️  10♦️  5♣️  5♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:43:55 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:43:55.268],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:44:02 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:02.032]
+
+23.05.2025 12:44:02 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:02.037],
+                                                          [combinationName | none],
+                                                          [cards | 🂡♣️  💂♦️  7♦️  👩🏼♥️  2♣️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:44:03 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:03.422],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 0],
+                                                          [fromWhere | Poker],
+                                                          [itemId | None],
+                                                          [balance | 21400],
+                                                          [before | 21400]
+
+23.05.2025 12:44:05 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:05.043],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 0],
+                                                          [before | 1]
+
+23.05.2025 12:44:05 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:05.047],
+                                                          [combinationName | pair],
+                                                          [cards | 6♣️  5♥️  💂♦️  5♣️  🂡♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:44:05 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:05.051],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:44:09 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:09.937]
+
+23.05.2025 12:44:09 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:09.942],
+                                                          [combinationName | none],
+                                                          [cards | 7♠️  2♥️  10♠️  👩🏼♦️  8♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:44:11 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:11.326],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 0],
+                                                          [fromWhere | Poker],
+                                                          [itemId | None],
+                                                          [balance | 21400],
+                                                          [before | 21400]
+
+23.05.2025 12:44:12 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:12.416],
+                                                          [order | 6]
+
+23.05.2025 12:44:19 | EventName: ClosedContent | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:19.682],
+                                                          [content | FooterRooms]
+
+23.05.2025 12:44:20 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:20.130],
+                                                          [window | Rooms]
+
+23.05.2025 12:44:20 | EventName: RoomStarted | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:20.538],
+                                                          [roomId | 001_king_throne_room]
+
+23.05.2025 12:44:21 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:21.185],
+                                                          [window | ContentReward],
+                                                          [contentType | Rooms]
+
+23.05.2025 12:44:21 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:21.190],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 3500],
+                                                          [fromWhere | Onboarding],
+                                                          [itemId | NewContent_Rooms],
+                                                          [balance | 24900],
+                                                          [before | 21400]
+
+23.05.2025 12:44:25 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:25.155],
+                                                          [order | 1]
+
+23.05.2025 12:44:29 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:29.453],
+                                                          [order | 2]
+
+23.05.2025 12:44:36 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:44:36.481],
+                                                          [order | 0]
+
+23.05.2025 12:45:27 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:27.498],
+                                                          [order | 1]
+
+23.05.2025 12:45:30 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:30.249],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 1],
+                                                          [item_id | item_03]
+
+23.05.2025 12:45:30 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:30.254],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 4300],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 20600],
+                                                          [before | 24900]
+
+23.05.2025 12:45:32 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:32.240],
+                                                          [order | 2]
+
+23.05.2025 12:45:39 | EventName: RoomRewardTooltip | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:39.971],
+                                                          [rewardType | First]
+
+23.05.2025 12:45:41 | EventName: RoomRewardTooltip | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:41.083],
+                                                          [rewardType | Second]
+
+23.05.2025 12:45:42 | EventName: RoomRewardTooltip | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:42.014],
+                                                          [rewardType | Final]
+
+23.05.2025 12:45:50 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:50.762],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 2],
+                                                          [item_id | item_01]
+
+23.05.2025 12:45:50 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:50.766],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 1300],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 19300],
+                                                          [before | 20600]
+
+23.05.2025 12:45:51 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:51.276],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 3],
+                                                          [item_id | item_02]
+
+23.05.2025 12:45:51 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:51.279],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 3000],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 16300],
+                                                          [before | 19300]
+
+23.05.2025 12:45:51 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:51.639],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 4],
+                                                          [item_id | item_04]
+
+23.05.2025 12:45:51 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:51.642],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 3400],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 12900],
+                                                          [before | 16300]
+
+23.05.2025 12:45:59 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:59.748],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 5],
+                                                          [item_id | item_05]
+
+23.05.2025 12:45:59 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:45:59.751],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 3900],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 9000],
+                                                          [before | 12900]
+
+23.05.2025 12:46:00 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:46:00.244],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 6],
+                                                          [item_id | item_14]
+
+23.05.2025 12:46:00 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:46:00.247],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 4300],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 4700],
+                                                          [before | 9000]
+
+23.05.2025 12:46:00 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:46:00.710],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 7],
+                                                          [item_id | item_19]
+
+23.05.2025 12:46:00 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:46:00.715],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 4700],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 0],
+                                                          [before | 4700]
+
+23.05.2025 12:46:02 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:46:02.765],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Energy],
+                                                          [value | 10],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room_gift_First],
+                                                          [balance | 10],
+                                                          [before | 0]
+
+23.05.2025 12:46:36 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:46:36.697],
+                                                          [window | Poker]
+
+23.05.2025 12:46:50 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:46:50.670],
+                                                          [window | AddFriends]
+
+23.05.2025 12:46:50 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:46:50.674],
+                                                          [window | Social]
+
+23.05.2025 12:46:55 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:46:55.636],
+                                                          [window | Leaderboard]
+
+23.05.2025 12:46:59 | EventName: LeaderboardClick | Params:
+                                                          [PreciseTime | 2025-05-23 05:46:59.341],
+                                                          [type | friends]
+
+23.05.2025 12:47:02 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:02.995],
+                                                          [window | AddFriends]
+
+23.05.2025 12:47:06 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:06.372],
+                                                          [window | InviteFriends]
+
+23.05.2025 12:47:06 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:06.379],
+                                                          [window | InviteFriends]
+
+23.05.2025 12:47:09 | EventName: InviteFriendsPrize | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:09.641],
+                                                          [prize | 1]
+
+23.05.2025 12:47:11 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:11.238],
+                                                          [window | InviteFriendsInfo]
+
+23.05.2025 12:47:13 | EventName: FriendInviteTry | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:13.514],
+                                                          [type | Standart]
+
+23.05.2025 12:47:18 | EventName: FriendInviteResult | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:18.492],
+                                                          [type | Standart],
+                                                          [result | Unknown]
+
+23.05.2025 12:47:22 | EventName: FriendInviteTry | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:22.392],
+                                                          [type | Facebook]
+
+23.05.2025 12:47:31 | EventName: FriendInviteResult | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:31.542],
+                                                          [type | Facebook],
+                                                          [result | Done]
+
+23.05.2025 12:47:48 | EventName: FriendInviteTry | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:48.171],
+                                                          [type | Facebook]
+
+23.05.2025 12:47:53 | EventName: FriendInviteResult | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:53.227],
+                                                          [type | Facebook],
+                                                          [result | Done]
+
+23.05.2025 12:47:53 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:53.533],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Energy],
+                                                          [value | 20],
+                                                          [fromWhere | invite_friends_popup],
+                                                          [itemId | friends_share_reward_lvl_2],
+                                                          [balance | 30],
+                                                          [before | 10]
+
+23.05.2025 12:47:53 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:47:53.542],
+                                                          [window | Rewards]
+
+23.05.2025 12:48:02 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:02.755],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 29],
+                                                          [before | 30]
+
+23.05.2025 12:48:02 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:02.760],
+                                                          [combinationName | set],
+                                                          [cards | 🂡♠️  7♣️  7♥️  7♦️  10♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:02 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:02.763],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:04 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:04.544],
+                                                          [combinationName | set],
+                                                          [cards | 5♣️  7♣️  7♥️  7♦️  👩🏼♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:05 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:05.554],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 2900],
+                                                          [fromWhere | Poker],
+                                                          [itemId | ThreeOfAKind],
+                                                          [balance | 2900],
+                                                          [before | 0]
+
+23.05.2025 12:48:06 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:06.885],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 28],
+                                                          [before | 29]
+
+23.05.2025 12:48:06 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:06.901],
+                                                          [combinationName | none],
+                                                          [cards | 5♥️  6♥️  9♣️  4♥️  3♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:06 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:06.906],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:08 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:08.696]
+
+23.05.2025 12:48:08 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:08.700],
+                                                          [combinationName | pair],
+                                                          [cards | 5♥️  6♥️  6♠️  4♥️  3♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:09 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:09.595],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 1400],
+                                                          [fromWhere | Poker],
+                                                          [itemId | JackOrBetter],
+                                                          [balance | 4300],
+                                                          [before | 2900]
+
+23.05.2025 12:48:10 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:10.616],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 27],
+                                                          [before | 28]
+
+23.05.2025 12:48:10 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:10.619],
+                                                          [combinationName | doper],
+                                                          [cards | 8♦️  5♣️  🂡♦️  5♥️  8♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:10 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:10.623],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:12 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:12.301],
+                                                          [combinationName | doper],
+                                                          [cards | 8♦️  5♣️  👑♠️  5♥️  8♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:13 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:13.196],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 2100],
+                                                          [fromWhere | Poker],
+                                                          [itemId | TwoPairs],
+                                                          [balance | 6400],
+                                                          [before | 4300]
+
+23.05.2025 12:48:14 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:14.205],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 26],
+                                                          [before | 27]
+
+23.05.2025 12:48:14 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:14.209],
+                                                          [combinationName | set],
+                                                          [cards | 2♦️  3♣️  3♦️  3♠️  🂡♣️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:14 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:14.213],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:15 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:15.873],
+                                                          [combinationName | set],
+                                                          [cards | 👑♣️  3♣️  3♦️  3♠️  7♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:16 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:16.901],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 2900],
+                                                          [fromWhere | Poker],
+                                                          [itemId | ThreeOfAKind],
+                                                          [balance | 9300],
+                                                          [before | 6400]
+
+23.05.2025 12:48:17 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:17.942],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 25],
+                                                          [before | 26]
+
+23.05.2025 12:48:17 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:17.946],
+                                                          [combinationName | straight],
+                                                          [cards | 💂♠️  10♠️  9♣️  8♥️  👩🏼♦️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:17 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:17.949],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:19 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:19.527],
+                                                          [combinationName | straight],
+                                                          [cards | 💂♠️  10♠️  9♣️  8♥️  👩🏼♦️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:19 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:19.544],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 7200],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Straight],
+                                                          [balance | 16500],
+                                                          [before | 9300]
+
+23.05.2025 12:48:22 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:22.288],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 24],
+                                                          [before | 25]
+
+23.05.2025 12:48:22 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:22.295],
+                                                          [combinationName | none],
+                                                          [cards | 👑♥️  5♥️  10♥️  3♠️  2♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:22 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:22.302],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:23 | EventName: ManualHold | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:23.964]
+
+23.05.2025 12:48:23 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:23.967],
+                                                          [combinationName | pair],
+                                                          [cards | 👑♥️  5♥️  10♥️  10♦️  2♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:24 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:24.857],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 1400],
+                                                          [fromWhere | Poker],
+                                                          [itemId | JackOrBetter],
+                                                          [balance | 17900],
+                                                          [before | 16500]
+
+23.05.2025 12:48:25 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:25.879],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 23],
+                                                          [before | 24]
+
+23.05.2025 12:48:25 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:25.883],
+                                                          [combinationName | flush],
+                                                          [cards | 👑♣️  10♣️  🂡♣️  2♣️  5♣️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:25 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:25.887],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:27 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:27.735],
+                                                          [combinationName | flush],
+                                                          [cards | 👑♣️  10♣️  🂡♣️  2♣️  5♣️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:27 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:27.754],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 10000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Flush],
+                                                          [balance | 27900],
+                                                          [before | 17900]
+
+23.05.2025 12:48:29 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:29.636],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 22],
+                                                          [before | 23]
+
+23.05.2025 12:48:29 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:29.640],
+                                                          [combinationName | none],
+                                                          [cards | 10♠️  9♣️  👑♣️  🂡♥️  5♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:29 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:29.644],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:31 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:31.256],
+                                                          [combinationName | none],
+                                                          [cards | 👩🏼♣️  2♦️  💂♣️  8♥️  7♦️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:32 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:32.731],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 0],
+                                                          [fromWhere | Poker],
+                                                          [itemId | None],
+                                                          [balance | 27900],
+                                                          [before | 27900]
+
+23.05.2025 12:48:33 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:33.685],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 21],
+                                                          [before | 22]
+
+23.05.2025 12:48:33 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:33.689],
+                                                          [combinationName | doper],
+                                                          [cards | 8♦️  8♥️  6♣️  3♦️  3♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:33 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:33.693],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:35 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:35.458],
+                                                          [combinationName | doper],
+                                                          [cards | 8♦️  8♥️  2♠️  3♦️  3♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:36 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:36.319],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 2100],
+                                                          [fromWhere | Poker],
+                                                          [itemId | TwoPairs],
+                                                          [balance | 30000],
+                                                          [before | 27900]
+
+23.05.2025 12:48:43 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:43.785],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 25],
+                                                          [before | 20]
+
+23.05.2025 12:48:43 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:43.793],
+                                                          [combinationName | set],
+                                                          [cards | 👩🏼♣️  👩🏼♥️  🃏  5♦️  3♣️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:43 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:43.798],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:46 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:46.242],
+                                                          [order | 7]
+
+23.05.2025 12:48:49 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:49.595],
+                                                          [order | 8]
+
+23.05.2025 12:48:50 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:50.894],
+                                                          [combinationName | four],
+                                                          [cards | 👩🏼♣️  👩🏼♥️  🃏  👩🏼♠️  7♣️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:52 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:52.402],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 36000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | FourOfAKind],
+                                                          [balance | 66000],
+                                                          [before | 30000]
+
+23.05.2025 12:48:57 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:57.810],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 24],
+                                                          [before | 25]
+
+23.05.2025 12:48:57 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:57.814],
+                                                          [combinationName | set],
+                                                          [cards | 💂♣️  💂♥️  💂♠️  2♣️  6♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:48:57 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:57.817],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:48:59 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:48:59.613],
+                                                          [combinationName | set],
+                                                          [cards | 💂♣️  💂♥️  💂♠️  👩🏼♠️  5♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:49:00 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:00.624],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 2900],
+                                                          [fromWhere | Poker],
+                                                          [itemId | ThreeOfAKind],
+                                                          [balance | 68900],
+                                                          [before | 66000]
+
+23.05.2025 12:49:01 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:01.325],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 23],
+                                                          [before | 24]
+
+23.05.2025 12:49:01 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:01.329],
+                                                          [combinationName | fh],
+                                                          [cards | 💂♠️  2♠️  2♣️  2♦️  💂♣️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:49:01 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:01.333],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:49:03 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:03.586],
+                                                          [combinationName | fh],
+                                                          [cards | 💂♠️  2♠️  2♣️  2♦️  💂♣️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:49:03 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:03.605],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 20000],
+                                                          [fromWhere | Poker],
+                                                          [itemId | FullHouse],
+                                                          [balance | 88900],
+                                                          [before | 68900]
+
+23.05.2025 12:49:05 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:05.418],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 22],
+                                                          [before | 23]
+
+23.05.2025 12:49:05 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:05.423],
+                                                          [combinationName | set],
+                                                          [cards | 10♦️  👑♥️  👑♣️  👑♦️  5♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:49:05 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:05.426],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:49:07 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:07.121],
+                                                          [combinationName | set],
+                                                          [cards | 🂡♣️  👑♥️  👑♣️  👑♦️  2♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:49:08 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:08.154],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 2900],
+                                                          [fromWhere | Poker],
+                                                          [itemId | ThreeOfAKind],
+                                                          [balance | 91800],
+                                                          [before | 88900]
+
+23.05.2025 12:49:09 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:09.072],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 21],
+                                                          [before | 22]
+
+23.05.2025 12:49:09 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:09.077],
+                                                          [combinationName | set],
+                                                          [cards | 4♠️  10♥️  🂡♠️  4♣️  4♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:49:09 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:09.080],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:49:10 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:10.845],
+                                                          [combinationName | set],
+                                                          [cards | 4♠️  3♣️  7♦️  4♣️  4♥️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:49:11 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:11.873],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 2900],
+                                                          [fromWhere | Poker],
+                                                          [itemId | ThreeOfAKind],
+                                                          [balance | 94700],
+                                                          [before | 91800]
+
+23.05.2025 12:49:12 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:12.860],
+                                                          [eventType | Списание],
+                                                          [currencyName | Energy],
+                                                          [value | 1],
+                                                          [fromWhere | Poker],
+                                                          [itemId | Spin],
+                                                          [balance | 20],
+                                                          [before | 21]
+
+23.05.2025 12:49:12 | EventName: PokerCombinationStart | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:12.864],
+                                                          [combinationName | doper],
+                                                          [cards | 👑♦️  3♦️  👑♥️  2♥️  3♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:49:12 | EventName: DealDrawPress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:12.868],
+                                                          [bet | 1],
+                                                          [maxAvailableMultiplier | 0]
+
+23.05.2025 12:49:14 | EventName: PokerCombinationFinal | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:14.747],
+                                                          [combinationName | doper],
+                                                          [cards | 👑♦️  3♦️  👑♥️  🂡♥️  3♠️],
+                                                          [autoplayOn | False]
+
+23.05.2025 12:49:15 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:15.643],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Gold],
+                                                          [value | 2100],
+                                                          [fromWhere | Poker],
+                                                          [itemId | TwoPairs],
+                                                          [balance | 96800],
+                                                          [before | 94700]
+
+23.05.2025 12:49:18 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:18.068],
+                                                          [window | Rooms]
+
+23.05.2025 12:49:24 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:24.455],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 8],
+                                                          [item_id | item_06]
+
+23.05.2025 12:49:24 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:24.459],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 5400],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 91400],
+                                                          [before | 96800]
+
+23.05.2025 12:49:24 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:24.935],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 9],
+                                                          [item_id | item_07]
+
+23.05.2025 12:49:24 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:24.940],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 6000],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 85400],
+                                                          [before | 91400]
+
+23.05.2025 12:49:25 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:25.452],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 10],
+                                                          [item_id | item_08]
+
+23.05.2025 12:49:25 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:25.457],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 6700],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 78700],
+                                                          [before | 85400]
+
+23.05.2025 12:49:28 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:28.575],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 11],
+                                                          [item_id | item_11]
+
+23.05.2025 12:49:28 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:28.580],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 7100],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 71600],
+                                                          [before | 78700]
+
+23.05.2025 12:49:29 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:29.060],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 12],
+                                                          [item_id | item_13]
+
+23.05.2025 12:49:29 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:29.064],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 7600],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 64000],
+                                                          [before | 71600]
+
+23.05.2025 12:49:29 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:29.539],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 13],
+                                                          [item_id | item_17]
+
+23.05.2025 12:49:29 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:29.544],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 8000],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 56000],
+                                                          [before | 64000]
+
+23.05.2025 12:49:31 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:31.670],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Diamond],
+                                                          [value | 4],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room_gift_Second],
+                                                          [balance | 4],
+                                                          [before | 0]
+
+23.05.2025 12:49:36 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:36.582],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 14],
+                                                          [item_id | item_09]
+
+23.05.2025 12:49:36 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:36.587],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 8400],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 47600],
+                                                          [before | 56000]
+
+23.05.2025 12:49:37 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:37.094],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 15],
+                                                          [item_id | item_15]
+
+23.05.2025 12:49:37 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:37.098],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 8900],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 38700],
+                                                          [before | 47600]
+
+23.05.2025 12:49:37 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:37.626],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 16],
+                                                          [item_id | item_18]
+
+23.05.2025 12:49:37 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:37.630],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 9300],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 29400],
+                                                          [before | 38700]
+
+23.05.2025 12:49:41 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:41.565],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 17],
+                                                          [item_id | item_10]
+
+23.05.2025 12:49:41 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:41.570],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 9300],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 20100],
+                                                          [before | 29400]
+
+23.05.2025 12:49:42 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:42.045],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 18],
+                                                          [item_id | item_12]
+
+23.05.2025 12:49:42 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:42.049],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 9700],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 10400],
+                                                          [before | 20100]
+
+23.05.2025 12:49:42 | EventName: RoomProgress | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:42.445],
+                                                          [roomId | 001_king_throne_room],
+                                                          [progress | 19],
+                                                          [item_id | item_16]
+
+23.05.2025 12:49:42 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:42.449],
+                                                          [eventType | Списание],
+                                                          [currencyName | Gold],
+                                                          [value | 10000],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room],
+                                                          [balance | 400],
+                                                          [before | 10400]
+
+23.05.2025 12:49:44 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:44.630],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Energy],
+                                                          [value | 20],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room_gift_Final],
+                                                          [balance | 40],
+                                                          [before | 20]
+
+23.05.2025 12:49:44 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:44.636],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Egg],
+                                                          [value | 1],
+                                                          [fromWhere | Rooms],
+                                                          [itemId | 001_king_throne_room_gift_Final],
+                                                          [balance | 1],
+                                                          [before | 0]
+
+23.05.2025 12:49:50 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:50.279],
+                                                          [window | CardPacks]
+
+23.05.2025 12:49:50 | EventName: CardCollected | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:50.308],
+                                                          [collection | Tropic],
+                                                          [suit | Spades],
+                                                          [rank | King],
+                                                          [isNew | True],
+                                                          [fromWhere | 001_king_throne_room]
+
+23.05.2025 12:49:50 | EventName: CardCollected | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:50.317],
+                                                          [collection | Standard],
+                                                          [suit | Spades],
+                                                          [rank | Eight],
+                                                          [isNew | True],
+                                                          [fromWhere | 001_king_throne_room]
+
+23.05.2025 12:49:50 | EventName: CardCollected | Params:
+                                                          [PreciseTime | 2025-05-23 05:49:50.325],
+                                                          [collection | Standard],
+                                                          [suit | Clubs],
+                                                          [rank | Two],
+                                                          [isNew | True],
+                                                          [fromWhere | 001_king_throne_room]
+
+23.05.2025 12:50:00 | EventName: RoomFinished | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:00.395],
+                                                          [roomId | 001_king_throne_room]
+
+23.05.2025 12:50:06 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:06.737],
+                                                          [window | RoomsMap]
+
+23.05.2025 12:50:10 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:10.907],
+                                                          [window | Poker]
+
+23.05.2025 12:50:15 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:15.039],
+                                                          [window | NewContent],
+                                                          [contentType | Pets]
+
+23.05.2025 12:50:18 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:18.425],
+                                                          [order | 9]
+
+23.05.2025 12:50:20 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:20.823],
+                                                          [window | Pets]
+
+23.05.2025 12:50:21 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:21.516],
+                                                          [window | ContentReward],
+                                                          [contentType | Pets]
+
+23.05.2025 12:50:21 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:21.521],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Apple],
+                                                          [value | 10],
+                                                          [fromWhere | Onboarding],
+                                                          [itemId | NewContent_Pets],
+                                                          [balance | 10],
+                                                          [before | 0]
+
+23.05.2025 12:50:25 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:25.694],
+                                                          [window | OnboardingComix],
+                                                          [comixType | Pets]
+
+23.05.2025 12:50:29 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:29.778],
+                                                          [eventType | Списание],
+                                                          [currencyName | Egg],
+                                                          [value | 1],
+                                                          [fromWhere | Pets],
+                                                          [itemId | Nest],
+                                                          [balance | 0],
+                                                          [before | 1]
+
+23.05.2025 12:50:29 | EventName: EggClaim | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:29.800],
+                                                          [petName | mushroom]
+
+23.05.2025 12:50:34 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:34.642],
+                                                          [order | 1]
+
+23.05.2025 12:50:37 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:37.078],
+                                                          [eventType | Списание],
+                                                          [currencyName | Apple],
+                                                          [value | 2],
+                                                          [fromWhere | Pets],
+                                                          [itemId | Eat_pet_4_mushroom],
+                                                          [balance | 8],
+                                                          [before | 10]
+
+23.05.2025 12:50:39 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:39.025],
+                                                          [order | 2]
+
+23.05.2025 12:50:41 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:41.808],
+                                                          [order | 0]
+
+23.05.2025 12:50:43 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:43.740],
+                                                          [window | PetReward]
+
+23.05.2025 12:50:45 | EventName: PetSpeedup | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:45.916],
+                                                          [PetId | pet_4_mushroom]
+
+23.05.2025 12:50:45 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:45.921],
+                                                          [eventType | Списание],
+                                                          [currencyName | Diamond],
+                                                          [value | 3],
+                                                          [fromWhere | Pets],
+                                                          [itemId | SpeedUp_pet_4_mushroom],
+                                                          [balance | 1],
+                                                          [before | 4]
+
+23.05.2025 12:50:45 | EventName: OnboardingDialog | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:45.967],
+                                                          [order | 1]
+
+23.05.2025 12:50:48 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:48.314],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Energy],
+                                                          [value | 5],
+                                                          [fromWhere | Pets],
+                                                          [itemId | Feed_pet_4_mushroom],
+                                                          [balance | 45],
+                                                          [before | 40]
+
+23.05.2025 12:50:50 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:50.822],
+                                                          [eventType | Списание],
+                                                          [currencyName | Apple],
+                                                          [value | 2],
+                                                          [fromWhere | Pets],
+                                                          [itemId | Eat_pet_4_mushroom],
+                                                          [balance | 6],
+                                                          [before | 8]
+
+23.05.2025 12:50:54 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 05:50:54.947],
+                                                          [window | Poker]
+
+23.05.2025 13:13:39 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 06:13:39.615],
+                                                          [window | Navigation]
+
+23.05.2025 13:13:42 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 06:13:42.176],
+                                                          [window | Settings]
+
+23.05.2025 13:13:42 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 06:13:42.426],
+                                                          [window | Закрыто]
+
+23.05.2025 13:16:43 | EventName: SoundToggle | Params:
+                                                          [PreciseTime | 2025-05-23 06:16:43.893],
+                                                          [state | True]
+
+23.05.2025 13:16:45 | EventName: SoundToggle | Params:
+                                                          [PreciseTime | 2025-05-23 06:16:45.172],
+                                                          [state | False]
+
+23.05.2025 13:16:45 | EventName: MusicToggle | Params:
+                                                          [PreciseTime | 2025-05-23 06:16:45.986],
+                                                          [state | True]
+
+23.05.2025 13:16:46 | EventName: MusicToggle | Params:
+                                                          [PreciseTime | 2025-05-23 06:16:46.451],
+                                                          [state | False]
+
+23.05.2025 13:23:15 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 06:23:15.975],
+                                                          [window | Notifications]
+
+23.05.2025 13:24:13 | EventName: PushNotificationsToggle | Params:
+                                                          [PreciseTime | 2025-05-23 06:24:13.633],
+                                                          [state | False]
+
+23.05.2025 13:50:35 | EventName: QuietHoursToggle | Params:
+                                                          [PreciseTime | 2025-05-23 06:50:35.576],
+                                                          [state | True]
+
+23.05.2025 13:50:38 | EventName: QuietHoursToggle | Params:
+                                                          [PreciseTime | 2025-05-23 06:50:38.583],
+                                                          [state | False]
+
+23.05.2025 13:53:06 | EventName: QuietHoursStartChanged | Params:
+                                                          [PreciseTime | 2025-05-23 06:53:06.907],
+                                                          [hours | 1],
+                                                          [minutes | 13]
+
+23.05.2025 13:53:11 | EventName: QuietHoursEndChanged | Params:
+                                                          [PreciseTime | 2025-05-23 06:53:11.507],
+                                                          [hours | 12],
+                                                          [minutes | 22]
+
+23.05.2025 13:55:25 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 06:55:25.003],
+                                                          [window | Legal]
+
+23.05.2025 13:56:41 | EventName: LegalClick | Params:
+                                                          [PreciseTime | 2025-05-23 06:56:41.284],
+                                                          [link | 1]
+
+23.05.2025 13:56:51 | EventName: LegalClick | Params:
+                                                          [PreciseTime | 2025-05-23 06:56:51.252],
+                                                          [link | 2]
+
+
+23.05.2025 13:59:45 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 06:59:45.406],
+                                                          [window | Language]
+
+23.05.2025 14:01:04 | EventName: LanguageClick | Params:
+                                                          [PreciseTime | 2025-05-23 07:01:04.194],
+                                                          [language | French]
+
+23.05.2025 14:01:23 | EventName: AreYouSureLanguage | Params:
+                                                          [PreciseTime | 2025-05-23 07:01:23.352],
+                                                          [choice | False]
+
+23.05.2025 14:02:40 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 07:02:40.610],
+                                                          [window | AccountManagement]
+
+23.05.2025 14:04:29 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 07:04:29.654],
+                                                          [window | ShareTheMail]
+
+23.05.2025 14:04:42 | EventName: EmailShared | Params:
+                                                          [PreciseTime | 2025-05-23 07:04:42.976],
+                                                          [mail | TEST@TEST.TEST]
+
+23.05.2025 14:04:44 | EventName: CurrencyChanged | Params:
+                                                          [PreciseTime | 2025-05-23 07:04:44.490],
+                                                          [eventType | Начисление],
+                                                          [currencyName | Energy],
+                                                          [value | 25],
+                                                          [fromWhere | settings],
+                                                          [itemId | share_mail_reward],
+                                                          [balance | 70],
+                                                          [before | 45]
+
+23.05.2025 14:10:48 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 07:10:48.099],
+                                                          [window | AccountDeletion]
+
+23.05.2025 14:11:05 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 07:11:05.306],
+                                                          [window | DeleteAccount]
+
+23.05.2025 14:17:54 | EventName: WindowOpen | Params:
+                                                          [PreciseTime | 2025-05-23 07:17:54.961],
+                                                          [window | Feedback]
+
+23.05.2025 14:19:44 | EventName: FeedbackSent | Params:
+                                                          [PreciseTime | 2025-05-23 07:19:44.715],
+                                                          [email | TEST@TEST.TEST],
+                                                          [feedback | TEEEEEEEEEEEESSSSTTTTT]
+

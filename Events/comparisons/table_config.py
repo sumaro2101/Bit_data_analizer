@@ -74,8 +74,6 @@ TABLE_COLOR = '\033[96m'  # Бирюзовый для всей таблицы
 # Жирный шрифт для заголовков (ANSI-код)
 HEADER_STYLE = '\033[1m'
 
-NAME_CHECK_LIST = 'User_story.xlsx'
-
 TIME_MASK = '%d.%m.%Y %H:%M:%S'
 
 
